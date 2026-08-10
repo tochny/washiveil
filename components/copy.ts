@@ -6,7 +6,7 @@ export const LOCALE_LABELS: Record<Locale, string> = { en: 'EN', 'zh-tw': '繁',
 export const LOCALE_TAGS: Record<Locale, string> = { en: 'en', 'zh-tw': 'zh-Hant', ja: 'ja' };
 
 export interface Copy {
-  nav: { surfaces: string; controls: string; overlays: string; structure: string };
+  nav: { surfaces: string; controls: string; overlays: string; structure: string; install: string };
   hero: {
     badge: string;
     title: string;
@@ -115,7 +115,7 @@ export interface Copy {
 }
 
 const en: Copy = {
-  nav: { surfaces: 'Surfaces', controls: 'Controls', overlays: 'Overlays', structure: 'Structure' },
+  nav: { surfaces: 'Surfaces', controls: 'Controls', overlays: 'Overlays', structure: 'Structure', install: 'Install' },
   hero: {
     badge: '57 registry items',
     title: 'Warm paper. Translucent veils.',
@@ -233,7 +233,7 @@ const en: Copy = {
 };
 
 const zhTw: Copy = {
-  nav: { surfaces: '表面', controls: '控制項', overlays: '浮層', structure: '結構' },
+  nav: { surfaces: '表面', controls: '控制項', overlays: '浮層', structure: '結構', install: '安裝' },
   hero: {
     badge: '57 個 registry 項目',
     title: '暖紙為底，透紗為層。',
@@ -351,7 +351,7 @@ const zhTw: Copy = {
 };
 
 const ja: Copy = {
-  nav: { surfaces: 'サーフェス', controls: 'コントロール', overlays: 'オーバーレイ', structure: '構造' },
+  nav: { surfaces: 'サーフェス', controls: 'コントロール', overlays: 'オーバーレイ', structure: '構造', install: 'インストール' },
   hero: {
     badge: 'レジストリ項目 57 点',
     title: '温かい紙、透ける紗。',

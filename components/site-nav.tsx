@@ -20,6 +20,7 @@ export function SiteNav({ locale }: { locale: Locale }) {
     { label: t.nav.controls, href: '#controls' },
     { label: t.nav.overlays, href: '#overlays' },
     { label: t.nav.structure, href: '#structure' },
+    { label: t.nav.install, href: '#install' },
   ];
 
   React.useEffect(() => {
