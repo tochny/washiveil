@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "chip",
+  "title": "Chip",
+  "description": "Taxonomy pill in the tri-color hues (ruri / korozen / sumire) plus a neutral glass register.",
+  "registryDependencies": [
+    "https://washiveil.alexchih.com/r/theme.json"
+  ],
+  "files": [
+    {
+      "path": "registry/washiveil/ui/chip.tsx",
+      "content": "import { Slot } from 'radix-ui';\n\nimport { cn } from '@/lib/utils';\n\nconst hues = {\n  ruri: 'border-ruri/25 bg-ruri/10 text-ruri dark:border-ruri-soft/25 dark:bg-ruri-soft/10 dark:text-ruri-soft',\n  korozen:\n    'border-korozen/25 bg-korozen/10 text-korozen dark:border-korozen-soft/25 dark:bg-korozen-soft/10 dark:text-korozen-soft',\n  sumire:\n    'border-sumire/25 bg-sumire/10 text-sumire dark:border-sumire-soft/25 dark:bg-sumire-soft/10 dark:text-sumire-soft',\n  neutral: 'border-glass-edge bg-glass text-muted-foreground backdrop-blur',\n} as const;\n\nexport type ChipHue = keyof typeof hues;\n\nexport interface ChipProps extends React.HTMLAttributes<HTMLSpanElement> {\n  hue?: ChipHue;\n  asChild?: boolean;\n}\n\nexport function Chip({ hue = 'ruri', asChild, className, children, ...props }: ChipProps) {\n  const Comp = asChild ? Slot.Root : 'span';\n  return (\n    <Comp\n      className={cn(\n        'inline-block rounded-full border px-2.5 py-0.5 font-mono text-[0.75rem] tracking-wide uppercase',\n        hues[hue],\n        className,\n      )}\n      {...props}\n    >\n      {children}\n    </Comp>\n  );\n}\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

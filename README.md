@@ -1,23 +1,73 @@
-# registry-template
+# washiveil
 
-You can use the `shadcn` CLI to run your own component registry. Running your own
-component registry allows you to distribute your custom components, hooks, pages, and
-other files to any React project.
+Warm washi paper, translucent veils. A [shadcn](https://ui.shadcn.com) registry with
+first-class Chinese & Japanese typography.
 
-> [!IMPORTANT]  
-> This template uses Tailwind v4. For Tailwind v3, see [registry-template-v3](https://github.com/shadcn-ui/registry-template-v3).
+Not glassmorphism. The ground is paper — a warm, grained washi surface — and every
+layer above it is a veil: translucent white in light mode, a lifted warm dark (never
+a white haze) in dark mode. Three lights move beneath everything.
 
-## Getting Started
+## Install
 
-This is a template for creating a custom registry using Next.js.
+Every component pulls the token layer (`theme`) automatically.
 
-- The template uses a `registry.json` file to define components and their files.
-- The `shadcn build` command is used to build the registry.
-- The registry items are served as static files under `public/r/[name].json`.
-- The template also includes a route handler for serving registry items.
-- Every registry item are compatible with the `shadcn` CLI.
-- We have also added v0 integration using the `Open in v0` api.
+```bash
+npx shadcn@latest add https://washiveil.alexchih.com/r/glass-card.json
+```
 
-## Documentation
+Works in any shadcn-initialized project (Tailwind CSS v4). The components read two
+token layers: standard shadcn semantic variables, plus the washi extension
+(`--glass*`, tri-color accents) installed by the theme item.
 
-Visit the [shadcn documentation](https://ui.shadcn.com/docs/registry) to view the full documentation.
+## Components
+
+| Item | What it is |
+| --- | --- |
+| `theme` | The full token layer — washi ground, glass veils, tri-color, light + dark |
+| `ambient-field` | Viewport-fixed tri-color light field (WebGL + CSS fallback + film grain) |
+| `glass-nav` | Floating glass pill nav — sliding hover pill, scroll-adaptive contrast, mobile sheet |
+| `theme-toggle` | Dark-mode toggle with no-flash pre-paint script |
+| `glass-card` | The base translucent surface |
+| `glass-button` | Pill button — korozen primary, quiet secondary, ruri tinted |
+| `chip` | Taxonomy pill in the tri-color hues |
+| `stat-strip` | Three-up stat band with tri-colored numerals |
+| `status-badge` | Live-status pill with pulse dot |
+| `code-badge` | Mono identifier badge |
+| `glass-toc` | On-this-page navigation card |
+| `glass-input` / `glass-textarea` | Form fields on glass |
+| `glass-dialog` | Modal as a veil (Radix Dialog) |
+| `glass-tooltip` | Tooltip on strong glass (Radix Tooltip) |
+| `share-row` | URL-intent share row — no SDKs, no trackers |
+
+## The tri-color
+
+Three accents, named after their nearest Japanese traditional colors. Values are
+tuned for contrast on the washi ground; the lineage is the point, not a spectral match.
+
+| Token | Value | Named after | Nearest match |
+| --- | --- | --- | --- |
+| `ruri` | `#2e63b8` | 瑠璃 — lapis lazuli blue | ΔE 7.8 to 瑠璃色 `#1e50a2` |
+| `korozen` | `#d0722e` | 黄櫨染 — the emperor's enthronement robe, once forbidden to everyone else | ΔE 7.8 to 黄櫨染 `#d66a35` |
+| `sumire` | `#7b68c8` | 菫 — the violet flower | ΔE 13 to 菫色 `#7058a3` — brightened well past the classical dye |
+
+## Chinese & Japanese, first-class
+
+- Font stacks lead with a Latin face and unify zh/ja glyph forms via Noto CJK
+  (Han unification: 直/骨/海 render differently in TC and JP — the stack order matters)
+- `text-wrap: balance` on display text; Japanese headings break at phrase
+  boundaries (`word-break: auto-phrase`, progressive enhancement)
+- Full-width punctuation conventions respected throughout the demo copy
+
+## Roadmap
+
+Phase 2 (deferred deliberately, not forgotten): `glass-select`, `glass-tabs`,
+`glass-toast`, `glass-table`, `glass-accordion`, blocks (hero, footer, contact).
+
+## Design story
+
+The palette and its three lights have an origin story — read it at
+[alexchih.com](https://alexchih.com) (link lands with the launch post).
+
+## License
+
+MIT © [Alex Chih](https://alexchih.com)

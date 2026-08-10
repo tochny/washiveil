@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "code-badge",
+  "title": "Code Badge",
+  "description": "Identifier badge for codes and versions — rounded-md mono, distinct from the taxonomy Chip.",
+  "registryDependencies": [
+    "https://washiveil.alexchih.com/r/theme.json"
+  ],
+  "files": [
+    {
+      "path": "registry/washiveil/ui/code-badge.tsx",
+      "content": "import { cn } from '@/lib/utils';\n\n// Identifier badge (course codes, cert codes) -- rounded-md, no border.\n// Distinct from Chip (rounded-full pill, bordered) which marks taxonomy.\n\nexport type CodeBadgeProps = React.ComponentProps<'span'>;\n\nexport function CodeBadge({ className, ...props }: CodeBadgeProps) {\n  return (\n    <span\n      className={cn(\n        'rounded-md bg-ruri/10 px-2 py-1 font-mono text-[0.75rem] font-semibold text-ruri dark:bg-ruri-soft/10 dark:text-ruri-soft',\n        className,\n      )}\n      {...props}\n    />\n  );\n}\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

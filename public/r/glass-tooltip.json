@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "glass-tooltip",
+  "title": "Glass Tooltip",
+  "description": "Tooltip on the strong glass surface, built on Radix Tooltip.",
+  "dependencies": [
+    "radix-ui"
+  ],
+  "registryDependencies": [
+    "https://washiveil.alexchih.com/r/theme.json"
+  ],
+  "files": [
+    {
+      "path": "registry/washiveil/ui/glass-tooltip.tsx",
+      "content": "'use client'\n\nimport * as React from 'react'\nimport { Tooltip as TooltipPrimitive } from 'radix-ui'\n\nimport { cn } from '@/lib/utils'\n\nconst GlassTooltipProvider = ({ delayDuration = 200, ...props }: React.ComponentProps<typeof TooltipPrimitive.Provider>) => (\n  <TooltipPrimitive.Provider delayDuration={delayDuration} {...props} />\n)\n\nconst GlassTooltip = TooltipPrimitive.Root\n\nconst GlassTooltipTrigger = TooltipPrimitive.Trigger\n\nconst GlassTooltipContent = React.forwardRef<\n  React.ComponentRef<typeof TooltipPrimitive.Content>,\n  React.ComponentPropsWithoutRef<typeof TooltipPrimitive.Content>\n>(({ className, sideOffset = 6, ...props }, ref) => (\n  <TooltipPrimitive.Portal>\n    <TooltipPrimitive.Content\n      ref={ref}\n      sideOffset={sideOffset}\n      className={cn(\n        'z-50 rounded-full border border-glass-edge bg-glass-stronger px-3 py-1.5 text-xs text-foreground backdrop-blur-xl shadow-sm animate-in fade-in-0 zoom-in-95 data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=closed]:zoom-out-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2',\n        className,\n      )}\n      {...props}\n    />\n  </TooltipPrimitive.Portal>\n))\nGlassTooltipContent.displayName = TooltipPrimitive.Content.displayName\n\nexport { GlassTooltipProvider, GlassTooltip, GlassTooltipTrigger, GlassTooltipContent }\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

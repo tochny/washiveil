@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "status-badge",
+  "title": "Status Badge",
+  "description": "Live-status pill with a pulse dot on a glass ground.",
+  "registryDependencies": [
+    "https://washiveil.alexchih.com/r/theme.json"
+  ],
+  "files": [
+    {
+      "path": "registry/washiveil/ui/status-badge.tsx",
+      "content": "import { cn } from '@/lib/utils';\n\nexport type StatusBadgeProps = React.ComponentProps<'div'>;\n\nexport function StatusBadge({ className, children, ...props }: StatusBadgeProps) {\n  return (\n    <div\n      className={cn(\n        'inline-flex items-center gap-2 rounded-full border border-glass-edge bg-glass px-3 py-1 font-mono text-[0.75rem] text-ruri backdrop-blur-md dark:text-ruri-soft',\n        className,\n      )}\n      {...props}\n    >\n      <span className=\"inline-flex size-1.5 rounded-full bg-ruri motion-safe:animate-pulse dark:bg-ruri-soft\" />\n      {children}\n    </div>\n  );\n}\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

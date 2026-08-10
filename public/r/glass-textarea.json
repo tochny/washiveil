@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "glass-textarea",
+  "title": "Glass Textarea",
+  "description": "Multiline input on a translucent glass surface with a ruri focus ring.",
+  "registryDependencies": [
+    "https://washiveil.alexchih.com/r/theme.json"
+  ],
+  "files": [
+    {
+      "path": "registry/washiveil/ui/glass-textarea.tsx",
+      "content": "import * as React from 'react'\n\nimport { cn } from '@/lib/utils'\n\nconst GlassTextarea = React.forwardRef<HTMLTextAreaElement, React.ComponentProps<'textarea'>>(\n  ({ className, ...props }, ref) => {\n    return (\n      <textarea\n        className={cn(\n          'flex min-h-24 w-full rounded-xl border border-glass-edge bg-glass px-3.5 py-2.5 text-sm text-foreground backdrop-blur-md placeholder:text-faint transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:cursor-not-allowed disabled:opacity-50 aria-invalid:border-destructive',\n          className,\n        )}\n        ref={ref}\n        {...props}\n      />\n    )\n  },\n)\nGlassTextarea.displayName = 'GlassTextarea'\n\nexport { GlassTextarea }\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

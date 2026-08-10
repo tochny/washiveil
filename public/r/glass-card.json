@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "glass-card",
+  "title": "Glass Card",
+  "description": "The base translucent surface — blurred white veil on washi in light, lifted warm dark in dark.",
+  "registryDependencies": [
+    "https://washiveil.alexchih.com/r/theme.json"
+  ],
+  "files": [
+    {
+      "path": "registry/washiveil/ui/glass-card.tsx",
+      "content": "import { cn } from '@/lib/utils';\n\nexport interface GlassCardProps extends React.ComponentProps<'div'> {\n  padded?: boolean;\n}\n\nexport function GlassCard({ padded = true, className, ...props }: GlassCardProps) {\n  return (\n    <div\n      className={cn(\n        'rounded-2xl border border-glass-border bg-glass shadow-[0_8px_32px_rgba(28,25,20,0.06)] backdrop-blur-xl',\n        padded && 'p-6',\n        className,\n      )}\n      {...props}\n    />\n  );\n}\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}
