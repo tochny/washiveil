@@ -1082,6 +1082,21 @@
           "type": "registry:ui"
         }
       ]
+    },
+    {
+      "name": "lang-switcher",
+      "type": "registry:ui",
+      "title": "Lang Switcher",
+      "description": "Locale switcher on the glass pill — the active language is a filled ruri moment. For sites that take Chinese & Japanese seriously.",
+      "registryDependencies": [
+        "https://washiveil.alexchih.com/r/theme.json"
+      ],
+      "files": [
+        {
+          "path": "registry/washiveil/ui/lang-switcher.tsx",
+          "type": "registry:ui"
+        }
+      ]
     }
   ]
 }

@@ -117,7 +117,7 @@ export interface Copy {
 const en: Copy = {
   nav: { surfaces: 'Surfaces', controls: 'Controls', overlays: 'Overlays', structure: 'Structure' },
   hero: {
-    badge: '56 registry items',
+    badge: '57 registry items',
     title: 'Warm paper. Translucent veils.',
     lede: 'A shadcn registry that is not glassmorphism: the ground is washi, every layer above it is a veil, and three lights move beneath everything. Chinese & Japanese typography is first-class, not an afterthought.',
     install: 'Install',
@@ -235,7 +235,7 @@ const en: Copy = {
 const zhTw: Copy = {
   nav: { surfaces: '表面', controls: '控制項', overlays: '浮層', structure: '結構' },
   hero: {
-    badge: '56 個 registry 項目',
+    badge: '57 個 registry 項目',
     title: '暖紙為底，透紗為層。',
     lede: '這不是 glassmorphism：底是和紙，其上每一層都是紗，三色光在最底下流動。中日文排版是一等公民，不是事後補丁。',
     install: '安裝',
@@ -353,7 +353,7 @@ const zhTw: Copy = {
 const ja: Copy = {
   nav: { surfaces: 'サーフェス', controls: 'コントロール', overlays: 'オーバーレイ', structure: '構造' },
   hero: {
-    badge: 'レジストリ項目 56 点',
+    badge: 'レジストリ項目 57 点',
     title: '温かい紙、透ける紗。',
     lede: 'これは glassmorphism ではありません。地は和紙、その上の各層は紗、そして最下層では三つの灯りが揺れています。中国語・日本語の組版を最初から第一級として設計しました。',
     install: 'インストール',

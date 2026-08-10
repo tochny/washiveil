@@ -4,6 +4,7 @@ import * as React from 'react';
 
 import { COPY, LOCALE_LABELS, LOCALE_PATHS, type Locale } from '@/components/copy';
 import { GlassNav } from '@/registry/washiveil/ui/glass-nav';
+import { LangSwitcher } from '@/registry/washiveil/ui/lang-switcher';
 import { ThemeToggle } from '@/registry/washiveil/ui/theme-toggle';
 
 const LOCALES: Locale[] = ['en', 'zh-tw', 'ja'];
@@ -51,22 +52,9 @@ export function SiteNav({ locale }: { locale: Locale }) {
       activeHref={active}
       cta={{ label: 'GitHub', href: 'https://github.com/tochny' }}
     >
-      <nav aria-label="Language" className="flex items-center gap-1">
-        {LOCALES.map((l) => (
-          <a
-            key={l}
-            href={LOCALE_PATHS[l]}
-            aria-current={l === locale ? 'page' : undefined}
-            className={`rounded-full px-2 py-1 font-mono text-[0.75rem] ${
-              l === locale
-                ? 'font-semibold text-ruri dark:text-ruri-soft'
-                : 'text-muted-foreground hover:text-foreground'
-            }`}
-          >
-            {LOCALE_LABELS[l]}
-          </a>
-        ))}
-      </nav>
+      <LangSwitcher
+        items={LOCALES.map((l) => ({ label: LOCALE_LABELS[l], href: LOCALE_PATHS[l], current: l === locale }))}
+      />
       <ThemeToggle />
     </GlassNav>
   );
