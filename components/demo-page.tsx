@@ -1,3 +1,4 @@
+import { InstallCommand } from '@/components/install-command';
 import { PickerDemo } from '@/components/picker-demo';
 import { SiteNav } from '@/components/site-nav';
 import { ToastDemo } from '@/components/toast-demo';
@@ -216,6 +217,7 @@ export function DemoPage({ locale }: { locale: Locale }) {
               </GlassCard>
               <GlassTOC items={tocItems} />
             </div>
+            <InstallCommand item="glass-card" copyLabel={t.installCmd.copy} copiedLabel={t.installCmd.copied} className="mt-4" />
           </Section>
 
           <Section id="controls" title={t.controls.title} lede={t.controls.lede}>
@@ -271,6 +273,7 @@ export function DemoPage({ locale }: { locale: Locale }) {
                 <GlassProgress value={62} />
               </GlassCard>
             </div>
+            <InstallCommand item="glass-select" copyLabel={t.installCmd.copy} copiedLabel={t.installCmd.copied} className="mt-4" />
           </Section>
 
           <Section id="overlays" title={t.overlays.title} lede={t.overlays.lede}>
@@ -350,6 +353,7 @@ export function DemoPage({ locale }: { locale: Locale }) {
               </GlassTooltipProvider>
               <ToastDemo label={t.overlays.toast} title={t.overlays.toastTitle} description={t.overlays.toastBody} />
             </GlassCard>
+            <InstallCommand item="glass-dialog" copyLabel={t.installCmd.copy} copiedLabel={t.installCmd.copied} className="mt-4" />
           </Section>
 
           <Section id="structure" title={t.structure.title} lede={t.structure.lede}>
@@ -416,6 +420,7 @@ export function DemoPage({ locale }: { locale: Locale }) {
                 </GlassTable>
               </GlassCard>
             </div>
+            <InstallCommand item="glass-tabs" copyLabel={t.installCmd.copy} copiedLabel={t.installCmd.copied} className="mt-4" />
           </Section>
 
           <Section id="indicators" title={t.indicators.title} lede={t.indicators.lede}>
@@ -468,6 +473,7 @@ export function DemoPage({ locale }: { locale: Locale }) {
                 </GlassPaginationContent>
               </GlassPagination>
             </GlassCard>
+            <InstallCommand item="glass-pagination" copyLabel={t.installCmd.copy} copiedLabel={t.installCmd.copied} className="mt-4" />
           </Section>
 
           <Section id="pickers" title={t.pickers.title} lede={t.pickers.lede}>
@@ -517,6 +523,7 @@ export function DemoPage({ locale }: { locale: Locale }) {
                 <GlassEmptyDescription>{t.pickers.emptyBody}</GlassEmptyDescription>
               </GlassEmpty>
             </div>
+            <InstallCommand item="glass-command" copyLabel={t.installCmd.copy} copiedLabel={t.installCmd.copied} className="mt-4" />
           </Section>
 
           <Section id="typography" title={t.typography.title} lede={t.typography.lede}>
@@ -536,14 +543,11 @@ export function DemoPage({ locale }: { locale: Locale }) {
                 </p>
               </GlassCard>
             </div>
+            <InstallCommand item="theme" copyLabel={t.installCmd.copy} copiedLabel={t.installCmd.copied} className="mt-4" />
           </Section>
 
           <Section id="install" title={t.install.title} lede={t.install.lede}>
-            <GlassCard className="overflow-x-auto">
-              <pre className="font-mono text-[0.8125rem] leading-relaxed">
-                <code>npx shadcn@latest add https://washiveil.alexchih.com/r/glass-card.json</code>
-              </pre>
-            </GlassCard>
+            <InstallCommand item="glass-card" copyLabel={t.installCmd.copy} copiedLabel={t.installCmd.copied} />
           </Section>
         </main>
 

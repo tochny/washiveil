@@ -7,6 +7,9 @@ Not glassmorphism. The ground is paper — a warm, grained washi surface — and
 layer above it is a veil: translucent white in light mode, a lifted warm dark (never
 a white haze) in dark mode. Three lights move beneath everything.
 
+![washiveil demo — light](docs/preview-light.png)
+![washiveil demo — dark](docs/preview-dark.png)
+
 ## Install
 
 Every component pulls the token layer (`theme`) automatically.

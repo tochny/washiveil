@@ -111,6 +111,7 @@ export interface Copy {
   };
   typography: { title: string; lede: string };
   install: { title: string; lede: string };
+  installCmd: { copy: string; copied: string };
   footer: { tagline: string };
 }
 
@@ -229,6 +230,7 @@ const en: Copy = {
     lede: 'Noto CJK unifies zh/ja glyph forms; display text balances; Japanese headings break at phrase boundaries.',
   },
   install: { title: 'Install', lede: 'Every component pulls the theme token layer automatically.' },
+  installCmd: { copy: 'Copy install command', copied: 'Copied' },
   footer: { tagline: 'washiveil — paper · veil · three lights' },
 };
 
@@ -347,6 +349,7 @@ const zhTw: Copy = {
     lede: 'Noto CJK 統一中日字形；標題自動平衡斷行；日文標題按語節換行。',
   },
   install: { title: '安裝', lede: '每個元件都會自動帶入 theme token 層。' },
+  installCmd: { copy: '複製安裝指令', copied: '已複製' },
   footer: { tagline: 'washiveil — 紙 · 紗 · 三色光' },
 };
 
@@ -465,6 +468,7 @@ const ja: Copy = {
     lede: 'Noto CJK が中日の字形を統一。見出しはバランス改行、日本語は文節単位で折り返します。',
   },
   install: { title: 'インストール', lede: 'どのコンポーネントも theme トークン層を自動で取り込みます。' },
+  installCmd: { copy: 'インストールコマンドをコピー', copied: 'コピーしました' },
   footer: { tagline: 'washiveil — 紙 · 紗 · 三つの灯り' },
 };
 
