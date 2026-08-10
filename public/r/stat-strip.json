@@ -2,6 +2,7 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "stat-strip",
   "title": "Stat Strip",
+  "author": "Alex Chih (https://alexchih.com)",
   "description": "Three-up stat band with tri-colored numerals on a glass surface.",
   "registryDependencies": [
     "https://washiveil.alexchih.com/r/theme.json"

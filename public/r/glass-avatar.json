@@ -2,6 +2,7 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "glass-avatar",
   "title": "Glass Avatar",
+  "author": "Alex Chih (https://alexchih.com)",
   "description": "Avatar with a glass ring, built on Radix Avatar.",
   "dependencies": [
     "radix-ui"

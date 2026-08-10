@@ -2,6 +2,7 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "glass-date-picker",
   "title": "Glass Date Picker",
+  "author": "Alex Chih (https://alexchih.com)",
   "description": "Date picker — glass field trigger, calendar in a strong-glass popover.",
   "dependencies": [
     "react-day-picker",

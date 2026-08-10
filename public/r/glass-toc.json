@@ -2,6 +2,7 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "glass-toc",
   "title": "Glass TOC",
+  "author": "Alex Chih (https://alexchih.com)",
   "description": "On-this-page navigation card with active-item highlight.",
   "registryDependencies": [
     "https://washiveil.alexchih.com/r/theme.json"

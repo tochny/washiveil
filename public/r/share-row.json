@@ -2,6 +2,7 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "share-row",
   "title": "Share Row",
+  "author": "Alex Chih (https://alexchih.com)",
   "description": "URL-intent share row — native share sheet when supported, clipboard copy fallback, X/LinkedIn intents. No SDKs, no trackers.",
   "dependencies": [
     "lucide-react"

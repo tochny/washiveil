@@ -2,6 +2,7 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "glass-aspect-ratio",
   "title": "Glass Aspect Ratio",
+  "author": "Alex Chih (https://alexchih.com)",
   "description": "Ratio-locked container, built on Radix AspectRatio.",
   "dependencies": [
     "radix-ui"

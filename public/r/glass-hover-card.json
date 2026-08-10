@@ -2,6 +2,7 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "glass-hover-card",
   "title": "Glass Hover Card",
+  "author": "Alex Chih (https://alexchih.com)",
   "description": "Hover card on strong glass, built on Radix HoverCard.",
   "dependencies": [
     "radix-ui"

@@ -2,6 +2,7 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "glass-tabs",
   "title": "Glass Tabs",
+  "author": "Alex Chih (https://alexchih.com)",
   "description": "Pill tab list on a glass ground with a ruri active tab, built on Radix Tabs.",
   "dependencies": [
     "radix-ui"

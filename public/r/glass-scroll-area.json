@@ -2,6 +2,7 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "glass-scroll-area",
   "title": "Glass Scroll Area",
+  "author": "Alex Chih (https://alexchih.com)",
   "description": "Custom scrollbar as a faint veil, built on Radix ScrollArea.",
   "dependencies": [
     "radix-ui"

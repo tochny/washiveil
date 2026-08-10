@@ -2,6 +2,7 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "glass-menubar",
   "title": "Glass Menubar",
+  "author": "Alex Chih (https://alexchih.com)",
   "description": "Application menubar on the glass pill with strong-glass dropdowns, built on Radix Menubar.",
   "dependencies": [
     "radix-ui",

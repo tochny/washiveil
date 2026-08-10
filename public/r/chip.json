@@ -2,6 +2,7 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "chip",
   "title": "Chip",
+  "author": "Alex Chih (https://alexchih.com)",
   "description": "Taxonomy pill in the tri-color hues (ruri / korozen / sumire) plus a neutral glass register.",
   "registryDependencies": [
     "https://washiveil.alexchih.com/r/theme.json"

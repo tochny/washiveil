@@ -2,6 +2,7 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "glass-accordion",
   "title": "Glass Accordion",
+  "author": "Alex Chih (https://alexchih.com)",
   "description": "Accordion on glass with soft dividers, built on Radix Accordion.",
   "dependencies": [
     "radix-ui",

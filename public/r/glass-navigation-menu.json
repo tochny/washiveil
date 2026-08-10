@@ -2,6 +2,7 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "glass-navigation-menu",
   "title": "Glass Navigation Menu",
+  "author": "Alex Chih (https://alexchih.com)",
   "description": "Site navigation with strong-glass flyout panels, built on Radix NavigationMenu.",
   "dependencies": [
     "radix-ui",

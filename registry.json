@@ -8,6 +8,8 @@
       "type": "registry:theme",
       "title": "Washi Veil Theme",
       "description": "Warm washi ground, translucent glass veils, and the ruri/korozen/sumire tri-color — light and dark. Installs the token layer every Washi Veil component builds on.",
+      "author": "Alex Chih (https://alexchih.com)",
+      "docs": "Fonts are not bundled — install @fontsource-variable/inter, manrope, jetbrains-mono, noto-sans-tc and noto-sans-jp to pin the stacks; system fonts are the fallback. Text selection ships sumire — the third light’s quietest job.",
       "cssVars": {
         "theme": {
           "font-sans": "'Inter Variable', 'Noto Sans TC Variable', 'Noto Sans JP Variable', 'Noto Sans TC', 'Noto Sans JP', ui-sans-serif, system-ui, sans-serif",
@@ -117,6 +119,8 @@
       "type": "registry:ui",
       "title": "Ambient Field",
       "description": "Viewport-fixed tri-color light field the page scrolls over — WebGL glows with per-pixel dither, CSS fallback for first paint, film-grain overlay. Reduced-motion safe.",
+      "author": "Alex Chih (https://alexchih.com)",
+      "docs": "Render <AmbientField /> once at the app root, before your content. It is viewport-fixed; everything scrolls over it.",
       "registryDependencies": [
         "https://washiveil.alexchih.com/r/theme.json"
       ],
@@ -132,6 +136,8 @@
       "type": "registry:ui",
       "title": "Glass Nav",
       "description": "Floating glass pill navigation — sliding hover pill, scroll-adaptive contrast, masked blur scroll edge, working mobile sheet.",
+      "author": "Alex Chih (https://alexchih.com)",
+      "docs": "Drop <ThemeToggle /> or <LangSwitcher /> into the children slot — it renders in the desktop actions zone and the mobile sheet footer. Active state is controlled via activeHref.",
       "dependencies": [
         "lucide-react"
       ],
@@ -150,6 +156,8 @@
       "type": "registry:ui",
       "title": "Theme Toggle",
       "description": "Class-strategy dark mode toggle with localStorage persistence and no-flash pre-paint script helper.",
+      "author": "Alex Chih (https://alexchih.com)",
+      "docs": "Place <ThemeScript /> inside <head> in your root layout to avoid a dark-mode flash; put <ThemeToggle /> wherever the switch lives.",
       "dependencies": [
         "lucide-react"
       ],
@@ -168,6 +176,7 @@
       "type": "registry:ui",
       "title": "Glass Card",
       "description": "The base translucent surface — blurred white veil on washi in light, lifted warm dark in dark.",
+      "author": "Alex Chih (https://alexchih.com)",
       "registryDependencies": [
         "https://washiveil.alexchih.com/r/theme.json"
       ],
@@ -183,6 +192,7 @@
       "type": "registry:ui",
       "title": "Glass Button",
       "description": "Pill button in three registers — korozen primary, quiet secondary outline, ruri tinted.",
+      "author": "Alex Chih (https://alexchih.com)",
       "dependencies": [
         "class-variance-authority",
         "radix-ui"
@@ -202,6 +212,7 @@
       "type": "registry:ui",
       "title": "Chip",
       "description": "Taxonomy pill in the tri-color hues (ruri / korozen / sumire) plus a neutral glass register.",
+      "author": "Alex Chih (https://alexchih.com)",
       "registryDependencies": [
         "https://washiveil.alexchih.com/r/theme.json"
       ],
@@ -217,6 +228,7 @@
       "type": "registry:ui",
       "title": "Stat Strip",
       "description": "Three-up stat band with tri-colored numerals on a glass surface.",
+      "author": "Alex Chih (https://alexchih.com)",
       "registryDependencies": [
         "https://washiveil.alexchih.com/r/theme.json"
       ],
@@ -232,6 +244,7 @@
       "type": "registry:ui",
       "title": "Status Badge",
       "description": "Live-status pill with a pulse dot on a glass ground.",
+      "author": "Alex Chih (https://alexchih.com)",
       "registryDependencies": [
         "https://washiveil.alexchih.com/r/theme.json"
       ],
@@ -247,6 +260,7 @@
       "type": "registry:ui",
       "title": "Code Badge",
       "description": "Identifier badge for codes and versions — rounded-md mono, distinct from the taxonomy Chip.",
+      "author": "Alex Chih (https://alexchih.com)",
       "registryDependencies": [
         "https://washiveil.alexchih.com/r/theme.json"
       ],
@@ -262,6 +276,7 @@
       "type": "registry:ui",
       "title": "Glass TOC",
       "description": "On-this-page navigation card with active-item highlight.",
+      "author": "Alex Chih (https://alexchih.com)",
       "registryDependencies": [
         "https://washiveil.alexchih.com/r/theme.json"
       ],
@@ -277,6 +292,7 @@
       "type": "registry:ui",
       "title": "Glass Input",
       "description": "Text input on a translucent glass surface with a ruri focus ring.",
+      "author": "Alex Chih (https://alexchih.com)",
       "registryDependencies": [
         "https://washiveil.alexchih.com/r/theme.json"
       ],
@@ -292,6 +308,7 @@
       "type": "registry:ui",
       "title": "Glass Textarea",
       "description": "Multiline input on a translucent glass surface with a ruri focus ring.",
+      "author": "Alex Chih (https://alexchih.com)",
       "registryDependencies": [
         "https://washiveil.alexchih.com/r/theme.json"
       ],
@@ -307,6 +324,7 @@
       "type": "registry:ui",
       "title": "Glass Dialog",
       "description": "Modal dialog as a glass veil — blurred translucent panel over a soft scrim, built on Radix Dialog.",
+      "author": "Alex Chih (https://alexchih.com)",
       "dependencies": [
         "radix-ui",
         "lucide-react"
@@ -326,6 +344,7 @@
       "type": "registry:ui",
       "title": "Glass Tooltip",
       "description": "Tooltip on the strong glass surface, built on Radix Tooltip.",
+      "author": "Alex Chih (https://alexchih.com)",
       "dependencies": [
         "radix-ui"
       ],
@@ -344,6 +363,7 @@
       "type": "registry:ui",
       "title": "Share Row",
       "description": "URL-intent share row — native share sheet when supported, clipboard copy fallback, X/LinkedIn intents. No SDKs, no trackers.",
+      "author": "Alex Chih (https://alexchih.com)",
       "dependencies": [
         "lucide-react"
       ],
@@ -362,6 +382,7 @@
       "type": "registry:ui",
       "title": "Glass Label",
       "description": "Form label in the mono uppercase register.",
+      "author": "Alex Chih (https://alexchih.com)",
       "dependencies": [
         "radix-ui"
       ],
@@ -380,6 +401,7 @@
       "type": "registry:ui",
       "title": "Glass Select",
       "description": "Select on the glass field register — popover panel on strong glass, built on Radix Select.",
+      "author": "Alex Chih (https://alexchih.com)",
       "dependencies": [
         "radix-ui",
         "lucide-react"
@@ -399,6 +421,7 @@
       "type": "registry:ui",
       "title": "Glass Switch",
       "description": "Toggle switch — ruri track when on, glass thumb, built on Radix Switch.",
+      "author": "Alex Chih (https://alexchih.com)",
       "dependencies": [
         "radix-ui"
       ],
@@ -417,6 +440,7 @@
       "type": "registry:ui",
       "title": "Glass Checkbox",
       "description": "Checkbox on glass with a ruri checked state, built on Radix Checkbox.",
+      "author": "Alex Chih (https://alexchih.com)",
       "dependencies": [
         "radix-ui",
         "lucide-react"
@@ -436,6 +460,7 @@
       "type": "registry:ui",
       "title": "Glass Radio Group",
       "description": "Radio group on glass with ruri selection dots, built on Radix RadioGroup.",
+      "author": "Alex Chih (https://alexchih.com)",
       "dependencies": [
         "radix-ui"
       ],
@@ -454,6 +479,7 @@
       "type": "registry:ui",
       "title": "Glass Slider",
       "description": "Slider with a ruri range on a glass track, built on Radix Slider.",
+      "author": "Alex Chih (https://alexchih.com)",
       "dependencies": [
         "radix-ui"
       ],
@@ -472,6 +498,7 @@
       "type": "registry:ui",
       "title": "Glass Popover",
       "description": "Popover panel on strong glass, built on Radix Popover.",
+      "author": "Alex Chih (https://alexchih.com)",
       "dependencies": [
         "radix-ui"
       ],
@@ -490,6 +517,7 @@
       "type": "registry:ui",
       "title": "Glass Dropdown Menu",
       "description": "Menu on strong glass — items, labels, separators, shortcuts, submenus. Built on Radix DropdownMenu.",
+      "author": "Alex Chih (https://alexchih.com)",
       "dependencies": [
         "radix-ui",
         "lucide-react"
@@ -509,6 +537,7 @@
       "type": "registry:ui",
       "title": "Glass Sheet",
       "description": "Side sheet as a veil — slides from any edge over a soft scrim. Built on Radix Dialog.",
+      "author": "Alex Chih (https://alexchih.com)",
       "dependencies": [
         "radix-ui",
         "lucide-react"
@@ -528,6 +557,7 @@
       "type": "registry:ui",
       "title": "Glass Alert Dialog",
       "description": "Confirmation dialog on strong glass, built on Radix AlertDialog.",
+      "author": "Alex Chih (https://alexchih.com)",
       "dependencies": [
         "radix-ui"
       ],
@@ -546,6 +576,7 @@
       "type": "registry:ui",
       "title": "Glass Hover Card",
       "description": "Hover card on strong glass, built on Radix HoverCard.",
+      "author": "Alex Chih (https://alexchih.com)",
       "dependencies": [
         "radix-ui"
       ],
@@ -564,6 +595,8 @@
       "type": "registry:ui",
       "title": "Glass Sonner",
       "description": "Toasts as small veils — sonner styled on the washi glass registers.",
+      "author": "Alex Chih (https://alexchih.com)",
+      "docs": "Mount <GlassToaster /> once at the root, then call toast() from anywhere.",
       "dependencies": [
         "sonner"
       ],
@@ -582,6 +615,7 @@
       "type": "registry:ui",
       "title": "Glass Tabs",
       "description": "Pill tab list on a glass ground with a ruri active tab, built on Radix Tabs.",
+      "author": "Alex Chih (https://alexchih.com)",
       "dependencies": [
         "radix-ui"
       ],
@@ -600,6 +634,7 @@
       "type": "registry:ui",
       "title": "Glass Accordion",
       "description": "Accordion on glass with soft dividers, built on Radix Accordion.",
+      "author": "Alex Chih (https://alexchih.com)",
       "dependencies": [
         "radix-ui",
         "lucide-react"
@@ -619,6 +654,7 @@
       "type": "registry:ui",
       "title": "Glass Table",
       "description": "Data table in the washi editorial register — mono uppercase header, soft row dividers.",
+      "author": "Alex Chih (https://alexchih.com)",
       "registryDependencies": [
         "https://washiveil.alexchih.com/r/theme.json"
       ],
@@ -634,6 +670,7 @@
       "type": "registry:ui",
       "title": "Glass Separator",
       "description": "Hairline separator on the soft border register, built on Radix Separator.",
+      "author": "Alex Chih (https://alexchih.com)",
       "dependencies": [
         "radix-ui"
       ],
@@ -652,6 +689,7 @@
       "type": "registry:ui",
       "title": "Glass Alert",
       "description": "Inline alert on glass — neutral, ruri info, korozen warning, destructive.",
+      "author": "Alex Chih (https://alexchih.com)",
       "registryDependencies": [
         "https://washiveil.alexchih.com/r/theme.json"
       ],
@@ -667,6 +705,7 @@
       "type": "registry:ui",
       "title": "Glass Skeleton",
       "description": "Loading placeholder — a shimmering veil.",
+      "author": "Alex Chih (https://alexchih.com)",
       "registryDependencies": [
         "https://washiveil.alexchih.com/r/theme.json"
       ],
@@ -682,6 +721,7 @@
       "type": "registry:ui",
       "title": "Glass Progress",
       "description": "Progress bar with a ruri fill on a glass track, built on Radix Progress.",
+      "author": "Alex Chih (https://alexchih.com)",
       "dependencies": [
         "radix-ui"
       ],
@@ -700,6 +740,7 @@
       "type": "registry:ui",
       "title": "Glass Avatar",
       "description": "Avatar with a glass ring, built on Radix Avatar.",
+      "author": "Alex Chih (https://alexchih.com)",
       "dependencies": [
         "radix-ui"
       ],
@@ -718,6 +759,7 @@
       "type": "registry:ui",
       "title": "Glass Breadcrumb",
       "description": "Breadcrumb trail in the quiet text register.",
+      "author": "Alex Chih (https://alexchih.com)",
       "dependencies": [
         "lucide-react"
       ],
@@ -736,6 +778,7 @@
       "type": "registry:ui",
       "title": "Glass Pagination",
       "description": "Pagination pills on the ghost-circle register.",
+      "author": "Alex Chih (https://alexchih.com)",
       "dependencies": [
         "lucide-react"
       ],
@@ -754,6 +797,7 @@
       "type": "registry:ui",
       "title": "Glass Context Menu",
       "description": "Right-click menu on strong glass — items, checkboxes, radios, submenus. Built on Radix ContextMenu.",
+      "author": "Alex Chih (https://alexchih.com)",
       "dependencies": [
         "radix-ui",
         "lucide-react"
@@ -773,6 +817,7 @@
       "type": "registry:ui",
       "title": "Glass Menubar",
       "description": "Application menubar on the glass pill with strong-glass dropdowns, built on Radix Menubar.",
+      "author": "Alex Chih (https://alexchih.com)",
       "dependencies": [
         "radix-ui",
         "lucide-react"
@@ -792,6 +837,7 @@
       "type": "registry:ui",
       "title": "Glass Navigation Menu",
       "description": "Site navigation with strong-glass flyout panels, built on Radix NavigationMenu.",
+      "author": "Alex Chih (https://alexchih.com)",
       "dependencies": [
         "radix-ui",
         "lucide-react"
@@ -811,6 +857,7 @@
       "type": "registry:ui",
       "title": "Glass Collapsible",
       "description": "Show/hide region, built on Radix Collapsible.",
+      "author": "Alex Chih (https://alexchih.com)",
       "dependencies": [
         "radix-ui"
       ],
@@ -829,6 +876,7 @@
       "type": "registry:ui",
       "title": "Glass Toggle",
       "description": "Pressed-state pill — quiet until on, then ruri. Built on Radix Toggle.",
+      "author": "Alex Chih (https://alexchih.com)",
       "dependencies": [
         "radix-ui"
       ],
@@ -847,6 +895,7 @@
       "type": "registry:ui",
       "title": "Glass Toggle Group",
       "description": "Segmented toggles on the glass pill ground, built on Radix ToggleGroup.",
+      "author": "Alex Chih (https://alexchih.com)",
       "dependencies": [
         "radix-ui"
       ],
@@ -865,6 +914,7 @@
       "type": "registry:ui",
       "title": "Glass Scroll Area",
       "description": "Custom scrollbar as a faint veil, built on Radix ScrollArea.",
+      "author": "Alex Chih (https://alexchih.com)",
       "dependencies": [
         "radix-ui"
       ],
@@ -883,6 +933,7 @@
       "type": "registry:ui",
       "title": "Glass Aspect Ratio",
       "description": "Ratio-locked container, built on Radix AspectRatio.",
+      "author": "Alex Chih (https://alexchih.com)",
       "dependencies": [
         "radix-ui"
       ],
@@ -901,6 +952,7 @@
       "type": "registry:ui",
       "title": "Glass Kbd",
       "description": "Keyboard key cap in the mono register on a faint glass chip.",
+      "author": "Alex Chih (https://alexchih.com)",
       "registryDependencies": [
         "https://washiveil.alexchih.com/r/theme.json"
       ],
@@ -916,6 +968,7 @@
       "type": "registry:ui",
       "title": "Glass Spinner",
       "description": "Loading spinner in the quiet register, reduced-motion safe.",
+      "author": "Alex Chih (https://alexchih.com)",
       "dependencies": [
         "lucide-react"
       ],
@@ -934,6 +987,7 @@
       "type": "registry:ui",
       "title": "Glass Empty",
       "description": "Empty state — icon, title, description, action slot on a soft glass ground.",
+      "author": "Alex Chih (https://alexchih.com)",
       "registryDependencies": [
         "https://washiveil.alexchih.com/r/theme.json"
       ],
@@ -949,6 +1003,7 @@
       "type": "registry:ui",
       "title": "Glass Drawer",
       "description": "Bottom drawer as a rising veil with a grab handle, built on Vaul.",
+      "author": "Alex Chih (https://alexchih.com)",
       "dependencies": [
         "vaul"
       ],
@@ -967,6 +1022,7 @@
       "type": "registry:ui",
       "title": "Glass Input OTP",
       "description": "One-time-code input on glass cells with a ruri active caret.",
+      "author": "Alex Chih (https://alexchih.com)",
       "dependencies": [
         "input-otp"
       ],
@@ -985,6 +1041,8 @@
       "type": "registry:ui",
       "title": "Glass Command",
       "description": "Command palette on strong glass — search, groups, shortcuts. Built on cmdk.",
+      "author": "Alex Chih (https://alexchih.com)",
+      "docs": "GlassCommandDialog composes the glass dialog for a ⌘K palette; use GlassCommand alone for inline search.",
       "dependencies": [
         "cmdk",
         "lucide-react"
@@ -1004,6 +1062,7 @@
       "type": "registry:ui",
       "title": "Glass Combobox",
       "description": "Searchable select composed from the command palette inside a popover.",
+      "author": "Alex Chih (https://alexchih.com)",
       "dependencies": [
         "cmdk",
         "lucide-react"
@@ -1025,6 +1084,7 @@
       "type": "registry:ui",
       "title": "Glass Calendar",
       "description": "Calendar on the washi ground with ruri selection, built on react-day-picker.",
+      "author": "Alex Chih (https://alexchih.com)",
       "dependencies": [
         "react-day-picker",
         "lucide-react"
@@ -1044,6 +1104,7 @@
       "type": "registry:ui",
       "title": "Glass Date Picker",
       "description": "Date picker — glass field trigger, calendar in a strong-glass popover.",
+      "author": "Alex Chih (https://alexchih.com)",
       "dependencies": [
         "react-day-picker",
         "lucide-react"
@@ -1066,6 +1127,8 @@
       "type": "registry:ui",
       "title": "Glass Form",
       "description": "react-hook-form wiring with the washiveil label and message registers.",
+      "author": "Alex Chih (https://alexchih.com)",
+      "docs": "Pairs with react-hook-form’s useForm + zodResolver; GlassFormField wires Controller, ids and aria for you.",
       "dependencies": [
         "react-hook-form",
         "@hookform/resolvers",
@@ -1088,6 +1151,7 @@
       "type": "registry:ui",
       "title": "Lang Switcher",
       "description": "Locale switcher on the glass pill — the active language is a filled ruri moment. For sites that take Chinese & Japanese seriously.",
+      "author": "Alex Chih (https://alexchih.com)",
       "registryDependencies": [
         "https://washiveil.alexchih.com/r/theme.json"
       ],

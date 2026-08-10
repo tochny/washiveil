@@ -2,6 +2,7 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "glass-textarea",
   "title": "Glass Textarea",
+  "author": "Alex Chih (https://alexchih.com)",
   "description": "Multiline input on a translucent glass surface with a ruri focus ring.",
   "registryDependencies": [
     "https://washiveil.alexchih.com/r/theme.json"

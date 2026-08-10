@@ -2,6 +2,7 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "glass-skeleton",
   "title": "Glass Skeleton",
+  "author": "Alex Chih (https://alexchih.com)",
   "description": "Loading placeholder — a shimmering veil.",
   "registryDependencies": [
     "https://washiveil.alexchih.com/r/theme.json"
