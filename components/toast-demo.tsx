@@ -3,14 +3,10 @@
 import { GlassButton } from '@/registry/washiveil/ui/glass-button';
 import { toast } from '@/registry/washiveil/ui/glass-sonner';
 
-export function ToastDemo() {
+export function ToastDemo({ label, title, description }: { label: string; title: string; description: string }) {
   return (
-    <GlassButton
-      variant="secondary"
-      size="sm"
-      onClick={() => toast('A small veil', { description: 'It fades like paper in the light.' })}
-    >
-      Show toast
+    <GlassButton variant="secondary" size="sm" onClick={() => toast(title, { description })}>
+      {label}
     </GlassButton>
   );
 }

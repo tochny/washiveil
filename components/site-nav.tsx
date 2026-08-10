@@ -1,0 +1,73 @@
+'use client';
+
+import * as React from 'react';
+
+import { COPY, LOCALE_LABELS, LOCALE_PATHS, type Locale } from '@/components/copy';
+import { GlassNav } from '@/registry/washiveil/ui/glass-nav';
+import { ThemeToggle } from '@/registry/washiveil/ui/theme-toggle';
+
+const LOCALES: Locale[] = ['en', 'zh-tw', 'ja'];
+
+// Scrollspy lives in the demo, not in GlassNav — the nav stays a controlled
+// component and each consumer decides what "active" means.
+export function SiteNav({ locale }: { locale: Locale }) {
+  const [active, setActive] = React.useState<string | undefined>();
+  const t = COPY[locale];
+
+  const navLinks = [
+    { label: t.nav.surfaces, href: '#surfaces' },
+    { label: t.nav.controls, href: '#controls' },
+    { label: t.nav.overlays, href: '#overlays' },
+    { label: t.nav.structure, href: '#structure' },
+  ];
+
+  React.useEffect(() => {
+    const sections = navLinks.map((l) => document.getElementById(l.href.slice(1))).filter(
+      (el): el is HTMLElement => el !== null,
+    );
+    const visible = new Set<string>();
+    const observer = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (entry.isIntersecting) visible.add(entry.target.id);
+          else visible.delete(entry.target.id);
+        }
+        const current = sections.find((s) => visible.has(s.id));
+        setActive(current ? `#${current.id}` : undefined);
+      },
+      // A band around the upper-middle of the viewport: the section crossing
+      // it owns the pill. Top offset clears the sticky nav.
+      { rootMargin: '-15% 0px -55% 0px' },
+    );
+    sections.forEach((s) => observer.observe(s));
+    return () => observer.disconnect();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  return (
+    <GlassNav
+      brand={<span className="font-display text-xl font-semibold">washiveil</span>}
+      links={navLinks}
+      activeHref={active}
+      cta={{ label: 'GitHub', href: 'https://github.com/tochny' }}
+    >
+      <nav aria-label="Language" className="flex items-center gap-1">
+        {LOCALES.map((l) => (
+          <a
+            key={l}
+            href={LOCALE_PATHS[l]}
+            aria-current={l === locale ? 'page' : undefined}
+            className={`rounded-full px-2 py-1 font-mono text-[0.75rem] ${
+              l === locale
+                ? 'font-semibold text-ruri dark:text-ruri-soft'
+                : 'text-muted-foreground hover:text-foreground'
+            }`}
+          >
+            {LOCALE_LABELS[l]}
+          </a>
+        ))}
+      </nav>
+      <ThemeToggle />
+    </GlassNav>
+  );
+}

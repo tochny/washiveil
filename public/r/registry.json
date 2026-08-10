@@ -101,8 +101,14 @@
         "h1, h2, h3": {
           "text-wrap": "balance"
         },
-        "html[lang='ja'] :is(h1, h2, h3)": {
+        "[lang='ja'] :is(h1, h2, h3)": {
           "word-break": "auto-phrase"
+        },
+        "::selection": {
+          "background": "color-mix(in srgb, var(--sumire) 28%, transparent)"
+        },
+        ".dark ::selection": {
+          "background": "color-mix(in srgb, var(--sumire-soft) 35%, transparent)"
         }
       }
     },

@@ -154,8 +154,17 @@
   --radius-xl: calc(var(--radius) + 4px);
 }
 
-/* ja pages prefer JP glyph forms (Han unification: 直/骨/海… differ from TC) */
-html[lang='ja'] {
+/* Sumire selection — the passive purple moment. Third light, quietest job. */
+::selection {
+  background: color-mix(in srgb, var(--sumire) 28%, transparent);
+}
+.dark ::selection {
+  background: color-mix(in srgb, var(--sumire-soft) 35%, transparent);
+}
+
+/* ja content prefers JP glyph forms (Han unification: 直/骨/海… differ from
+   TC). Scoped to any [lang='ja'] subtree — page-level or embedded. */
+[lang='ja'] {
   --font-sans:
     'Inter Variable', 'Noto Sans JP Variable', 'Noto Sans TC Variable', 'Noto Sans JP', 'Noto Sans TC',
     ui-sans-serif, system-ui, sans-serif;
@@ -183,6 +192,6 @@ h2,
 h3 {
   text-wrap: balance;
 }
-html[lang='ja'] :is(h1, h2, h3) {
+[lang='ja'] :is(h1, h2, h3) {
   word-break: auto-phrase;
 }

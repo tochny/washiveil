@@ -13,7 +13,15 @@ const OPTIONS = [
   { value: 'sumire', label: 'Sumire 菫' },
 ];
 
-export function PickerDemo() {
+export function PickerDemo({
+  comboboxPlaceholder,
+  comboboxEmpty,
+  datePlaceholder,
+}: {
+  comboboxPlaceholder: string;
+  comboboxEmpty: string;
+  datePlaceholder: string;
+}) {
   const [material, setMaterial] = React.useState<string | undefined>();
   const [date, setDate] = React.useState<Date | undefined>();
   return (
@@ -22,10 +30,10 @@ export function PickerDemo() {
         options={OPTIONS}
         value={material}
         onValueChange={setMaterial}
-        placeholder="Pick a material…"
-        emptyText="Nothing woven yet."
+        placeholder={comboboxPlaceholder}
+        emptyText={comboboxEmpty}
       />
-      <GlassDatePicker value={date} onValueChange={setDate} />
+      <GlassDatePicker value={date} onValueChange={setDate} placeholder={datePlaceholder} />
     </div>
   );
 }
