@@ -1,0 +1,24 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "glass-form",
+  "title": "Glass Form",
+  "description": "react-hook-form wiring with the washiveil label and message registers.",
+  "dependencies": [
+    "react-hook-form",
+    "@hookform/resolvers",
+    "zod",
+    "radix-ui"
+  ],
+  "registryDependencies": [
+    "https://washiveil.alexchih.com/r/theme.json",
+    "https://washiveil.alexchih.com/r/glass-label.json"
+  ],
+  "files": [
+    {
+      "path": "registry/washiveil/ui/glass-form.tsx",
+      "content": "'use client'\n\nimport * as React from 'react'\nimport {\n  Controller,\n  FormProvider,\n  useFormContext,\n  type ControllerProps,\n  type FieldPath,\n  type FieldValues,\n} from 'react-hook-form'\nimport { Slot } from 'radix-ui'\n\nimport { cn } from '@/lib/utils'\nimport { GlassLabel } from './glass-label'\n\nconst GlassForm = FormProvider\n\ntype GlassFormFieldContextValue<\n  TFieldValues extends FieldValues = FieldValues,\n  TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,\n> = {\n  name: TName\n}\n\nconst GlassFormFieldContext = React.createContext<GlassFormFieldContextValue>({} as GlassFormFieldContextValue)\n\nfunction GlassFormField<\n  TFieldValues extends FieldValues = FieldValues,\n  TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,\n>({ ...props }: ControllerProps<TFieldValues, TName>) {\n  return (\n    <GlassFormFieldContext.Provider value={{ name: props.name }}>\n      <Controller {...props} />\n    </GlassFormFieldContext.Provider>\n  )\n}\n\nfunction useGlassFormField() {\n  const fieldContext = React.useContext(GlassFormFieldContext)\n  const itemContext = React.useContext(GlassFormItemContext)\n  const { getFieldState, formState } = useFormContext()\n\n  if (!fieldContext.name) {\n    throw new Error('useGlassFormField should be used within <GlassFormField>')\n  }\n\n  const fieldState = getFieldState(fieldContext.name, formState)\n\n  const { id } = itemContext\n\n  return {\n    id,\n    name: fieldContext.name,\n    formItemId: `${id}-form-item`,\n    formDescriptionId: `${id}-form-item-description`,\n    formMessageId: `${id}-form-item-message`,\n    ...fieldState,\n  }\n}\n\ntype GlassFormItemContextValue = {\n  id: string\n}\n\nconst GlassFormItemContext = React.createContext<GlassFormItemContextValue>({} as GlassFormItemContextValue)\n\nconst GlassFormItem = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>(\n  ({ className, ...props }, ref) => {\n    const id = React.useId()\n\n    return (\n      <GlassFormItemContext.Provider value={{ id }}>\n        <div ref={ref} className={cn('grid gap-1.5', className)} {...props} />\n      </GlassFormItemContext.Provider>\n    )\n  },\n)\nGlassFormItem.displayName = 'GlassFormItem'\n\nconst GlassFormLabel = React.forwardRef<\n  React.ComponentRef<typeof GlassLabel>,\n  React.ComponentPropsWithoutRef<typeof GlassLabel>\n>(({ className, ...props }, ref) => {\n  const { error, formItemId } = useGlassFormField()\n\n  return <GlassLabel ref={ref} className={cn(error && 'text-destructive', className)} htmlFor={formItemId} {...props} />\n})\nGlassFormLabel.displayName = 'GlassFormLabel'\n\nconst GlassFormControl = React.forwardRef<\n  React.ComponentRef<typeof Slot.Root>,\n  React.ComponentPropsWithoutRef<typeof Slot.Root>\n>(({ ...props }, ref) => {\n  const { error, formItemId, formDescriptionId, formMessageId } = useGlassFormField()\n\n  return (\n    <Slot.Root\n      ref={ref}\n      id={formItemId}\n      aria-describedby={!error ? formDescriptionId : `${formDescriptionId} ${formMessageId}`}\n      aria-invalid={!!error}\n      {...props}\n    />\n  )\n})\nGlassFormControl.displayName = 'GlassFormControl'\n\nconst GlassFormDescription = React.forwardRef<HTMLParagraphElement, React.HTMLAttributes<HTMLParagraphElement>>(\n  ({ className, ...props }, ref) => {\n    const { formDescriptionId } = useGlassFormField()\n\n    return <p ref={ref} id={formDescriptionId} className={cn('text-xs text-muted-foreground', className)} {...props} />\n  },\n)\nGlassFormDescription.displayName = 'GlassFormDescription'\n\nconst GlassFormMessage = React.forwardRef<HTMLParagraphElement, React.HTMLAttributes<HTMLParagraphElement>>(\n  ({ className, children, ...props }, ref) => {\n    const { error, formMessageId } = useGlassFormField()\n    const body = error ? String(error.message) : children\n\n    if (!body) {\n      return null\n    }\n\n    return (\n      <p ref={ref} id={formMessageId} className={cn('text-xs text-destructive', className)} {...props}>\n        {body}\n      </p>\n    )\n  },\n)\nGlassFormMessage.displayName = 'GlassFormMessage'\n\nexport {\n  useGlassFormField,\n  GlassForm,\n  GlassFormItem,\n  GlassFormLabel,\n  GlassFormControl,\n  GlassFormDescription,\n  GlassFormMessage,\n  GlassFormField,\n}\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

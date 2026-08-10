@@ -42,6 +42,13 @@ token layers: standard shadcn semantic variables, plus the washi extension
 | `glass-tabs` / `glass-accordion` / `glass-table` / `glass-separator` / `glass-alert` | Structure in the editorial register |
 | `glass-skeleton` / `glass-progress` / `glass-avatar` | Quiet states |
 | `glass-breadcrumb` / `glass-pagination` | Quiet wayfinding |
+| `glass-context-menu` / `glass-menubar` / `glass-navigation-menu` | The full menu family on strong glass |
+| `glass-toggle` / `glass-toggle-group` / `glass-collapsible` / `glass-scroll-area` / `glass-aspect-ratio` | Utility primitives |
+| `glass-command` / `glass-combobox` | cmdk palette and searchable select |
+| `glass-calendar` / `glass-date-picker` | day-picker themed to the washi ground |
+| `glass-form` | react-hook-form wiring in the house registers |
+| `glass-drawer` / `glass-input-otp` | Rising veil drawer (Vaul), OTP cells on glass |
+| `glass-kbd` / `glass-spinner` / `glass-empty` | Small states and marks |
 | `share-row` | URL-intent share row — no SDKs, no trackers |
 
 ## The tri-color

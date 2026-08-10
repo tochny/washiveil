@@ -1,4 +1,18 @@
+import { PickerDemo } from '@/components/picker-demo';
 import { ToastDemo } from '@/components/toast-demo';
+import {
+  GlassDrawer,
+  GlassDrawerContent,
+  GlassDrawerDescription,
+  GlassDrawerHeader,
+  GlassDrawerTitle,
+  GlassDrawerTrigger,
+} from '@/registry/washiveil/ui/glass-drawer';
+import { GlassEmpty, GlassEmptyDescription, GlassEmptyIcon, GlassEmptyTitle } from '@/registry/washiveil/ui/glass-empty';
+import { GlassInputOTP, GlassInputOTPGroup, GlassInputOTPSlot } from '@/registry/washiveil/ui/glass-input-otp';
+import { GlassKbd } from '@/registry/washiveil/ui/glass-kbd';
+import { GlassSpinner } from '@/registry/washiveil/ui/glass-spinner';
+import { GlassToggleGroup, GlassToggleGroupItem } from '@/registry/washiveil/ui/glass-toggle-group';
 import { AmbientField } from '@/registry/washiveil/ui/ambient-field';
 import { Chip } from '@/registry/washiveil/ui/chip';
 import { CodeBadge } from '@/registry/washiveil/ui/code-badge';
@@ -151,7 +165,7 @@ export default function Home() {
 
         {/* Hero */}
         <header className="mt-20 sm:mt-28">
-          <StatusBadge>38 registry items</StatusBadge>
+          <StatusBadge>56 registry items</StatusBadge>
           <h1 className="mt-5 font-display text-4xl font-semibold tracking-tight sm:text-5xl">
             Warm paper. Translucent veils.
           </h1>
@@ -170,7 +184,7 @@ export default function Home() {
           <StatStrip
             className="mt-12"
             items={[
-              { value: '38', label: 'registry items' },
+              { value: '56', label: 'registry items' },
               { value: '3', label: 'lights on paper' },
               { value: 'MIT', label: 'licensed' },
             ]}
@@ -485,6 +499,57 @@ export default function Home() {
                 </GlassPaginationContent>
               </GlassPagination>
             </GlassCard>
+          </Section>
+
+          <Section id="pickers" title="Pickers & input" lede="cmdk, day-picker, vaul, and OTP — all wearing the same veil.">
+            <div className="grid gap-4 sm:grid-cols-2">
+              <GlassCard className="grid content-start gap-4">
+                <PickerDemo />
+                <GlassInputOTP maxLength={6}>
+                  <GlassInputOTPGroup>
+                    <GlassInputOTPSlot index={0} />
+                    <GlassInputOTPSlot index={1} />
+                    <GlassInputOTPSlot index={2} />
+                    <GlassInputOTPSlot index={3} />
+                    <GlassInputOTPSlot index={4} />
+                    <GlassInputOTPSlot index={5} />
+                  </GlassInputOTPGroup>
+                </GlassInputOTP>
+                <div className="flex flex-wrap items-center gap-3">
+                  <GlassToggleGroup type="single" defaultValue="veil" variant="outline">
+                    <GlassToggleGroupItem value="washi">Washi</GlassToggleGroupItem>
+                    <GlassToggleGroupItem value="veil">Veil</GlassToggleGroupItem>
+                    <GlassToggleGroupItem value="light">Light</GlassToggleGroupItem>
+                  </GlassToggleGroup>
+                  <GlassDrawer>
+                    <GlassDrawerTrigger asChild>
+                      <GlassButton variant="secondary" size="sm">
+                        Drawer
+                      </GlassButton>
+                    </GlassDrawerTrigger>
+                    <GlassDrawerContent>
+                      <GlassDrawerHeader>
+                        <GlassDrawerTitle>A rising veil</GlassDrawerTitle>
+                        <GlassDrawerDescription>Drag the handle. It floats, inset like the sheet.</GlassDrawerDescription>
+                      </GlassDrawerHeader>
+                    </GlassDrawerContent>
+                  </GlassDrawer>
+                </div>
+                <p className="flex items-center gap-2 text-sm text-muted-foreground">
+                  <GlassSpinner /> Loading with <GlassKbd>⌘</GlassKbd>
+                  <GlassKbd>K</GlassKbd> nearby
+                </p>
+              </GlassCard>
+              <GlassEmpty>
+                <GlassEmptyIcon>
+                  <GlassSpinner aria-hidden="true" />
+                </GlassEmptyIcon>
+                <GlassEmptyTitle>Nothing here yet</GlassEmptyTitle>
+                <GlassEmptyDescription>
+                  The empty state is a dashed washi ground — quiet, not apologetic.
+                </GlassEmptyDescription>
+              </GlassEmpty>
+            </div>
           </Section>
 
           <Section

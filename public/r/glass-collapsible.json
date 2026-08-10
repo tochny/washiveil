@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "glass-collapsible",
+  "title": "Glass Collapsible",
+  "description": "Show/hide region, built on Radix Collapsible.",
+  "dependencies": [
+    "radix-ui"
+  ],
+  "registryDependencies": [
+    "https://washiveil.alexchih.com/r/theme.json"
+  ],
+  "files": [
+    {
+      "path": "registry/washiveil/ui/glass-collapsible.tsx",
+      "content": "'use client'\n\nimport { Collapsible as CollapsiblePrimitive } from 'radix-ui'\n\nconst GlassCollapsible = CollapsiblePrimitive.Root\n\nconst GlassCollapsibleTrigger = CollapsiblePrimitive.CollapsibleTrigger\n\nconst GlassCollapsibleContent = CollapsiblePrimitive.CollapsibleContent\n\nexport { GlassCollapsible, GlassCollapsibleTrigger, GlassCollapsibleContent }\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

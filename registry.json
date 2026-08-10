@@ -742,6 +742,340 @@
           "type": "registry:ui"
         }
       ]
+    },
+    {
+      "name": "glass-context-menu",
+      "type": "registry:ui",
+      "title": "Glass Context Menu",
+      "description": "Right-click menu on strong glass — items, checkboxes, radios, submenus. Built on Radix ContextMenu.",
+      "dependencies": [
+        "radix-ui",
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "https://washiveil.alexchih.com/r/theme.json"
+      ],
+      "files": [
+        {
+          "path": "registry/washiveil/ui/glass-context-menu.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "glass-menubar",
+      "type": "registry:ui",
+      "title": "Glass Menubar",
+      "description": "Application menubar on the glass pill with strong-glass dropdowns, built on Radix Menubar.",
+      "dependencies": [
+        "radix-ui",
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "https://washiveil.alexchih.com/r/theme.json"
+      ],
+      "files": [
+        {
+          "path": "registry/washiveil/ui/glass-menubar.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "glass-navigation-menu",
+      "type": "registry:ui",
+      "title": "Glass Navigation Menu",
+      "description": "Site navigation with strong-glass flyout panels, built on Radix NavigationMenu.",
+      "dependencies": [
+        "radix-ui",
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "https://washiveil.alexchih.com/r/theme.json"
+      ],
+      "files": [
+        {
+          "path": "registry/washiveil/ui/glass-navigation-menu.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "glass-collapsible",
+      "type": "registry:ui",
+      "title": "Glass Collapsible",
+      "description": "Show/hide region, built on Radix Collapsible.",
+      "dependencies": [
+        "radix-ui"
+      ],
+      "registryDependencies": [
+        "https://washiveil.alexchih.com/r/theme.json"
+      ],
+      "files": [
+        {
+          "path": "registry/washiveil/ui/glass-collapsible.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "glass-toggle",
+      "type": "registry:ui",
+      "title": "Glass Toggle",
+      "description": "Pressed-state pill — quiet until on, then ruri. Built on Radix Toggle.",
+      "dependencies": [
+        "radix-ui"
+      ],
+      "registryDependencies": [
+        "https://washiveil.alexchih.com/r/theme.json"
+      ],
+      "files": [
+        {
+          "path": "registry/washiveil/ui/glass-toggle.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "glass-toggle-group",
+      "type": "registry:ui",
+      "title": "Glass Toggle Group",
+      "description": "Segmented toggles on the glass pill ground, built on Radix ToggleGroup.",
+      "dependencies": [
+        "radix-ui"
+      ],
+      "registryDependencies": [
+        "https://washiveil.alexchih.com/r/theme.json"
+      ],
+      "files": [
+        {
+          "path": "registry/washiveil/ui/glass-toggle-group.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "glass-scroll-area",
+      "type": "registry:ui",
+      "title": "Glass Scroll Area",
+      "description": "Custom scrollbar as a faint veil, built on Radix ScrollArea.",
+      "dependencies": [
+        "radix-ui"
+      ],
+      "registryDependencies": [
+        "https://washiveil.alexchih.com/r/theme.json"
+      ],
+      "files": [
+        {
+          "path": "registry/washiveil/ui/glass-scroll-area.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "glass-aspect-ratio",
+      "type": "registry:ui",
+      "title": "Glass Aspect Ratio",
+      "description": "Ratio-locked container, built on Radix AspectRatio.",
+      "dependencies": [
+        "radix-ui"
+      ],
+      "registryDependencies": [
+        "https://washiveil.alexchih.com/r/theme.json"
+      ],
+      "files": [
+        {
+          "path": "registry/washiveil/ui/glass-aspect-ratio.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "glass-kbd",
+      "type": "registry:ui",
+      "title": "Glass Kbd",
+      "description": "Keyboard key cap in the mono register on a faint glass chip.",
+      "registryDependencies": [
+        "https://washiveil.alexchih.com/r/theme.json"
+      ],
+      "files": [
+        {
+          "path": "registry/washiveil/ui/glass-kbd.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "glass-spinner",
+      "type": "registry:ui",
+      "title": "Glass Spinner",
+      "description": "Loading spinner in the quiet register, reduced-motion safe.",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "https://washiveil.alexchih.com/r/theme.json"
+      ],
+      "files": [
+        {
+          "path": "registry/washiveil/ui/glass-spinner.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "glass-empty",
+      "type": "registry:ui",
+      "title": "Glass Empty",
+      "description": "Empty state — icon, title, description, action slot on a soft glass ground.",
+      "registryDependencies": [
+        "https://washiveil.alexchih.com/r/theme.json"
+      ],
+      "files": [
+        {
+          "path": "registry/washiveil/ui/glass-empty.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "glass-drawer",
+      "type": "registry:ui",
+      "title": "Glass Drawer",
+      "description": "Bottom drawer as a rising veil with a grab handle, built on Vaul.",
+      "dependencies": [
+        "vaul"
+      ],
+      "registryDependencies": [
+        "https://washiveil.alexchih.com/r/theme.json"
+      ],
+      "files": [
+        {
+          "path": "registry/washiveil/ui/glass-drawer.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "glass-input-otp",
+      "type": "registry:ui",
+      "title": "Glass Input OTP",
+      "description": "One-time-code input on glass cells with a ruri active caret.",
+      "dependencies": [
+        "input-otp"
+      ],
+      "registryDependencies": [
+        "https://washiveil.alexchih.com/r/theme.json"
+      ],
+      "files": [
+        {
+          "path": "registry/washiveil/ui/glass-input-otp.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "glass-command",
+      "type": "registry:ui",
+      "title": "Glass Command",
+      "description": "Command palette on strong glass — search, groups, shortcuts. Built on cmdk.",
+      "dependencies": [
+        "cmdk",
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "https://washiveil.alexchih.com/r/theme.json"
+      ],
+      "files": [
+        {
+          "path": "registry/washiveil/ui/glass-command.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "glass-combobox",
+      "type": "registry:ui",
+      "title": "Glass Combobox",
+      "description": "Searchable select composed from the command palette inside a popover.",
+      "dependencies": [
+        "cmdk",
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "https://washiveil.alexchih.com/r/theme.json",
+        "https://washiveil.alexchih.com/r/glass-popover.json",
+        "https://washiveil.alexchih.com/r/glass-command.json"
+      ],
+      "files": [
+        {
+          "path": "registry/washiveil/ui/glass-combobox.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "glass-calendar",
+      "type": "registry:ui",
+      "title": "Glass Calendar",
+      "description": "Calendar on the washi ground with ruri selection, built on react-day-picker.",
+      "dependencies": [
+        "react-day-picker",
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "https://washiveil.alexchih.com/r/theme.json"
+      ],
+      "files": [
+        {
+          "path": "registry/washiveil/ui/glass-calendar.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "glass-date-picker",
+      "type": "registry:ui",
+      "title": "Glass Date Picker",
+      "description": "Date picker — glass field trigger, calendar in a strong-glass popover.",
+      "dependencies": [
+        "react-day-picker",
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "https://washiveil.alexchih.com/r/theme.json",
+        "https://washiveil.alexchih.com/r/glass-popover.json",
+        "https://washiveil.alexchih.com/r/glass-calendar.json",
+        "https://washiveil.alexchih.com/r/glass-button.json"
+      ],
+      "files": [
+        {
+          "path": "registry/washiveil/ui/glass-date-picker.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "glass-form",
+      "type": "registry:ui",
+      "title": "Glass Form",
+      "description": "react-hook-form wiring with the washiveil label and message registers.",
+      "dependencies": [
+        "react-hook-form",
+        "@hookform/resolvers",
+        "zod",
+        "radix-ui"
+      ],
+      "registryDependencies": [
+        "https://washiveil.alexchih.com/r/theme.json",
+        "https://washiveil.alexchih.com/r/glass-label.json"
+      ],
+      "files": [
+        {
+          "path": "registry/washiveil/ui/glass-form.tsx",
+          "type": "registry:ui"
+        }
+      ]
     }
   ]
 }

@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "glass-aspect-ratio",
+  "title": "Glass Aspect Ratio",
+  "description": "Ratio-locked container, built on Radix AspectRatio.",
+  "dependencies": [
+    "radix-ui"
+  ],
+  "registryDependencies": [
+    "https://washiveil.alexchih.com/r/theme.json"
+  ],
+  "files": [
+    {
+      "path": "registry/washiveil/ui/glass-aspect-ratio.tsx",
+      "content": "'use client'\n\nimport { AspectRatio as AspectRatioPrimitive } from 'radix-ui'\n\nconst GlassAspectRatio = AspectRatioPrimitive.Root\n\nexport { GlassAspectRatio }\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

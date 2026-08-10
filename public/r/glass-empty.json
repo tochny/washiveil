@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "glass-empty",
+  "title": "Glass Empty",
+  "description": "Empty state — icon, title, description, action slot on a soft glass ground.",
+  "registryDependencies": [
+    "https://washiveil.alexchih.com/r/theme.json"
+  ],
+  "files": [
+    {
+      "path": "registry/washiveil/ui/glass-empty.tsx",
+      "content": "import { cn } from '@/lib/utils'\n\nexport function GlassEmpty({ className, ...props }: React.ComponentProps<'div'>) {\n  return (\n    <div\n      className={cn(\n        'grid place-items-center gap-3 rounded-2xl border border-dashed border-border bg-glass/50 p-10 text-center backdrop-blur-md',\n        className,\n      )}\n      {...props}\n    />\n  )\n}\n\nexport function GlassEmptyIcon({ className, ...props }: React.ComponentProps<'div'>) {\n  return (\n    <div\n      className={cn(\n        'grid size-12 place-items-center rounded-full border border-glass-edge bg-glass text-faint [&_svg]:size-5',\n        className,\n      )}\n      {...props}\n    />\n  )\n}\n\nexport function GlassEmptyTitle({ className, ...props }: React.ComponentProps<'h3'>) {\n  return <h3 className={cn('font-display text-base font-medium', className)} {...props} />\n}\n\nexport function GlassEmptyDescription({ className, ...props }: React.ComponentProps<'p'>) {\n  return <p className={cn('max-w-sm text-sm text-muted-foreground', className)} {...props} />\n}\n\nexport function GlassEmptyContent({ className, ...props }: React.ComponentProps<'div'>) {\n  return (\n    <div\n      className={cn('mt-1 flex flex-wrap items-center justify-center gap-3', className)}\n      {...props}\n    />\n  )\n}\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

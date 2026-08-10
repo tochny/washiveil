@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "glass-spinner",
+  "title": "Glass Spinner",
+  "description": "Loading spinner in the quiet register, reduced-motion safe.",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "https://washiveil.alexchih.com/r/theme.json"
+  ],
+  "files": [
+    {
+      "path": "registry/washiveil/ui/glass-spinner.tsx",
+      "content": "import { LoaderCircle } from 'lucide-react'\n\nimport { cn } from '@/lib/utils'\n\nexport type GlassSpinnerProps = React.ComponentProps<typeof LoaderCircle>\n\nexport function GlassSpinner({ className, ...props }: GlassSpinnerProps) {\n  return (\n    <LoaderCircle\n      role=\"status\"\n      aria-label=\"Loading\"\n      className={cn('size-4 text-muted-foreground motion-safe:animate-spin', className)}\n      {...props}\n    />\n  )\n}\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

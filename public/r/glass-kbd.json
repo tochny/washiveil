@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "glass-kbd",
+  "title": "Glass Kbd",
+  "description": "Keyboard key cap in the mono register on a faint glass chip.",
+  "registryDependencies": [
+    "https://washiveil.alexchih.com/r/theme.json"
+  ],
+  "files": [
+    {
+      "path": "registry/washiveil/ui/glass-kbd.tsx",
+      "content": "import { cn } from '@/lib/utils'\n\nexport type GlassKbdProps = React.ComponentProps<'kbd'>\n\nexport function GlassKbd({ className, ...props }: GlassKbdProps) {\n  return (\n    <kbd\n      className={cn(\n        'inline-flex h-5 min-w-5 items-center justify-center rounded-md border border-glass-edge bg-glass px-1.5 font-mono text-[0.6875rem] font-medium text-muted-foreground backdrop-blur',\n        className,\n      )}\n      {...props}\n    />\n  )\n}\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

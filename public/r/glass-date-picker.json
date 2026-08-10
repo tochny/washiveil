@@ -1,0 +1,24 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "glass-date-picker",
+  "title": "Glass Date Picker",
+  "description": "Date picker — glass field trigger, calendar in a strong-glass popover.",
+  "dependencies": [
+    "react-day-picker",
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "https://washiveil.alexchih.com/r/theme.json",
+    "https://washiveil.alexchih.com/r/glass-popover.json",
+    "https://washiveil.alexchih.com/r/glass-calendar.json",
+    "https://washiveil.alexchih.com/r/glass-button.json"
+  ],
+  "files": [
+    {
+      "path": "registry/washiveil/ui/glass-date-picker.tsx",
+      "content": "'use client'\n\nimport * as React from 'react'\nimport { CalendarIcon } from 'lucide-react'\n\nimport { cn } from '@/lib/utils'\nimport { GlassButton } from './glass-button'\nimport { GlassPopover, GlassPopoverContent, GlassPopoverTrigger } from './glass-popover'\nimport { GlassCalendar } from './glass-calendar'\n\nexport interface GlassDatePickerProps {\n  value?: Date\n  onValueChange?: (date: Date | undefined) => void\n  placeholder?: string\n  className?: string\n}\n\nfunction GlassDatePicker({\n  value,\n  onValueChange,\n  placeholder = 'Pick a date',\n  className,\n}: GlassDatePickerProps) {\n  const [open, setOpen] = React.useState(false)\n  return (\n    <GlassPopover open={open} onOpenChange={setOpen}>\n      <GlassPopoverTrigger asChild>\n        <GlassButton\n          variant=\"secondary\"\n          className={cn(\n            'w-full justify-start rounded-xl font-normal',\n            !value && 'text-faint',\n            className,\n          )}\n        >\n          <CalendarIcon className=\"mr-2 size-4 text-faint\" />\n          {value\n            ? new Intl.DateTimeFormat(undefined, {\n                year: 'numeric',\n                month: 'long',\n                day: 'numeric',\n              }).format(value)\n            : placeholder}\n        </GlassButton>\n      </GlassPopoverTrigger>\n      <GlassPopoverContent className=\"w-auto p-0\">\n        <GlassCalendar\n          mode=\"single\"\n          selected={value}\n          onSelect={(date) => {\n            onValueChange?.(date)\n            setOpen(false)\n          }}\n          autoFocus\n        />\n      </GlassPopoverContent>\n    </GlassPopover>\n  )\n}\nGlassDatePicker.displayName = 'GlassDatePicker'\n\nexport { GlassDatePicker }\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}
