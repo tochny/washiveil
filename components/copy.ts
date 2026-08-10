@@ -351,7 +351,7 @@ const zhTw: Copy = {
 };
 
 const ja: Copy = {
-  nav: { surfaces: 'サーフェス', controls: 'コントロール', overlays: 'オーバーレイ', structure: '構造', install: 'インストール' },
+  nav: { surfaces: '表層', controls: '操作', overlays: '重ね', structure: '構造', install: '導入' },
   hero: {
     badge: 'レジストリ項目 57 点',
     title: '温かい紙、透ける紗。',
