@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "glass-sonner",
+  "title": "Glass Sonner",
+  "description": "Toasts as small veils — sonner styled on the washi glass registers.",
+  "dependencies": [
+    "sonner"
+  ],
+  "registryDependencies": [
+    "https://washiveil.alexchih.com/r/theme.json"
+  ],
+  "files": [
+    {
+      "path": "registry/washiveil/ui/glass-sonner.tsx",
+      "content": "'use client'\n\nimport * as React from 'react'\nimport { Toaster as Sonner, toast } from 'sonner'\n\ntype GlassToasterProps = React.ComponentProps<typeof Sonner>\n\nfunction GlassToaster({ ...props }: GlassToasterProps) {\n  const [theme, setTheme] = React.useState<'light' | 'dark'>('light')\n\n  React.useEffect(() => {\n    const root = document.documentElement\n    const update = () => {\n      setTheme(root.classList.contains('dark') ? 'dark' : 'light')\n    }\n    update()\n    const observer = new MutationObserver(update)\n    observer.observe(root, { attributes: true, attributeFilter: ['class'] })\n    return () => observer.disconnect()\n  }, [])\n\n  return (\n    <Sonner\n      theme={theme}\n      className=\"toaster group\"\n      toastOptions={{\n        classNames: {\n          toast:\n            'group toast group-[.toaster]:rounded-2xl group-[.toaster]:border-glass-edge group-[.toaster]:bg-glass-stronger group-[.toaster]:backdrop-blur-2xl group-[.toaster]:text-foreground group-[.toaster]:shadow-[0_16px_48px_rgba(28,25,20,0.12)]',\n          description: 'group-[.toast]:text-muted-foreground',\n          actionButton: 'group-[.toast]:bg-ruri group-[.toast]:text-white dark:group-[.toast]:bg-ruri-soft dark:group-[.toast]:text-deep',\n          cancelButton: 'group-[.toast]:bg-muted group-[.toast]:text-muted-foreground',\n        },\n      }}\n      {...props}\n    />\n  )\n}\n\nexport { GlassToaster, toast }\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

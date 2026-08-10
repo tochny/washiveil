@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "glass-avatar",
+  "title": "Glass Avatar",
+  "description": "Avatar with a glass ring, built on Radix Avatar.",
+  "dependencies": [
+    "radix-ui"
+  ],
+  "registryDependencies": [
+    "https://washiveil.alexchih.com/r/theme.json"
+  ],
+  "files": [
+    {
+      "path": "registry/washiveil/ui/glass-avatar.tsx",
+      "content": "'use client';\n\nimport * as React from 'react';\nimport { Avatar as AvatarPrimitive } from 'radix-ui';\n\nimport { cn } from '@/lib/utils';\n\nconst GlassAvatar = React.forwardRef<\n  React.ComponentRef<typeof AvatarPrimitive.Root>,\n  React.ComponentPropsWithoutRef<typeof AvatarPrimitive.Root>\n>(({ className, ...props }, ref) => (\n  <AvatarPrimitive.Root\n    ref={ref}\n    className={cn(\n      'relative flex size-10 shrink-0 overflow-hidden rounded-full border border-glass-edge bg-glass backdrop-blur',\n      className,\n    )}\n    {...props}\n  />\n));\nGlassAvatar.displayName = AvatarPrimitive.Root.displayName;\n\nconst GlassAvatarImage = React.forwardRef<\n  React.ComponentRef<typeof AvatarPrimitive.Image>,\n  React.ComponentPropsWithoutRef<typeof AvatarPrimitive.Image>\n>(({ className, ...props }, ref) => (\n  <AvatarPrimitive.Image ref={ref} className={cn('aspect-square size-full object-cover', className)} {...props} />\n));\nGlassAvatarImage.displayName = AvatarPrimitive.Image.displayName;\n\nconst GlassAvatarFallback = React.forwardRef<\n  React.ComponentRef<typeof AvatarPrimitive.Fallback>,\n  React.ComponentPropsWithoutRef<typeof AvatarPrimitive.Fallback>\n>(({ className, ...props }, ref) => (\n  <AvatarPrimitive.Fallback\n    ref={ref}\n    className={cn(\n      'flex size-full items-center justify-center font-mono text-[0.75rem] uppercase text-muted-foreground',\n      className,\n    )}\n    {...props}\n  />\n));\nGlassAvatarFallback.displayName = AvatarPrimitive.Fallback.displayName;\n\nexport { GlassAvatar, GlassAvatarImage, GlassAvatarFallback };\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

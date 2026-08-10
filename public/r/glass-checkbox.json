@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "glass-checkbox",
+  "title": "Glass Checkbox",
+  "description": "Checkbox on glass with a ruri checked state, built on Radix Checkbox.",
+  "dependencies": [
+    "radix-ui",
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "https://washiveil.alexchih.com/r/theme.json"
+  ],
+  "files": [
+    {
+      "path": "registry/washiveil/ui/glass-checkbox.tsx",
+      "content": "'use client'\n\nimport * as React from 'react'\nimport { Checkbox as CheckboxPrimitive } from 'radix-ui'\nimport { Check } from 'lucide-react'\n\nimport { cn } from '@/lib/utils'\n\nconst GlassCheckbox = React.forwardRef<\n  React.ComponentRef<typeof CheckboxPrimitive.Root>,\n  React.ComponentPropsWithoutRef<typeof CheckboxPrimitive.Root>\n>(({ className, ...props }, ref) => (\n  <CheckboxPrimitive.Root\n    ref={ref}\n    className={cn(\n      'peer size-4.5 shrink-0 rounded-md border border-glass-edge bg-glass backdrop-blur focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:cursor-not-allowed disabled:opacity-50 data-[state=checked]:bg-ruri data-[state=checked]:border-ruri data-[state=checked]:text-white dark:data-[state=checked]:bg-ruri-soft dark:data-[state=checked]:border-ruri-soft dark:data-[state=checked]:text-deep',\n      className,\n    )}\n    {...props}\n  >\n    <CheckboxPrimitive.Indicator className={cn('flex items-center justify-center text-current')}>\n      <Check className=\"size-3.5\" />\n    </CheckboxPrimitive.Indicator>\n  </CheckboxPrimitive.Root>\n))\nGlassCheckbox.displayName = CheckboxPrimitive.Root.displayName\n\nexport { GlassCheckbox }\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "glass-alert",
+  "title": "Glass Alert",
+  "description": "Inline alert on glass — neutral, ruri info, korozen warning, destructive.",
+  "registryDependencies": [
+    "https://washiveil.alexchih.com/r/theme.json"
+  ],
+  "files": [
+    {
+      "path": "registry/washiveil/ui/glass-alert.tsx",
+      "content": "import * as React from 'react'\nimport { cva, type VariantProps } from 'class-variance-authority'\n\nimport { cn } from '@/lib/utils'\n\nexport const glassAlertVariants = cva(\n  'relative grid grid-cols-[0_1fr] items-start gap-x-3 rounded-2xl border p-4 text-sm backdrop-blur-md [&>svg+div]:translate-y-[-3px] [&>svg]:absolute [&>svg]:left-4 [&>svg]:top-4 [&>svg]:size-4 [&>svg]:text-current has-[svg]:grid-cols-[auto_1fr] has-[svg]:pl-11',\n  {\n    variants: {\n      variant: {\n        default: 'border-glass-border bg-glass text-body',\n        info: 'border-ruri/25 bg-ruri/10 text-ruri dark:border-ruri-soft/25 dark:bg-ruri-soft/10 dark:text-ruri-soft',\n        warning:\n          'border-korozen/25 bg-korozen/10 text-korozen dark:border-korozen-soft/25 dark:bg-korozen-soft/10 dark:text-korozen-soft',\n        destructive: 'border-destructive/30 bg-destructive/10 text-destructive',\n      },\n    },\n    defaultVariants: {\n      variant: 'default',\n    },\n  },\n)\n\nexport interface GlassAlertProps extends React.HTMLAttributes<HTMLDivElement>, VariantProps<typeof glassAlertVariants> {}\n\nfunction GlassAlert({ variant, className, ...props }: GlassAlertProps) {\n  return <div role=\"alert\" className={cn(glassAlertVariants({ variant }), className)} {...props} />\n}\n\nfunction GlassAlertTitle({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) {\n  return <h5 className={cn('col-start-2 font-medium leading-none tracking-tight', className)} {...props} />\n}\n\nfunction GlassAlertDescription({ className, ...props }: React.HTMLAttributes<HTMLParagraphElement>) {\n  return <div className={cn('col-start-2 text-sm text-muted-foreground [&_p]:leading-relaxed', className)} {...props} />\n}\n\nexport { GlassAlert, GlassAlertTitle, GlassAlertDescription }\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

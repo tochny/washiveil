@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "glass-progress",
+  "title": "Glass Progress",
+  "description": "Progress bar with a ruri fill on a glass track, built on Radix Progress.",
+  "dependencies": [
+    "radix-ui"
+  ],
+  "registryDependencies": [
+    "https://washiveil.alexchih.com/r/theme.json"
+  ],
+  "files": [
+    {
+      "path": "registry/washiveil/ui/glass-progress.tsx",
+      "content": "'use client';\n\nimport * as React from 'react';\nimport { Progress as ProgressPrimitive } from 'radix-ui';\n\nimport { cn } from '@/lib/utils';\n\nconst GlassProgress = React.forwardRef<\n  React.ComponentRef<typeof ProgressPrimitive.Root>,\n  React.ComponentPropsWithoutRef<typeof ProgressPrimitive.Root>\n>(({ className, value, ...props }, ref) => (\n  <ProgressPrimitive.Root\n    ref={ref}\n    value={value}\n    className={cn('h-2 w-full overflow-hidden rounded-full border border-glass-edge bg-glass backdrop-blur', className)}\n    {...props}\n  >\n    <ProgressPrimitive.Indicator\n      className=\"h-full rounded-full bg-ruri transition-transform dark:bg-ruri-soft\"\n      style={{ transform: `translateX(-${100 - (value || 0)}%)` }}\n    />\n  </ProgressPrimitive.Root>\n));\nGlassProgress.displayName = ProgressPrimitive.Root.displayName;\n\nexport { GlassProgress };\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

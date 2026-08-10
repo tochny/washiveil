@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "glass-radio-group",
+  "title": "Glass Radio Group",
+  "description": "Radio group on glass with ruri selection dots, built on Radix RadioGroup.",
+  "dependencies": [
+    "radix-ui"
+  ],
+  "registryDependencies": [
+    "https://washiveil.alexchih.com/r/theme.json"
+  ],
+  "files": [
+    {
+      "path": "registry/washiveil/ui/glass-radio-group.tsx",
+      "content": "'use client'\n\nimport * as React from 'react'\nimport { RadioGroup as RadioGroupPrimitive } from 'radix-ui'\n\nimport { cn } from '@/lib/utils'\n\nconst GlassRadioGroup = React.forwardRef<\n  React.ComponentRef<typeof RadioGroupPrimitive.Root>,\n  React.ComponentPropsWithoutRef<typeof RadioGroupPrimitive.Root>\n>(({ className, ...props }, ref) => (\n  <RadioGroupPrimitive.Root className={cn('grid gap-2.5', className)} {...props} ref={ref} />\n))\nGlassRadioGroup.displayName = RadioGroupPrimitive.Root.displayName\n\nconst GlassRadioGroupItem = React.forwardRef<\n  React.ComponentRef<typeof RadioGroupPrimitive.Item>,\n  React.ComponentPropsWithoutRef<typeof RadioGroupPrimitive.Item>\n>(({ className, ...props }, ref) => (\n  <RadioGroupPrimitive.Item\n    ref={ref}\n    className={cn(\n      'peer aspect-square size-4.5 rounded-full border border-glass-edge bg-glass focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:cursor-not-allowed disabled:opacity-50',\n      className,\n    )}\n    {...props}\n  >\n    <RadioGroupPrimitive.Indicator className=\"flex items-center justify-center\">\n      <span className=\"size-2 rounded-full bg-ruri dark:bg-ruri-soft\" />\n    </RadioGroupPrimitive.Indicator>\n  </RadioGroupPrimitive.Item>\n))\nGlassRadioGroupItem.displayName = RadioGroupPrimitive.Item.displayName\n\nexport { GlassRadioGroup, GlassRadioGroupItem }\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

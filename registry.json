@@ -350,6 +350,398 @@
           "type": "registry:ui"
         }
       ]
+    },
+    {
+      "name": "glass-label",
+      "type": "registry:ui",
+      "title": "Glass Label",
+      "description": "Form label in the mono uppercase register.",
+      "dependencies": [
+        "radix-ui"
+      ],
+      "registryDependencies": [
+        "https://washiveil.alexchih.com/r/theme.json"
+      ],
+      "files": [
+        {
+          "path": "registry/washiveil/ui/glass-label.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "glass-select",
+      "type": "registry:ui",
+      "title": "Glass Select",
+      "description": "Select on the glass field register — popover panel on strong glass, built on Radix Select.",
+      "dependencies": [
+        "radix-ui",
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "https://washiveil.alexchih.com/r/theme.json"
+      ],
+      "files": [
+        {
+          "path": "registry/washiveil/ui/glass-select.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "glass-switch",
+      "type": "registry:ui",
+      "title": "Glass Switch",
+      "description": "Toggle switch — ruri track when on, glass thumb, built on Radix Switch.",
+      "dependencies": [
+        "radix-ui"
+      ],
+      "registryDependencies": [
+        "https://washiveil.alexchih.com/r/theme.json"
+      ],
+      "files": [
+        {
+          "path": "registry/washiveil/ui/glass-switch.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "glass-checkbox",
+      "type": "registry:ui",
+      "title": "Glass Checkbox",
+      "description": "Checkbox on glass with a ruri checked state, built on Radix Checkbox.",
+      "dependencies": [
+        "radix-ui",
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "https://washiveil.alexchih.com/r/theme.json"
+      ],
+      "files": [
+        {
+          "path": "registry/washiveil/ui/glass-checkbox.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "glass-radio-group",
+      "type": "registry:ui",
+      "title": "Glass Radio Group",
+      "description": "Radio group on glass with ruri selection dots, built on Radix RadioGroup.",
+      "dependencies": [
+        "radix-ui"
+      ],
+      "registryDependencies": [
+        "https://washiveil.alexchih.com/r/theme.json"
+      ],
+      "files": [
+        {
+          "path": "registry/washiveil/ui/glass-radio-group.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "glass-slider",
+      "type": "registry:ui",
+      "title": "Glass Slider",
+      "description": "Slider with a ruri range on a glass track, built on Radix Slider.",
+      "dependencies": [
+        "radix-ui"
+      ],
+      "registryDependencies": [
+        "https://washiveil.alexchih.com/r/theme.json"
+      ],
+      "files": [
+        {
+          "path": "registry/washiveil/ui/glass-slider.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "glass-popover",
+      "type": "registry:ui",
+      "title": "Glass Popover",
+      "description": "Popover panel on strong glass, built on Radix Popover.",
+      "dependencies": [
+        "radix-ui"
+      ],
+      "registryDependencies": [
+        "https://washiveil.alexchih.com/r/theme.json"
+      ],
+      "files": [
+        {
+          "path": "registry/washiveil/ui/glass-popover.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "glass-dropdown-menu",
+      "type": "registry:ui",
+      "title": "Glass Dropdown Menu",
+      "description": "Menu on strong glass — items, labels, separators, shortcuts, submenus. Built on Radix DropdownMenu.",
+      "dependencies": [
+        "radix-ui",
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "https://washiveil.alexchih.com/r/theme.json"
+      ],
+      "files": [
+        {
+          "path": "registry/washiveil/ui/glass-dropdown-menu.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "glass-sheet",
+      "type": "registry:ui",
+      "title": "Glass Sheet",
+      "description": "Side sheet as a veil — slides from any edge over a soft scrim. Built on Radix Dialog.",
+      "dependencies": [
+        "radix-ui",
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "https://washiveil.alexchih.com/r/theme.json"
+      ],
+      "files": [
+        {
+          "path": "registry/washiveil/ui/glass-sheet.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "glass-alert-dialog",
+      "type": "registry:ui",
+      "title": "Glass Alert Dialog",
+      "description": "Confirmation dialog on strong glass, built on Radix AlertDialog.",
+      "dependencies": [
+        "radix-ui"
+      ],
+      "registryDependencies": [
+        "https://washiveil.alexchih.com/r/theme.json"
+      ],
+      "files": [
+        {
+          "path": "registry/washiveil/ui/glass-alert-dialog.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "glass-hover-card",
+      "type": "registry:ui",
+      "title": "Glass Hover Card",
+      "description": "Hover card on strong glass, built on Radix HoverCard.",
+      "dependencies": [
+        "radix-ui"
+      ],
+      "registryDependencies": [
+        "https://washiveil.alexchih.com/r/theme.json"
+      ],
+      "files": [
+        {
+          "path": "registry/washiveil/ui/glass-hover-card.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "glass-sonner",
+      "type": "registry:ui",
+      "title": "Glass Sonner",
+      "description": "Toasts as small veils — sonner styled on the washi glass registers.",
+      "dependencies": [
+        "sonner"
+      ],
+      "registryDependencies": [
+        "https://washiveil.alexchih.com/r/theme.json"
+      ],
+      "files": [
+        {
+          "path": "registry/washiveil/ui/glass-sonner.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "glass-tabs",
+      "type": "registry:ui",
+      "title": "Glass Tabs",
+      "description": "Pill tab list on a glass ground with a ruri active tab, built on Radix Tabs.",
+      "dependencies": [
+        "radix-ui"
+      ],
+      "registryDependencies": [
+        "https://washiveil.alexchih.com/r/theme.json"
+      ],
+      "files": [
+        {
+          "path": "registry/washiveil/ui/glass-tabs.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "glass-accordion",
+      "type": "registry:ui",
+      "title": "Glass Accordion",
+      "description": "Accordion on glass with soft dividers, built on Radix Accordion.",
+      "dependencies": [
+        "radix-ui",
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "https://washiveil.alexchih.com/r/theme.json"
+      ],
+      "files": [
+        {
+          "path": "registry/washiveil/ui/glass-accordion.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "glass-table",
+      "type": "registry:ui",
+      "title": "Glass Table",
+      "description": "Data table in the washi editorial register — mono uppercase header, soft row dividers.",
+      "registryDependencies": [
+        "https://washiveil.alexchih.com/r/theme.json"
+      ],
+      "files": [
+        {
+          "path": "registry/washiveil/ui/glass-table.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "glass-separator",
+      "type": "registry:ui",
+      "title": "Glass Separator",
+      "description": "Hairline separator on the soft border register, built on Radix Separator.",
+      "dependencies": [
+        "radix-ui"
+      ],
+      "registryDependencies": [
+        "https://washiveil.alexchih.com/r/theme.json"
+      ],
+      "files": [
+        {
+          "path": "registry/washiveil/ui/glass-separator.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "glass-alert",
+      "type": "registry:ui",
+      "title": "Glass Alert",
+      "description": "Inline alert on glass — neutral, ruri info, korozen warning, destructive.",
+      "registryDependencies": [
+        "https://washiveil.alexchih.com/r/theme.json"
+      ],
+      "files": [
+        {
+          "path": "registry/washiveil/ui/glass-alert.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "glass-skeleton",
+      "type": "registry:ui",
+      "title": "Glass Skeleton",
+      "description": "Loading placeholder — a shimmering veil.",
+      "registryDependencies": [
+        "https://washiveil.alexchih.com/r/theme.json"
+      ],
+      "files": [
+        {
+          "path": "registry/washiveil/ui/glass-skeleton.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "glass-progress",
+      "type": "registry:ui",
+      "title": "Glass Progress",
+      "description": "Progress bar with a ruri fill on a glass track, built on Radix Progress.",
+      "dependencies": [
+        "radix-ui"
+      ],
+      "registryDependencies": [
+        "https://washiveil.alexchih.com/r/theme.json"
+      ],
+      "files": [
+        {
+          "path": "registry/washiveil/ui/glass-progress.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "glass-avatar",
+      "type": "registry:ui",
+      "title": "Glass Avatar",
+      "description": "Avatar with a glass ring, built on Radix Avatar.",
+      "dependencies": [
+        "radix-ui"
+      ],
+      "registryDependencies": [
+        "https://washiveil.alexchih.com/r/theme.json"
+      ],
+      "files": [
+        {
+          "path": "registry/washiveil/ui/glass-avatar.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "glass-breadcrumb",
+      "type": "registry:ui",
+      "title": "Glass Breadcrumb",
+      "description": "Breadcrumb trail in the quiet text register.",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "https://washiveil.alexchih.com/r/theme.json"
+      ],
+      "files": [
+        {
+          "path": "registry/washiveil/ui/glass-breadcrumb.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "glass-pagination",
+      "type": "registry:ui",
+      "title": "Glass Pagination",
+      "description": "Pagination pills on the ghost-circle register.",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "https://washiveil.alexchih.com/r/theme.json"
+      ],
+      "files": [
+        {
+          "path": "registry/washiveil/ui/glass-pagination.tsx",
+          "type": "registry:ui"
+        }
+      ]
     }
   ]
 }

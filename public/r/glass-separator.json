@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "glass-separator",
+  "title": "Glass Separator",
+  "description": "Hairline separator on the soft border register, built on Radix Separator.",
+  "dependencies": [
+    "radix-ui"
+  ],
+  "registryDependencies": [
+    "https://washiveil.alexchih.com/r/theme.json"
+  ],
+  "files": [
+    {
+      "path": "registry/washiveil/ui/glass-separator.tsx",
+      "content": "'use client'\n\nimport * as React from 'react'\nimport { Separator as SeparatorPrimitive } from 'radix-ui'\n\nimport { cn } from '@/lib/utils'\n\nconst GlassSeparator = React.forwardRef<\n  React.ComponentRef<typeof SeparatorPrimitive.Root>,\n  React.ComponentPropsWithoutRef<typeof SeparatorPrimitive.Root>\n>(({ className, orientation = 'horizontal', decorative = true, ...props }, ref) => (\n  <SeparatorPrimitive.Root\n    ref={ref}\n    decorative={decorative}\n    orientation={orientation}\n    className={cn(\n      'shrink-0 bg-border',\n      orientation === 'horizontal' ? 'h-px w-full' : 'h-full w-px',\n      className,\n    )}\n    {...props}\n  />\n))\nGlassSeparator.displayName = SeparatorPrimitive.Root.displayName\n\nexport { GlassSeparator }\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

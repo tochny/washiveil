@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "glass-accordion",
+  "title": "Glass Accordion",
+  "description": "Accordion on glass with soft dividers, built on Radix Accordion.",
+  "dependencies": [
+    "radix-ui",
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "https://washiveil.alexchih.com/r/theme.json"
+  ],
+  "files": [
+    {
+      "path": "registry/washiveil/ui/glass-accordion.tsx",
+      "content": "'use client'\n\nimport * as React from 'react'\nimport { Accordion as AccordionPrimitive } from 'radix-ui'\nimport { ChevronDown } from 'lucide-react'\n\nimport { cn } from '@/lib/utils'\n\nconst GlassAccordion = AccordionPrimitive.Root\n\nconst GlassAccordionItem = React.forwardRef<\n  React.ComponentRef<typeof AccordionPrimitive.Item>,\n  React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Item>\n>(({ className, ...props }, ref) => (\n  <AccordionPrimitive.Item\n    ref={ref}\n    className={cn('border-b border-foreground/10 last:border-b-0', className)}\n    {...props}\n  />\n))\nGlassAccordionItem.displayName = 'GlassAccordionItem'\n\nconst GlassAccordionTrigger = React.forwardRef<\n  React.ComponentRef<typeof AccordionPrimitive.Trigger>,\n  React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Trigger>\n>(({ className, children, ...props }, ref) => (\n  <AccordionPrimitive.Header className=\"flex\">\n    <AccordionPrimitive.Trigger\n      ref={ref}\n      className={cn(\n        'flex flex-1 items-center justify-between py-4 text-left text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background hover:text-ruri dark:hover:text-ruri-soft [&[data-state=open]>svg]:rotate-180',\n        className,\n      )}\n      {...props}\n    >\n      {children}\n      <ChevronDown className=\"size-4 shrink-0 text-faint transition-transform duration-200\" />\n    </AccordionPrimitive.Trigger>\n  </AccordionPrimitive.Header>\n))\nGlassAccordionTrigger.displayName = 'GlassAccordionTrigger'\n\nconst GlassAccordionContent = React.forwardRef<\n  React.ComponentRef<typeof AccordionPrimitive.Content>,\n  React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Content>\n>(({ className, children, ...props }, ref) => (\n  <AccordionPrimitive.Content\n    ref={ref}\n    className=\"overflow-hidden text-sm text-body data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down\"\n    {...props}\n  >\n    <div className={cn('pb-4', className)}>{children}</div>\n  </AccordionPrimitive.Content>\n))\nGlassAccordionContent.displayName = 'GlassAccordionContent'\n\nexport { GlassAccordion, GlassAccordionItem, GlassAccordionTrigger, GlassAccordionContent }\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

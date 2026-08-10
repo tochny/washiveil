@@ -34,9 +34,14 @@ token layers: standard shadcn semantic variables, plus the washi extension
 | `status-badge` | Live-status pill with pulse dot |
 | `code-badge` | Mono identifier badge |
 | `glass-toc` | On-this-page navigation card |
-| `glass-input` / `glass-textarea` | Form fields on glass |
-| `glass-dialog` | Modal as a veil (Radix Dialog) |
-| `glass-tooltip` | Tooltip on strong glass (Radix Tooltip) |
+| `glass-input` / `glass-textarea` / `glass-label` | Form fields on glass |
+| `glass-select` / `glass-switch` / `glass-checkbox` / `glass-radio-group` / `glass-slider` | The full control set, ruri-accented |
+| `glass-dialog` / `glass-sheet` / `glass-alert-dialog` | Modals and sheets as floating veils |
+| `glass-popover` / `glass-dropdown-menu` / `glass-hover-card` / `glass-tooltip` | Floating panels on strong glass |
+| `glass-sonner` | Toasts as small veils |
+| `glass-tabs` / `glass-accordion` / `glass-table` / `glass-separator` / `glass-alert` | Structure in the editorial register |
+| `glass-skeleton` / `glass-progress` / `glass-avatar` | Quiet states |
+| `glass-breadcrumb` / `glass-pagination` | Quiet wayfinding |
 | `share-row` | URL-intent share row — no SDKs, no trackers |
 
 ## The tri-color
@@ -60,8 +65,9 @@ tuned for contrast on the washi ground; the lineage is the point, not a spectral
 
 ## Roadmap
 
-Phase 2 (deferred deliberately, not forgotten): `glass-select`, `glass-tabs`,
-`glass-toast`, `glass-table`, `glass-accordion`, blocks (hero, footer, contact).
+Deferred deliberately, not forgotten: `glass-command`, `glass-calendar`,
+`glass-carousel`, charts, and blocks (hero, footer, contact) — heavy
+dependencies or low glass leverage, revisited on demand.
 
 ## Design story
 

@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "glass-breadcrumb",
+  "title": "Glass Breadcrumb",
+  "description": "Breadcrumb trail in the quiet text register.",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "https://washiveil.alexchih.com/r/theme.json"
+  ],
+  "files": [
+    {
+      "path": "registry/washiveil/ui/glass-breadcrumb.tsx",
+      "content": "import * as React from 'react';\nimport { Slot } from 'radix-ui';\nimport { ChevronRight, MoreHorizontal } from 'lucide-react';\n\nimport { cn } from '@/lib/utils';\n\nfunction GlassBreadcrumb({ ...props }: React.ComponentProps<'nav'>) {\n  return <nav aria-label=\"breadcrumb\" {...props} />;\n}\n\nfunction GlassBreadcrumbList({ className, ...props }: React.ComponentProps<'ol'>) {\n  return (\n    <ol\n      className={cn('flex flex-wrap items-center gap-1.5 text-sm text-muted-foreground', className)}\n      {...props}\n    />\n  );\n}\n\nfunction GlassBreadcrumbItem({ className, ...props }: React.ComponentProps<'li'>) {\n  return <li className={cn('inline-flex items-center gap-1.5', className)} {...props} />;\n}\n\ninterface GlassBreadcrumbLinkProps extends React.ComponentProps<'a'> {\n  asChild?: boolean;\n}\n\nfunction GlassBreadcrumbLink({ asChild, className, ...props }: GlassBreadcrumbLinkProps) {\n  const Comp = asChild ? Slot.Root : 'a';\n  return (\n    <Comp\n      className={cn('transition-colors hover:text-ruri dark:hover:text-ruri-soft', className)}\n      {...props}\n    />\n  );\n}\n\nfunction GlassBreadcrumbPage({ className, ...props }: React.ComponentProps<'span'>) {\n  return (\n    <span\n      role=\"link\"\n      aria-disabled=\"true\"\n      aria-current=\"page\"\n      className={cn('text-foreground', className)}\n      {...props}\n    />\n  );\n}\n\nfunction GlassBreadcrumbSeparator({ children, className, ...props }: React.ComponentProps<'li'>) {\n  return (\n    <li role=\"presentation\" aria-hidden=\"true\" className={cn('[&>svg]:size-3.5', className)} {...props}>\n      {children ?? <ChevronRight className=\"text-faint\" />}\n    </li>\n  );\n}\n\nfunction GlassBreadcrumbEllipsis({ className, ...props }: React.ComponentProps<'span'>) {\n  return (\n    <span\n      className={cn('grid size-9 place-items-center', className)}\n      {...props}\n    >\n      <MoreHorizontal className=\"size-4 text-faint\" />\n      <span className=\"sr-only\">More</span>\n    </span>\n  );\n}\n\nexport {\n  GlassBreadcrumb,\n  GlassBreadcrumbList,\n  GlassBreadcrumbItem,\n  GlassBreadcrumbLink,\n  GlassBreadcrumbPage,\n  GlassBreadcrumbSeparator,\n  GlassBreadcrumbEllipsis,\n};\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}
