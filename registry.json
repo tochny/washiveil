@@ -1,0 +1,236 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "washiveil",
+  "homepage": "https://washiveil.alexchih.com",
+  "items": [
+    {
+      "name": "theme",
+      "type": "registry:theme",
+      "title": "Washi Veil Theme",
+      "description": "Warm washi ground, translucent glass veils, and the ruri/korozen/sumire tri-color — light and dark. Installs the token layer every Washi Veil component builds on.",
+      "cssVars": {
+        "theme": {
+          "font-sans": "'Inter Variable', 'Noto Sans TC Variable', 'Noto Sans JP Variable', 'Noto Sans TC', 'Noto Sans JP', ui-sans-serif, system-ui, sans-serif",
+          "font-display": "'Manrope Variable', 'Noto Sans TC Variable', 'Noto Sans JP Variable', 'Noto Sans TC', 'Noto Sans JP', ui-sans-serif, system-ui, sans-serif",
+          "font-mono": "'JetBrains Mono Variable', 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace",
+          "color-body": "var(--body)",
+          "color-faint": "var(--faint)",
+          "color-glass": "var(--glass)",
+          "color-glass-border": "var(--glass-border)",
+          "color-glass-edge": "var(--glass-edge)",
+          "color-glass-strong": "var(--glass-strong)",
+          "color-glass-stronger": "var(--glass-stronger)",
+          "color-ruri": "var(--ruri)",
+          "color-ruri-soft": "var(--ruri-soft)",
+          "color-ruri-pale": "var(--ruri-pale)",
+          "color-korozen": "var(--korozen)",
+          "color-korozen-soft": "var(--korozen-soft)",
+          "color-korozen-deep": "var(--korozen-deep)",
+          "color-sumire": "var(--sumire)",
+          "color-sumire-soft": "var(--sumire-soft)",
+          "color-deep": "var(--deep)"
+        },
+        "light": {
+          "radius": "1rem",
+          "background": "#f7f3ec",
+          "foreground": "#1c1914",
+          "body": "#4a443c",
+          "faint": "#9a9184",
+          "muted": "rgba(28, 25, 20, 0.06)",
+          "muted-foreground": "#6e6659",
+          "card": "rgba(255, 255, 255, 0.45)",
+          "card-foreground": "#1c1914",
+          "popover": "rgba(255, 255, 255, 0.85)",
+          "popover-foreground": "#1c1914",
+          "primary": "#d0722e",
+          "primary-foreground": "#ffffff",
+          "secondary": "rgba(255, 255, 255, 0.4)",
+          "secondary-foreground": "#4a443c",
+          "accent": "rgba(46, 99, 184, 0.1)",
+          "accent-foreground": "#2e63b8",
+          "destructive": "#b0452f",
+          "destructive-foreground": "#ffffff",
+          "border": "rgba(28, 25, 20, 0.15)",
+          "input": "rgba(28, 25, 20, 0.15)",
+          "ring": "#2e63b8",
+          "glass": "rgba(255, 255, 255, 0.45)",
+          "glass-border": "rgba(255, 255, 255, 0.55)",
+          "glass-edge": "rgba(255, 255, 255, 0.5)",
+          "glass-strong": "rgba(255, 255, 255, 0.75)",
+          "glass-stronger": "rgba(255, 255, 255, 0.85)",
+          "ruri": "#2e63b8",
+          "ruri-soft": "#82b4f0",
+          "ruri-pale": "#b7d3f8",
+          "korozen": "#d0722e",
+          "korozen-soft": "#f2a36b",
+          "korozen-deep": "#b64f1b",
+          "sumire": "#7b68c8",
+          "sumire-soft": "#a99bea",
+          "deep": "#112441"
+        },
+        "dark": {
+          "background": "#12130f",
+          "foreground": "#e9e5dc",
+          "body": "#b5afa2",
+          "faint": "#7e7869",
+          "muted": "rgba(255, 255, 255, 0.1)",
+          "muted-foreground": "#a8a193",
+          "card": "rgba(255, 255, 255, 0.07)",
+          "card-foreground": "#e9e5dc",
+          "popover": "rgba(31, 32, 26, 0.92)",
+          "popover-foreground": "#e9e5dc",
+          "primary": "#f2a36b",
+          "primary-foreground": "#112441",
+          "secondary": "rgba(255, 255, 255, 0.08)",
+          "secondary-foreground": "#b5afa2",
+          "accent": "rgba(130, 180, 240, 0.1)",
+          "accent-foreground": "#82b4f0",
+          "destructive": "#e08b74",
+          "destructive-foreground": "#12130f",
+          "border": "rgba(255, 255, 255, 0.15)",
+          "input": "rgba(255, 255, 255, 0.15)",
+          "ring": "#82b4f0",
+          "glass": "rgba(255, 255, 255, 0.07)",
+          "glass-border": "rgba(255, 255, 255, 0.03)",
+          "glass-edge": "rgba(255, 255, 255, 0.06)",
+          "glass-strong": "rgba(31, 32, 26, 0.85)",
+          "glass-stronger": "rgba(31, 32, 26, 0.92)"
+        }
+      },
+      "css": {
+        "h1, h2, h3": {
+          "text-wrap": "balance"
+        },
+        "html[lang='ja'] :is(h1, h2, h3)": {
+          "word-break": "auto-phrase"
+        }
+      }
+    },
+    {
+      "name": "ambient-field",
+      "type": "registry:ui",
+      "title": "Ambient Field",
+      "description": "Viewport-fixed tri-color light field the page scrolls over — WebGL glows with per-pixel dither, CSS fallback for first paint, film-grain overlay. Reduced-motion safe.",
+      "registryDependencies": ["https://washiveil.alexchih.com/r/theme.json"],
+      "files": [{ "path": "registry/washiveil/ui/ambient-field.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "glass-nav",
+      "type": "registry:ui",
+      "title": "Glass Nav",
+      "description": "Floating glass pill navigation — sliding hover pill, scroll-adaptive contrast, masked blur scroll edge, working mobile sheet.",
+      "dependencies": ["lucide-react"],
+      "registryDependencies": ["https://washiveil.alexchih.com/r/theme.json"],
+      "files": [{ "path": "registry/washiveil/ui/glass-nav.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "theme-toggle",
+      "type": "registry:ui",
+      "title": "Theme Toggle",
+      "description": "Class-strategy dark mode toggle with localStorage persistence and no-flash pre-paint script helper.",
+      "dependencies": ["lucide-react"],
+      "registryDependencies": ["https://washiveil.alexchih.com/r/theme.json"],
+      "files": [{ "path": "registry/washiveil/ui/theme-toggle.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "glass-card",
+      "type": "registry:ui",
+      "title": "Glass Card",
+      "description": "The base translucent surface — blurred white veil on washi in light, lifted warm dark in dark.",
+      "registryDependencies": ["https://washiveil.alexchih.com/r/theme.json"],
+      "files": [{ "path": "registry/washiveil/ui/glass-card.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "glass-button",
+      "type": "registry:ui",
+      "title": "Glass Button",
+      "description": "Pill button in three registers — korozen primary, quiet secondary outline, ruri tinted.",
+      "dependencies": ["class-variance-authority", "radix-ui"],
+      "registryDependencies": ["https://washiveil.alexchih.com/r/theme.json"],
+      "files": [{ "path": "registry/washiveil/ui/glass-button.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "chip",
+      "type": "registry:ui",
+      "title": "Chip",
+      "description": "Taxonomy pill in the tri-color hues (ruri / korozen / sumire) plus a neutral glass register.",
+      "registryDependencies": ["https://washiveil.alexchih.com/r/theme.json"],
+      "files": [{ "path": "registry/washiveil/ui/chip.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "stat-strip",
+      "type": "registry:ui",
+      "title": "Stat Strip",
+      "description": "Three-up stat band with tri-colored numerals on a glass surface.",
+      "registryDependencies": ["https://washiveil.alexchih.com/r/theme.json"],
+      "files": [{ "path": "registry/washiveil/ui/stat-strip.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "status-badge",
+      "type": "registry:ui",
+      "title": "Status Badge",
+      "description": "Live-status pill with a pulse dot on a glass ground.",
+      "registryDependencies": ["https://washiveil.alexchih.com/r/theme.json"],
+      "files": [{ "path": "registry/washiveil/ui/status-badge.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "code-badge",
+      "type": "registry:ui",
+      "title": "Code Badge",
+      "description": "Identifier badge for codes and versions — rounded-md mono, distinct from the taxonomy Chip.",
+      "registryDependencies": ["https://washiveil.alexchih.com/r/theme.json"],
+      "files": [{ "path": "registry/washiveil/ui/code-badge.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "glass-toc",
+      "type": "registry:ui",
+      "title": "Glass TOC",
+      "description": "On-this-page navigation card with active-item highlight.",
+      "registryDependencies": ["https://washiveil.alexchih.com/r/theme.json"],
+      "files": [{ "path": "registry/washiveil/ui/glass-toc.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "glass-input",
+      "type": "registry:ui",
+      "title": "Glass Input",
+      "description": "Text input on a translucent glass surface with a ruri focus ring.",
+      "registryDependencies": ["https://washiveil.alexchih.com/r/theme.json"],
+      "files": [{ "path": "registry/washiveil/ui/glass-input.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "glass-textarea",
+      "type": "registry:ui",
+      "title": "Glass Textarea",
+      "description": "Multiline input on a translucent glass surface with a ruri focus ring.",
+      "registryDependencies": ["https://washiveil.alexchih.com/r/theme.json"],
+      "files": [{ "path": "registry/washiveil/ui/glass-textarea.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "glass-dialog",
+      "type": "registry:ui",
+      "title": "Glass Dialog",
+      "description": "Modal dialog as a glass veil — blurred translucent panel over a soft scrim, built on Radix Dialog.",
+      "dependencies": ["radix-ui", "lucide-react"],
+      "registryDependencies": ["https://washiveil.alexchih.com/r/theme.json"],
+      "files": [{ "path": "registry/washiveil/ui/glass-dialog.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "glass-tooltip",
+      "type": "registry:ui",
+      "title": "Glass Tooltip",
+      "description": "Tooltip on the strong glass surface, built on Radix Tooltip.",
+      "dependencies": ["radix-ui"],
+      "registryDependencies": ["https://washiveil.alexchih.com/r/theme.json"],
+      "files": [{ "path": "registry/washiveil/ui/glass-tooltip.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "share-row",
+      "type": "registry:ui",
+      "title": "Share Row",
+      "description": "URL-intent share row — native share sheet when supported, clipboard copy fallback, X/LinkedIn intents. No SDKs, no trackers.",
+      "dependencies": ["lucide-react"],
+      "registryDependencies": ["https://washiveil.alexchih.com/r/theme.json"],
+      "files": [{ "path": "registry/washiveil/ui/share-row.tsx", "type": "registry:ui" }]
+    }
+  ]
+}

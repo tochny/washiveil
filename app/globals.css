@@ -1,0 +1,188 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * Washi Veil — two-layer token architecture.
+ *
+ * Layer 1 (shadcn semantic): --background/--foreground/--primary/... so every
+ * component survives in a stock shadcn project. These SWITCH between light and
+ * dark — components use them with a single class (bg-background, not
+ * bg-ground dark:bg-ground-dark).
+ *
+ * Layer 2 (washi extension): the glass surfaces and the tri-color accents.
+ * Glass vars switch with the theme; the tri-color stays constant and
+ * components pick the -soft variant explicitly in dark (dark:text-ruri-soft),
+ * matching how the palette was designed.
+ *
+ * Tri-color naming: tokens are named after the nearest Japanese traditional
+ * colors (values tuned for contrast on the washi ground, lineage in docs):
+ *   ruri    瑠璃   lapis blue    (杜若 ΔE 6.1, 瑠璃 ΔE 7.8)
+ *   korozen 黄櫨染 imperial amber (ΔE 7.8 — the emperor's enthronement color)
+ *   sumire  菫     violet        (ΔE 13 — brightened well past the classical dye)
+ */
+
+:root {
+  --radius: 1rem;
+
+  --background: #f7f3ec;
+  --foreground: #1c1914;
+  --body: #4a443c;
+  --faint: #9a9184;
+  --muted: rgba(28, 25, 20, 0.06);
+  --muted-foreground: #6e6659;
+  --card: rgba(255, 255, 255, 0.45);
+  --card-foreground: #1c1914;
+  --popover: rgba(255, 255, 255, 0.85);
+  --popover-foreground: #1c1914;
+  --primary: #d0722e;
+  --primary-foreground: #ffffff;
+  --secondary: rgba(255, 255, 255, 0.4);
+  --secondary-foreground: #4a443c;
+  --accent: rgba(46, 99, 184, 0.1);
+  --accent-foreground: #2e63b8;
+  --destructive: #b0452f;
+  --destructive-foreground: #ffffff;
+  --border: rgba(28, 25, 20, 0.15);
+  --input: rgba(28, 25, 20, 0.15);
+  --ring: #2e63b8;
+
+  --glass: rgba(255, 255, 255, 0.45);
+  --glass-border: rgba(255, 255, 255, 0.55);
+  --glass-edge: rgba(255, 255, 255, 0.5);
+  --glass-strong: rgba(255, 255, 255, 0.75);
+  --glass-stronger: rgba(255, 255, 255, 0.85);
+
+  --ruri: #2e63b8;
+  --ruri-soft: #82b4f0;
+  --ruri-pale: #b7d3f8;
+  --korozen: #d0722e;
+  --korozen-soft: #f2a36b;
+  --korozen-deep: #b64f1b;
+  --sumire: #7b68c8;
+  --sumire-soft: #a99bea;
+  --deep: #112441;
+}
+
+.dark {
+  --background: #12130f;
+  --foreground: #e9e5dc;
+  --body: #b5afa2;
+  --faint: #7e7869;
+  --muted: rgba(255, 255, 255, 0.1);
+  --muted-foreground: #a8a193;
+  --card: rgba(255, 255, 255, 0.07);
+  --card-foreground: #e9e5dc;
+  --popover: rgba(31, 32, 26, 0.92);
+  --popover-foreground: #e9e5dc;
+  --primary: #f2a36b;
+  --primary-foreground: #112441;
+  --secondary: rgba(255, 255, 255, 0.08);
+  --secondary-foreground: #b5afa2;
+  --accent: rgba(130, 180, 240, 0.1);
+  --accent-foreground: #82b4f0;
+  --destructive: #e08b74;
+  --destructive-foreground: #12130f;
+  --border: rgba(255, 255, 255, 0.15);
+  --input: rgba(255, 255, 255, 0.15);
+  --ring: #82b4f0;
+
+  /* Dark glass is a lifted warm dark (#1f201a), NOT a white veil — a white
+     tint over a dark ground raises brightness and pushes scrolled content
+     through the blur. */
+  --glass: rgba(255, 255, 255, 0.07);
+  --glass-border: rgba(255, 255, 255, 0.03);
+  --glass-edge: rgba(255, 255, 255, 0.06);
+  --glass-strong: rgba(31, 32, 26, 0.85);
+  --glass-stronger: rgba(31, 32, 26, 0.92);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-body: var(--body);
+  --color-faint: var(--faint);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --color-glass: var(--glass);
+  --color-glass-border: var(--glass-border);
+  --color-glass-edge: var(--glass-edge);
+  --color-glass-strong: var(--glass-strong);
+  --color-glass-stronger: var(--glass-stronger);
+
+  --color-ruri: var(--ruri);
+  --color-ruri-soft: var(--ruri-soft);
+  --color-ruri-pale: var(--ruri-pale);
+  --color-korozen: var(--korozen);
+  --color-korozen-soft: var(--korozen-soft);
+  --color-korozen-deep: var(--korozen-deep);
+  --color-sumire: var(--sumire);
+  --color-sumire-soft: var(--sumire-soft);
+  --color-deep: var(--deep);
+
+  /* Chinese & Japanese first: Latin face leads, Noto CJK unifies zh/ja glyph
+     forms across platforms. Install the fontsource packages to pin versions;
+     the stack degrades to system fonts without them. */
+  --font-sans:
+    'Inter Variable', 'Noto Sans TC Variable', 'Noto Sans JP Variable', 'Noto Sans TC', 'Noto Sans JP',
+    ui-sans-serif, system-ui, sans-serif;
+  --font-display:
+    'Manrope Variable', 'Noto Sans TC Variable', 'Noto Sans JP Variable', 'Noto Sans TC', 'Noto Sans JP',
+    ui-sans-serif, system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono Variable', 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+/* ja pages prefer JP glyph forms (Han unification: 直/骨/海… differ from TC) */
+html[lang='ja'] {
+  --font-sans:
+    'Inter Variable', 'Noto Sans JP Variable', 'Noto Sans TC Variable', 'Noto Sans JP', 'Noto Sans TC',
+    ui-sans-serif, system-ui, sans-serif;
+  --font-display:
+    'Manrope Variable', 'Noto Sans JP Variable', 'Noto Sans TC Variable', 'Noto Sans JP', 'Noto Sans TC',
+    ui-sans-serif, system-ui, sans-serif;
+}
+
+html {
+  color-scheme: light;
+}
+html.dark {
+  color-scheme: dark;
+}
+
+body {
+  @apply bg-background text-foreground antialiased;
+}
+
+/* Display-text line breaking: balance keeps wrapped headlines in near-equal
+   lines; ja additionally breaks at phrase boundaries (BudouX in Chromium —
+   progressive enhancement, other engines ignore). */
+h1,
+h2,
+h3 {
+  text-wrap: balance;
+}
+html[lang='ja'] :is(h1, h2, h3) {
+  word-break: auto-phrase;
+}
