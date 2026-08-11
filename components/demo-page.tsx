@@ -176,7 +176,7 @@ export function DemoPage({ locale }: { locale: Locale }) {
           <StatStrip
             className="mt-12"
             items={[
-              { value: '57', label: t.hero.statItems },
+              { value: '58', label: t.hero.statItems },
               { value: '3', label: t.hero.statLights },
               { value: 'MIT', label: t.hero.statLicense },
             ]}

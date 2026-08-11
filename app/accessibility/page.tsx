@@ -5,7 +5,7 @@ import { A11yStatement } from '@/components/a11y-statement';
 export const metadata: Metadata = {
   title: 'washiveil — Accessibility statement',
   description:
-    'washiveil aims for WCAG 2.2 Level AA — on this demo site and in the shipped component defaults. Accessibility fixes are treated as bugs, not enhancements.',
+    'washiveil aims for WCAG 2.2 Level AA across this demo site and the shipped component defaults. Accessibility fixes are treated as bugs.',
   alternates: {
     canonical: 'https://washiveil.alexchih.com/accessibility/',
     languages: {

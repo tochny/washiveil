@@ -28,8 +28,8 @@ export async function ProseSpecimen({ h1, h2, h3 }: { h1: string; h2: string; h3
 
         <p lang="zh-Hant">
           段落：<strong>粗體強調</strong>、<em>Latin italic</em>、
-          <a href="#">行內連結</a>、行內 <code>terraform plan</code>——
-          中西混排時，全形標點與半形字元同行共存。
+          <a href="#">行內連結</a>與行內 <code>terraform plan</code>。
+          中西文混排時，全形標點與半形字元自然同列。
         </p>
 
                 <p lang="en">
@@ -41,12 +41,12 @@ export async function ProseSpecimen({ h1, h2, h3 }: { h1: string; h2: string; h3
           <code>行內程式碼</code>共處一行，字形由 Noto TC 統一。
         </p>
         <p lang="ja">
-          日本語の段落は語節単位で折り返し、<strong>強調</strong>や<a href="#">リンク</a>、
-          <code>インラインコード</code>を同じリズムで組みます。
+          日本語の段落は文節ごとに折り返し、<strong>強調</strong>や<a href="#">リンク</a>、
+          <code>インラインコード</code>も読みやすく配置します。
         </p>
 
-<blockquote>
-          「引言はここに&mdash;&mdash;編輯記號是黄櫨染的左線。」
+<blockquote lang="ja">
+          「引用はここに&mdash;&mdash;左側の黄櫨染は編集記号です。」
         </blockquote>
 
         <ul>

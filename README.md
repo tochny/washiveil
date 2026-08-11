@@ -3,9 +3,9 @@
 Warm washi paper, translucent veils. A [shadcn](https://ui.shadcn.com) registry with
 first-class Chinese & Japanese typography.
 
-Not glassmorphism. The ground is paper — a warm, grained washi surface — and every
-layer above it is a veil: translucent white in light mode, a lifted warm dark (never
-a white haze) in dark mode. Three lights move beneath everything.
+The ground is paper: a warm, grained washi surface. Every layer above it is a veil —
+translucent white in light mode, a lifted warm dark in dark mode — and three lights
+move beneath everything.
 
 ![washiveil demo — light](docs/preview-light.png)
 ![washiveil demo — dark](docs/preview-dark.png)
@@ -57,7 +57,7 @@ token layers: standard shadcn semantic variables, plus the washi extension
 ## The tri-color
 
 Three accents, named after their nearest Japanese traditional colors. Values are
-tuned for contrast on the washi ground; the lineage is the point, not a spectral match.
+tuned for contrast on the washi ground; the names carry the lineage.
 
 | Token | Value | Named after | Nearest match |
 | --- | --- | --- | --- |
@@ -73,11 +73,18 @@ tuned for contrast on the washi ground; the lineage is the point, not a spectral
   boundaries (`word-break: auto-phrase`, progressive enhancement)
 - Full-width punctuation conventions respected throughout the demo copy
 
+## Accessibility
+
+The demo and the shipped defaults target WCAG 2.2 AA. The statement — scope,
+methods, and the documented exceptions — is at
+[washiveil.alexchih.com/accessibility](https://washiveil.alexchih.com/accessibility/),
+and the design rulings behind it are recorded in [DECISIONS.md](DECISIONS.md).
+
 ## Roadmap
 
-Deferred deliberately, not forgotten: `glass-carousel`, `glass-resizable`,
-charts, sidebar, and blocks (hero, pricing, article) — heavy dependencies
-or low glass leverage, revisited on demand.
+Deferred for now: `glass-carousel`, `glass-resizable`, charts, sidebar, and
+blocks (hero, pricing, article) — heavy dependencies or low glass leverage,
+revisited on demand.
 
 ## Design story
 
