@@ -109,6 +109,7 @@ export interface Copy {
     emptyTitle: string;
     emptyBody: string;
   };
+  veil: { title: string; lede: string; cardTitle: string; cardBody: string };
   typography: { title: string; lede: string };
   install: { title: string; lede: string };
   installCmd: { copy: string; copied: string };
@@ -224,6 +225,13 @@ const en: Copy = {
     loading: 'Loading with',
     emptyTitle: 'Nothing here yet',
     emptyBody: 'The empty state is a dashed washi ground — quiet, not apologetic.',
+  },
+  veil: {
+    title: 'The veil at work',
+    lede: 'Sharp ink beneath translucent glass — scroll, and the veil proves itself.',
+    cardTitle: 'Ink under veil',
+    cardBody:
+      'Beneath this card: manuscript rules and the opening of the Tale of the Bamboo Cutter — a glowing stalk found among the bamboo. Blur, saturation, grain — all working on real ink.',
   },
   typography: {
     title: 'Chinese & Japanese, first-class',
@@ -344,6 +352,12 @@ const zhTw: Copy = {
     emptyTitle: '這裡還沒有東西',
     emptyBody: '空狀態是一片虛線的和紙底——安靜，不致歉。',
   },
+  veil: {
+    title: '紗的證明',
+    lede: '紗下是銳利的墨——捲動，看紗如何工作。',
+    cardTitle: '墨上之紗',
+    cardBody: '卡片底下是原稿用紙的罫線與《竹取物語》開篇——竹叢中那根發光的竹子。模糊、飽和、紙紋，都在真實的墨字上工作。',
+  },
   typography: {
     title: '中日文排版，一等公民',
     lede: 'Noto CJK 統一中日字形；標題自動平衡斷行；日文標題按語節換行。',
@@ -462,6 +476,13 @@ const ja: Copy = {
     loading: '読み込み中、そばには',
     emptyTitle: 'まだ何もありません',
     emptyBody: '空の状態は破線の和紙の地——静かに、詫びずに。',
+  },
+  veil: {
+    title: '紗の証明',
+    lede: '紗の下には鋭い墨——スクロールすると、紗が自ら証明します。',
+    cardTitle: '墨の上の紗',
+    cardBody:
+      'このカードの下には原稿用紙の罫線と『竹取物語』の冒頭——竹の中に光る一筋。ぼかしも彩度も紙の質感も、本物の墨の上で働いています。',
   },
   typography: {
     title: '中国語と日本語、第一級の組版',

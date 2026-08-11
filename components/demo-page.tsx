@@ -2,6 +2,7 @@ import { InstallCommand } from '@/components/install-command';
 import { PickerDemo } from '@/components/picker-demo';
 import { SiteNav } from '@/components/site-nav';
 import { ToastDemo } from '@/components/toast-demo';
+import { VeilProof } from '@/components/veil-proof';
 import { COPY, LOCALE_TAGS, type Locale } from '@/components/copy';
 import {
   GlassDrawer,
@@ -138,7 +139,8 @@ export function DemoPage({ locale }: { locale: Locale }) {
   const t = COPY[locale];
 
   const tocItems = [
-    { label: t.surfaces.title, href: '#surfaces', active: true },
+    { label: t.veil.title, href: '#veil', active: true },
+    { label: t.surfaces.title, href: '#surfaces' },
     { label: t.controls.title, href: '#controls' },
     { label: t.overlays.title, href: '#overlays' },
     { label: t.structure.title, href: '#structure' },
@@ -180,6 +182,10 @@ export function DemoPage({ locale }: { locale: Locale }) {
         </header>
 
         <main className="mt-20 space-y-20">
+          <Section id="veil" title={t.veil.title} lede={t.veil.lede}>
+            <VeilProof title={t.veil.cardTitle} body={t.veil.cardBody} />
+          </Section>
+
           <Section id="surfaces" title={t.surfaces.title} lede={t.surfaces.lede}>
             <div className="grid gap-4 sm:grid-cols-2">
               <GlassCard>
