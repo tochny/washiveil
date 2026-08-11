@@ -1,3 +1,7 @@
+'use client';
+
+import { useEffect, useLayoutEffect, useRef } from 'react';
+
 // Taketori Monogatari, opening through the naming of Kaguya-hime (public
 // domain) — one continuous pass, no tiling. The text ends where she
 // receives her name.
@@ -6,11 +10,54 @@ const PASSAGE =
 
 // Bare manuscript — the veil over it is the real one: the nav pill crossing
 // as you scroll, and the sumire selection if you select the text.
+// Under sm the frame measures itself: vertical-rl quantizes width in
+// line-height columns, so the minimal height that still fits the container
+// is also the one whose columns run flush to both edges.
 export function VeilProof() {
+  const frame = useRef<HTMLDivElement>(null);
+  const inner = useRef<HTMLDivElement>(null);
+
+  const useFitEffect = typeof window === 'undefined' ? useEffect : useLayoutEffect;
+  useFitEffect(() => {
+    const g = frame.current;
+    const t = inner.current;
+    if (!g || !t) return;
+
+    const fit = () => {
+      if (window.matchMedia('(min-width: 640px)').matches) {
+        g.style.height = '';
+        return;
+      }
+      const w = g.clientWidth;
+      let lo = 640;
+      let hi = 1600;
+      let best = hi;
+      for (let i = 0; i < 14; i++) {
+        const mid = Math.round((lo + hi) / 2);
+        g.style.height = `${mid}px`;
+        if (t.scrollWidth <= w) {
+          best = mid;
+          hi = mid;
+        } else {
+          lo = mid + 1;
+        }
+      }
+      g.style.height = `${best}px`;
+    };
+
+    fit();
+    window.addEventListener('resize', fit);
+    return () => window.removeEventListener('resize', fit);
+  }, []);
+
   return (
     <div className="relative">
-      <div className="wv-genko flex h-[60rem] justify-center overflow-hidden rounded-2xl p-8 sm:h-[44rem]" lang="ja">
-        <div style={{ writingMode: 'vertical-rl' }} className="h-full text-base leading-[2rem] text-foreground/80">
+      <div
+        ref={frame}
+        className="wv-genko flex h-[60rem] justify-center overflow-hidden rounded-2xl p-8 sm:h-[44rem]"
+        lang="ja"
+      >
+        <div ref={inner} style={{ writingMode: 'vertical-rl' }} className="h-full text-base leading-[2rem] text-foreground/80">
           <p>{PASSAGE}</p>
         </div>
       </div>

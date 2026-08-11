@@ -2,6 +2,11 @@
   "name": "washiveil",
   "version": "0.1.0",
   "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tochny/washiveil.git"
+  },
+  "homepage": "https://washiveil.alexchih.com",
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",

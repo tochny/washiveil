@@ -98,7 +98,7 @@ export function SiteNav({ locale }: { locale: Locale }) {
       brand={<span className="font-display text-xl font-semibold">washiveil</span>}
       links={navLinks}
       activeHref={active}
-      cta={{ label: 'GitHub', href: 'https://github.com/tochny' }}
+      cta={{ label: 'GitHub', href: 'https://github.com/tochny/washiveil' }}
     >
       <LangSwitcher
         onClickCapture={handleLangClick}
