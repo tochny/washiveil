@@ -41,6 +41,7 @@ const DICT: Record<Locale, A11yDict> = {
     exceptions: [
       'Decorative micro-labels: the faint 0.75rem meta text (section eyebrows, specimen captions) sits below the 4.5:1 text ratio by design. It is decorative; the same information is always available in conforming text nearby.',
       'Control boundaries: the 1px borders of the default veil aesthetic sit below the 3:1 non-text ratio (WCAG 1.4.11), as does nearly all glassmorphism. The high-contrast layer raises every control boundary to 3:1 or better — that layer is the supported path for users who need it.',
+      'Primary fill: primary-filled actions (the solid button, dialog actions, the nav call-to-action) ship display korozen (#d0722e), whose white label measures 3.43:1 — below the 4.5:1 text ratio. This is a deliberate brand-color decision; the high-contrast layer swaps the fill for korozen-deep (#b64f1b, 5.09:1). Dark mode passes in both layers.',
     ],
     feedbackTitle: 'Feedback',
     feedbackParts: [
@@ -71,6 +72,7 @@ const DICT: Record<Locale, A11yDict> = {
     exceptions: [
       '裝飾性微標籤：淡色 0.75rem 的輔助文字（區段眉標、樣本說明）低於 4.5:1 文字對比度標準，這是設計上的決定。該文字為裝飾性用途；相同資訊總是可在鄰近的合規文字中取得。',
       '控件邊界：預設紗質美學的 1px 邊框低於 3:1 非文字對比度標準（WCAG 1.4.11），大多數毛玻璃風格皆如此。高對比層將所有控件邊界提升至 3:1 以上——對需要此功能的使用者而言，該層才是正式支援的方式。',
+      '主要填色：使用主要填色的動作元素（實心按鈕、對話框動作、導覽列 CTA）出貨即為亮橘 korozen（#d0722e），白色標籤對比為 3.43:1，低於 4.5:1 文字標準。這是刻意的品牌色決定；高對比層會將填色換為 korozen-deep（#b64f1b，5.09:1）。深色模式在兩層皆合格。',
     ],
     feedbackTitle: '回饋',
     feedbackParts: [
@@ -102,6 +104,7 @@ const DICT: Record<Locale, A11yDict> = {
     exceptions: [
       '装飾的なマイクロラベル：淡い 0.75rem の補助テキスト（セクションのアイブロウ、見本キャプション）はテキスト比率 4.5:1 を意図的に下回っています。これは装飾目的であり、同じ情報は必ず近くの適合テキストで確認できます。',
       'コントロール境界：デフォルトのヴェール美学における 1px ボーダーは非テキスト比率 3:1（WCAG 1.4.11）を下回っており、ほぼすべてのグラスモーフィズムでも同様です。ハイコントラストレイヤーはすべてのコントロール境界を 3:1 以上に引き上げます——それが必要なユーザーにはこのレイヤーが正式にサポートされた手段です。',
+      'プライマリーの塗り：プライマリーの塗りを持つアクション（ソリッドボタン、ダイアログのアクション、ナビゲーションの CTA）は表示用の korozen（#d0722e）で出荷され、白いラベルのコントラストは 3.43:1 と、テキスト比率 4.5:1 を下回ります。これは意図的なブランドカラーの決定です。ハイコントラストレイヤーでは塗りが korozen-deep（#b64f1b、5.09:1）に置き換わります。ダークモードは両レイヤーとも基準を満たします。',
     ],
     feedbackTitle: 'フィードバック',
     feedbackParts: [

@@ -47,8 +47,18 @@ the high-contrast layer (`prefers-contrast: more` auto, `.contrast-more`
 manual) raises every boundary to ≥3:1 and is the supported path. Measured
 values live in `app/design/aa/page.tsx` and the theme's contrast-more block.
 
-## Primary button ships korozen-deep (F2b, 2026-08-10)
+## Primary fill stays display korozen; deep is the contrast-more step (F2b, 2026-08-11)
 
-`--primary` is `#b64f1b` (korozen-deep), not display korozen `#d0722e` —
-white labels need 4.5:1 and bright korozen only reaches ~3.4:1. Display
-korozen remains the accent for borders, glows, and non-text marks.
+**Ruling (Alex):** normal view keeps display korozen `#d0722e` as
+`--primary` — the brand color is design vocabulary, same category as the
+1px borders above. Its white label measures 3.43:1 and is a documented
+known exception in the accessibility statement. The AA step `#b64f1b`
+(korozen-deep, 5.09:1) lives in the high-contrast layer only
+(`prefers-contrast: more` / `.contrast-more`). Dark mode ships
+korozen-soft `#f2a36b` with deep text (7.56:1) and passes in both layers.
+
+History: the WCAG sweep briefly shipped korozen-deep as the baseline
+without a ruling; reverted 2026-08-11 when Alex caught it. The dividing
+line this settled: AA fixes with no design cost (names, targets, motion
+gate, subtle text lightness steps) go in the baseline; anything that
+reads as design vocabulary hardens only in the contrast-more layer.

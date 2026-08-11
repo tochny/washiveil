@@ -36,7 +36,7 @@
   --card-foreground: #1c1914;
   --popover: rgba(255, 255, 255, 0.85);
   --popover-foreground: #1c1914;
-  --primary: #b64f1b;
+  --primary: #d0722e;
   --primary-foreground: #ffffff;
   --secondary: rgba(255, 255, 255, 0.4);
   --secondary-foreground: #4a443c;
@@ -112,13 +112,17 @@
   --veil-grain: none;
 }
 
-/* System high-contrast: harden the boundary tokens. Manual override: .contrast-more on <html>. */
+/* System high-contrast: harden the boundary tokens and lift the primary fill
+   to its AA step (display korozen stays the normal-view default by ruling —
+   see DECISIONS.md). The .dark lines re-pin dark values because these blocks
+   sit after the .dark block and :root would win on source order. Manual
+   override: .contrast-more on <html>. */
 @media (prefers-contrast: more) {
-  :root { --border: #8a8072; --input: #8a8072; --glass-edge: rgba(135, 125, 111, 0.9); }
-  .dark { --border: #6e6e68; --input: #6e6e68; --glass-edge: rgba(120, 120, 114, 0.9); }
+  :root { --border: #8a8072; --input: #8a8072; --glass-edge: rgba(135, 125, 111, 0.9); --primary: #b64f1b; }
+  .dark { --border: #6e6e68; --input: #6e6e68; --glass-edge: rgba(120, 120, 114, 0.9); --primary: #f2a36b; }
 }
-.contrast-more { --border: #8a8072; --input: #8a8072; --glass-edge: rgba(135, 125, 111, 0.9); }
-.contrast-more.dark, .contrast-more .dark { --border: #6e6e68; --input: #6e6e68; --glass-edge: rgba(120, 120, 114, 0.9); }
+.contrast-more { --border: #8a8072; --input: #8a8072; --glass-edge: rgba(135, 125, 111, 0.9); --primary: #b64f1b; }
+.contrast-more.dark, .contrast-more .dark { --border: #6e6e68; --input: #6e6e68; --glass-edge: rgba(120, 120, 114, 0.9); --primary: #f2a36b; }
 
 @theme inline {
   --color-background: var(--background);

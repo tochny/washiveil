@@ -18,22 +18,20 @@ function GlassCalendar({ className, classNames, showOutsideDays = true, today, d
       classNames={{
         // UI elements
         root: '',
-        months: 'flex flex-col sm:flex-row gap-2',
+        months: 'relative flex flex-col sm:flex-row gap-2',
         month: 'flex flex-col gap-4',
-        month_caption: 'flex justify-center pt-1 relative items-center',
+        month_caption: 'flex h-8 items-center justify-center',
         caption_label: 'font-display font-medium text-sm',
-        nav: 'flex items-center gap-1',
+        nav: 'absolute inset-x-0 top-0 flex items-center justify-between',
         button_previous: cn(
           'inline-flex size-8 items-center justify-center rounded-full border border-foreground/10 bg-transparent text-sm transition-colors',
           'hover:border-ruri hover:text-ruri dark:hover:border-ruri-soft dark:hover:text-ruri-soft',
           'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background',
-          'absolute left-1',
         ),
         button_next: cn(
           'inline-flex size-8 items-center justify-center rounded-full border border-foreground/10 bg-transparent text-sm transition-colors',
           'hover:border-ruri hover:text-ruri dark:hover:border-ruri-soft dark:hover:text-ruri-soft',
           'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background',
-          'absolute right-1',
         ),
         month_grid: 'w-full border-collapse',
         weekdays: 'flex',

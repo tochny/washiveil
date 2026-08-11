@@ -43,7 +43,7 @@ export default function AAComparePage() {
           {/* Current */}
           <GlassCard className="space-y-8">
             <p className="font-display text-lg font-medium">現行</p>
-            <Row label="#3 primary button [RESOLVED]" note="baseline ships korozen-deep #b64f1b — 白字 5.09:1（及格）">
+            <Row label="#3 primary button [RULED: keep korozen]" note="baseline ships korozen #d0722e — 白字 3.43:1（已知例外；contrast-more 換 #b64f1b）">
               <div>
                 <GlassButton>送出 Send</GlassButton>
               </div>
