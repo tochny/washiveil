@@ -9,7 +9,7 @@ const PASSAGE =
 export function VeilProof() {
   return (
     <div className="relative">
-      <div className="wv-genko flex h-[44rem] justify-center overflow-hidden rounded-2xl p-8" lang="ja">
+      <div className="wv-genko flex h-[60rem] justify-center overflow-hidden rounded-2xl p-8 sm:h-[44rem]" lang="ja">
         <div style={{ writingMode: 'vertical-rl' }} className="h-full text-base leading-[2rem] text-foreground/80">
           <p>{PASSAGE}</p>
         </div>

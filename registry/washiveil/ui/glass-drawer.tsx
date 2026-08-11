@@ -40,7 +40,9 @@ const GlassDrawerContent = React.forwardRef<
     <DrawerPrimitive.Content
       ref={ref}
       className={cn(
-        'fixed inset-x-2 bottom-2 z-50 flex h-auto max-h-[85svh] flex-col rounded-3xl border border-glass-edge bg-glass-stronger backdrop-blur-2xl backdrop-saturate-150 shadow-[0_16px_48px_rgba(28,25,20,0.12)]',
+        // after:hidden kills vaul's overscroll extension — it is built for
+        // edge-attached drawers and pokes square-cornered out of a floating one.
+        'fixed inset-x-2 bottom-2 z-50 flex h-auto max-h-[85svh] flex-col rounded-3xl border border-glass-edge bg-glass-stronger backdrop-blur-2xl backdrop-saturate-150 shadow-[0_16px_48px_rgba(28,25,20,0.12)] after:hidden',
         className,
       )}
       {...props}
