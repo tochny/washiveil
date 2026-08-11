@@ -17,8 +17,8 @@
       {
         "id": "color-contrast",
         "impact": "serious",
-        "nodes": 5,
-        "sample": ".disabled\\:pointer-events-none.data-\\[state\\=on\\]\\:bg-ruri[data-state=\"off\"]:nth-child(1)",
+        "nodes": 3,
+        "sample": ".text-faint.text-\\[0\\.75rem\\]",
         "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds"
       }
     ],
@@ -56,8 +56,8 @@
       {
         "id": "color-contrast",
         "impact": "serious",
-        "nodes": 4,
-        "sample": ".disabled\\:pointer-events-none.data-\\[state\\=on\\]\\:bg-ruri[data-state=\"off\"]:nth-child(1)",
+        "nodes": 3,
+        "sample": ".text-faint.text-\\[0\\.75rem\\]",
         "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds"
       }
     ],
@@ -95,8 +95,8 @@
       {
         "id": "color-contrast",
         "impact": "serious",
-        "nodes": 5,
-        "sample": ".disabled\\:pointer-events-none.data-\\[state\\=on\\]\\:bg-ruri[data-state=\"off\"]:nth-child(1)",
+        "nodes": 3,
+        "sample": ".text-faint.text-\\[0\\.75rem\\]",
         "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds"
       }
     ],

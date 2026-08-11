@@ -12,7 +12,8 @@ const glassToggleVariants = cva(
     variants: {
       variant: {
         default: 'bg-transparent',
-        outline: 'border border-glass-edge bg-glass backdrop-blur-md',
+        outline:
+          'border border-glass-edge bg-glass backdrop-blur-md dark:data-[state=off]:text-[color:color-mix(in_srgb,var(--body)_70%,var(--foreground))]',
       },
       size: {
         default: 'px-3 py-1.5',
