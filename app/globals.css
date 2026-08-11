@@ -353,11 +353,10 @@ h3 {
 .prose pre {
   margin: 1.5rem 0;
   overflow-x: auto;
-  border-radius: 0.75rem;
+  border-radius: 1rem;
   border: 1px solid var(--glass-border);
-  background-color: var(--glass);
-  background-image: var(--veil-grain);
-  background-size: 128px 128px;
+  background-color: var(--glass-strong);
+  box-shadow: 0 8px 32px rgba(28, 25, 20, 0.06);
   -webkit-backdrop-filter: blur(24px);
   backdrop-filter: blur(24px);
   padding: 1.25rem;
@@ -373,7 +372,7 @@ h3 {
    as --shiki-light / --shiki-dark CSS vars; we pick the right one per mode
    and force the washi ground over shiki's theme background). */
 .prose pre.shiki {
-  background-color: var(--glass) !important;
+  background-color: var(--glass-strong) !important;
 }
 .prose pre.shiki span {
   color: var(--shiki-light);
@@ -381,7 +380,7 @@ h3 {
   font-weight: var(--shiki-light-font-weight);
 }
 .dark .prose pre.shiki {
-  background-color: var(--glass) !important;
+  background-color: var(--glass-strong) !important;
 }
 .dark .prose pre.shiki span {
   color: var(--shiki-dark) !important;
