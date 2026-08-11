@@ -36,7 +36,7 @@
   --card-foreground: #1c1914;
   --popover: rgba(255, 255, 255, 0.85);
   --popover-foreground: #1c1914;
-  --primary: #d0722e;
+  --primary: #b64f1b;
   --primary-foreground: #ffffff;
   --secondary: rgba(255, 255, 255, 0.4);
   --secondary-foreground: #4a443c;
@@ -66,6 +66,7 @@
   --korozen-deep: #b64f1b;
   --sumire: #7b68c8;
   --sumire-soft: #a99bea;
+  --sumire-deep: #6a58c0;
   --deep: #112441;
 
   /* Code panel trio — constants (same value both modes). */
@@ -111,6 +112,14 @@
   --veil-grain: none;
 }
 
+/* System high-contrast: harden the boundary tokens. Manual override: .contrast-more on <html>. */
+@media (prefers-contrast: more) {
+  :root { --border: #8a8072; --input: #8a8072; --glass-edge: rgba(138, 128, 114, 0.9); }
+  .dark { --border: #666660; --input: #666660; --glass-edge: rgba(102, 102, 96, 0.9); }
+}
+.contrast-more { --border: #8a8072; --input: #8a8072; --glass-edge: rgba(138, 128, 114, 0.9); }
+.contrast-more.dark, .contrast-more .dark { --border: #666660; --input: #666660; --glass-edge: rgba(102, 102, 96, 0.9); }
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -148,6 +157,7 @@
   --color-korozen-deep: var(--korozen-deep);
   --color-sumire: var(--sumire);
   --color-sumire-soft: var(--sumire-soft);
+  --color-sumire-deep: var(--sumire-deep);
   --color-deep: var(--deep);
   --color-code-cream: var(--code-cream);
   --color-code-panel: var(--code-panel);

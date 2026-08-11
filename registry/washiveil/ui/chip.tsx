@@ -7,7 +7,7 @@ const hues = {
   korozen:
     'border-korozen/25 bg-korozen/10 text-korozen-deep dark:border-korozen-soft/25 dark:bg-korozen-soft/10 dark:text-korozen-soft',
   sumire:
-    'border-sumire/25 bg-sumire/10 text-sumire dark:border-sumire-soft/25 dark:bg-sumire-soft/10 dark:text-sumire-soft',
+    'border-sumire/25 bg-sumire/10 text-sumire-deep dark:border-sumire-soft/25 dark:bg-sumire-soft/10 dark:text-sumire-soft',
   neutral: 'border-glass-edge bg-glass text-muted-foreground backdrop-blur',
 } as const;
 

@@ -9,7 +9,7 @@
       "title": "Washi Veil Theme",
       "description": "Warm washi ground, translucent glass veils, and the ruri/korozen/sumire tri-color — light and dark. Installs the token layer every Washi Veil component builds on.",
       "author": "Alex Chih (https://alexchih.com)",
-      "docs": "Fonts are not bundled — install @fontsource-variable/inter, manrope, jetbrains-mono, noto-sans-tc and noto-sans-jp to pin the stacks; system fonts are the fallback. Text selection ships sumire — the third light’s quietest job.",
+      "docs": "Fonts are not bundled — install @fontsource-variable/inter, manrope, jetbrains-mono, noto-sans-tc and noto-sans-jp to pin the stacks; system fonts are the fallback. Text selection ships sumire — the third light’s quietest job. Defaults meet WCAG AA text contrast; control boundaries harden automatically under prefers-contrast: more (or force with a contrast-more class on <html>).",
       "cssVars": {
         "theme": {
           "font-sans": "'Inter Variable', 'Noto Sans TC Variable', 'Noto Sans JP Variable', 'Noto Sans TC', 'Noto Sans JP', ui-sans-serif, system-ui, sans-serif",
@@ -30,6 +30,7 @@
           "color-korozen-deep": "var(--korozen-deep)",
           "color-sumire": "var(--sumire)",
           "color-sumire-soft": "var(--sumire-soft)",
+          "color-sumire-deep": "var(--sumire-deep)",
           "color-deep": "var(--deep)",
           "color-code-cream": "var(--code-cream)",
           "color-code-panel": "var(--code-panel)",
@@ -47,7 +48,7 @@
           "card-foreground": "#1c1914",
           "popover": "rgba(255, 255, 255, 0.85)",
           "popover-foreground": "#1c1914",
-          "primary": "#d0722e",
+          "primary": "#b64f1b",
           "primary-foreground": "#ffffff",
           "secondary": "rgba(255, 255, 255, 0.4)",
           "secondary-foreground": "#4a443c",
@@ -71,6 +72,7 @@
           "korozen-deep": "#b64f1b",
           "sumire": "#7b68c8",
           "sumire-soft": "#a99bea",
+          "sumire-deep": "#6a58c0",
           "deep": "#112441",
           "code-cream": "#f0ebe1",
           "code-panel": "#16181a",
@@ -134,6 +136,28 @@
           "html": {
             "font-size": "19px"
           }
+        },
+        "@media (prefers-contrast: more)": {
+          ":root": {
+            "--border": "#8a8072",
+            "--input": "#8a8072",
+            "--glass-edge": "rgba(138, 128, 114, 0.9)"
+          },
+          ".dark": {
+            "--border": "#666660",
+            "--input": "#666660",
+            "--glass-edge": "rgba(102, 102, 96, 0.9)"
+          }
+        },
+        ".contrast-more": {
+          "--border": "#8a8072",
+          "--input": "#8a8072",
+          "--glass-edge": "rgba(138, 128, 114, 0.9)"
+        },
+        ".contrast-more.dark, .contrast-more .dark": {
+          "--border": "#666660",
+          "--input": "#666660",
+          "--glass-edge": "rgba(102, 102, 96, 0.9)"
         }
       }
     },
