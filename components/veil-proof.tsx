@@ -12,7 +12,9 @@ export function VeilProof({ title, body }: { title: string; body: string }) {
       {/* sticky glass card overlay */}
       <div className="pointer-events-none absolute inset-0 z-10">
         <div className="pointer-events-auto sticky top-32 mx-auto max-w-sm">
-          <GlassCard>
+          {/* Lift the veil: hover (desktop) or press-and-hold (touch) fades the
+              card so the ink beneath shows sharp. Pure CSS — :active covers touch. */}
+          <GlassCard className="transition-opacity duration-500 hover:opacity-0 active:opacity-0">
             <p className="font-mono text-[0.75rem] tracking-[0.2em] text-faint uppercase">paper &times; ink &times; veil</p>
             <h3 className="mt-2 font-display text-lg font-medium">{title}</h3>
             <p className="mt-2 text-sm leading-relaxed text-body">{body}</p>
