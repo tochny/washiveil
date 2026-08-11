@@ -4,7 +4,7 @@ import { ProseSpecimen } from '@/components/prose-specimen';
 import { SiteNav } from '@/components/site-nav';
 import { ToastDemo } from '@/components/toast-demo';
 import { VeilProof } from '@/components/veil-proof';
-import { COPY, LOCALE_TAGS, type Locale } from '@/components/copy';
+import { COPY, LOCALE_PATHS, LOCALE_TAGS, type Locale } from '@/components/copy';
 import {
   GlassDrawer,
   GlassDrawerContent,
@@ -574,6 +574,12 @@ export function DemoPage({ locale }: { locale: Locale }) {
               Alex Chih
             </a>
           </p>
+          <a
+            href={locale === 'en' ? '/accessibility/' : `${LOCALE_PATHS[locale]}/accessibility/`}
+            className="text-ruri hover:text-deep dark:text-ruri-soft dark:hover:text-ruri-pale"
+          >
+            {t.footer.a11y}
+          </a>
           <p className="font-mono text-[0.75rem] tracking-[0.2em] uppercase">{t.footer.tagline}</p>
         </footer>
       </div>
