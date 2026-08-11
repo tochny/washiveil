@@ -9,6 +9,7 @@ import { LocaleScript } from '@/components/locale-script';
 import { ThemeScript } from '@/registry/washiveil/ui/theme-toggle';
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://washiveil.alexchih.com'),
   title: 'washiveil — warm paper, translucent veils',
   description:
     'A shadcn registry: washi ground, glass veils, the ruri/korozen/sumire tri-color, and first-class Chinese & Japanese typography.',
@@ -17,6 +18,7 @@ export const metadata: Metadata = {
       en: '/',
       'zh-Hant': '/zh-tw/',
       ja: '/ja/',
+      'x-default': '/',
     },
   },
 };
