@@ -26,23 +26,17 @@ export async function ProseSpecimen({ h1, h2, h3 }: { h1: string; h2: string; h3
         <h2>{h2}</h2>
         <h3>{h3}</h3>
 
+        <p lang="en">
+          A paragraph shows <strong>bold emphasis</strong>, <em>italic stress</em>,{' '}
+          an <a href="#">inline link</a>, and <code>terraform plan</code> as inline code.
+        </p>
         <p lang="zh-Hant">
-          段落：<strong>粗體強調</strong>、<em>Latin italic</em>、
+          段落展示<strong>粗體強調</strong>、<em>Latin italic</em>、
           <a href="#">行內連結</a>與行內 <code>terraform plan</code>。
-          中西文混排時，全形標點與半形字元自然同列。
-        </p>
-
-                <p lang="en">
-          English body text carries <strong>weighted emphasis</strong>, an{' '}
-          <a href="#">inline link</a>, and <code>inline code</code> at the same rhythm.
-        </p>
-        <p lang="zh-Hant">
-          中文段落以全形標點斷句，<strong>粗體強調</strong>、<a href="#">行內連結</a>與
-          <code>行內程式碼</code>共處一行，字形由 Noto TC 統一。
         </p>
         <p lang="ja">
-          日本語の段落は文節ごとに折り返し、<strong>強調</strong>や<a href="#">リンク</a>、
-          <code>インラインコード</code>も読みやすく配置します。
+          段落には<strong>太字の強調</strong>、<em>斜体</em>、
+          <a href="#">インラインリンク</a>、<code>terraform plan</code> のインラインコードが並びます。
         </p>
 
 <blockquote lang="ja">

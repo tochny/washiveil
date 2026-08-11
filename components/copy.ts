@@ -125,7 +125,7 @@ const en: Copy = {
   hero: {
     badge: '58 registry items',
     title: 'Warm paper. Translucent veils.',
-    lede: 'A shadcn registry with its own material language: the ground is washi, each layer above it a veil, and three lights moving beneath. Chinese & Japanese typography shapes the system from the start.',
+    lede: 'Washi at the ground, veils above, three lights beneath. Chinese & Japanese typography, considered from the start.',
     install: 'Install',
     browse: 'Browse components',
     statItems: 'registry items',
@@ -258,7 +258,7 @@ const zhTw: Copy = {
   hero: {
     badge: '58 個 registry 項目',
     title: '暖紙為底，透紗為層。',
-    lede: '這套 shadcn registry 自成一套材質語言：和紙為底，層層覆紗，三色光在下方流動。中日文排版從一開始就納入設計。',
+    lede: '和紙為底，覆紗為層，三色光在下方流動。中日文排版，從設計開始就是正事。',
     install: '安裝',
     browse: '瀏覽元件',
     statItems: 'Registry 項目',
@@ -391,7 +391,7 @@ const ja: Copy = {
   hero: {
     badge: 'レジストリ項目 58 点',
     title: '温かい紙、透ける紗。',
-    lede: 'この shadcn レジストリには独自の素材感があります。地は和紙、その上に紗を重ね、最下層で三つの灯りが揺れます。中国語・日本語の組版も初めから設計に組み込んでいます。',
+    lede: '和紙を地に、紗を重ね、三つの灯りがその下で揺れます。中国語・日本語の組版は、設計の最初から考慮しています。',
     install: 'インストール',
     browse: 'コンポーネント一覧',
     statItems: 'レジストリ項目',
