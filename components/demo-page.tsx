@@ -564,25 +564,23 @@ export function DemoPage({ locale }: { locale: Locale }) {
           </Section>
         </main>
 
-        <footer className="mt-24 grid gap-6 border-t border-foreground/10 pt-8 text-sm text-muted-foreground">
-          <div className="flex flex-wrap items-center justify-between gap-4">
-            <p>
-              MIT ©{' '}
-              <a
-                className="text-ruri hover:text-deep dark:text-ruri-soft dark:hover:text-ruri-pale"
-                href="https://alexchih.com"
-              >
-                Alex Chih
-              </a>
-            </p>
+        <footer className="mt-24 flex flex-wrap items-center justify-between gap-4 border-t border-foreground/10 pt-8 text-sm text-muted-foreground">
+          <p>
+            MIT ©{' '}
             <a
-              href={locale === 'en' ? '/accessibility/' : `${LOCALE_PATHS[locale]}/accessibility/`}
               className="text-ruri hover:text-deep dark:text-ruri-soft dark:hover:text-ruri-pale"
+              href="https://alexchih.com"
             >
-              {t.footer.a11y}
+              Alex Chih
             </a>
-          </div>
-          <p className="text-center font-mono text-[0.75rem] tracking-[0.2em] uppercase">{t.footer.tagline}</p>
+          </p>
+          <p className="font-mono text-[0.75rem] tracking-[0.2em] uppercase">{t.footer.tagline}</p>
+          <a
+            href={locale === 'en' ? '/accessibility/' : `${LOCALE_PATHS[locale]}/accessibility/`}
+            className="text-ruri hover:text-deep dark:text-ruri-soft dark:hover:text-ruri-pale"
+          >
+            {t.footer.a11y}
+          </a>
         </footer>
       </div>
     </>
