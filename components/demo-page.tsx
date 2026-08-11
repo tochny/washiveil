@@ -565,7 +565,6 @@ export function DemoPage({ locale }: { locale: Locale }) {
         </main>
 
         <footer className="mt-24 grid gap-6 border-t border-foreground/10 pt-8 text-sm text-muted-foreground">
-          <p className="text-center font-mono text-[0.75rem] tracking-[0.2em] uppercase">{t.footer.tagline}</p>
           <div className="flex flex-wrap items-center justify-between gap-4">
             <p>
               MIT ©{' '}
@@ -583,6 +582,7 @@ export function DemoPage({ locale }: { locale: Locale }) {
               {t.footer.a11y}
             </a>
           </div>
+          <p className="text-center font-mono text-[0.75rem] tracking-[0.2em] uppercase">{t.footer.tagline}</p>
         </footer>
       </div>
     </>
