@@ -50,7 +50,7 @@ function GlassAlertDialogHeader({ className, ...props }: React.HTMLAttributes<HT
 GlassAlertDialogHeader.displayName = 'GlassAlertDialogHeader'
 
 function GlassAlertDialogFooter({ className, ...props }: React.HTMLAttributes<HTMLDivElement>) {
-  return <div className={cn('flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2', className)} {...props} />
+  return <div className={cn('flex flex-col-reverse gap-2 sm:flex-row sm:justify-end', className)} {...props} />
 }
 GlassAlertDialogFooter.displayName = 'GlassAlertDialogFooter'
 
