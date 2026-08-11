@@ -57,7 +57,7 @@ export function GlassNav({ brand, links, activeHref, cta, children, className }:
       />
 
       {/* Glass pill */}
-      <div className="grid grid-cols-[1fr_auto] items-center rounded-full lg:grid-cols-[1fr_auto_1fr] border border-glass-edge bg-glass-strong px-5 py-3 shadow-[inset_0_1px_0_rgba(255,255,255,0.70),inset_0_-1px_0_rgba(28,25,20,0.05),0_8px_32px_rgba(28,25,20,0.08)] backdrop-blur-2xl backdrop-saturate-150 transition-colors duration-300 group-data-[scrolled]:bg-glass-stronger sm:px-6 dark:shadow-[inset_0_1px_0_rgba(255,255,255,0.10),inset_0_-1px_0_rgba(0,0,0,0.35),0_8px_32px_rgba(0,0,0,0.35)]">
+      <div className="veil-grain grid grid-cols-[1fr_auto] items-center rounded-full lg:grid-cols-[1fr_auto_1fr] border border-glass-edge bg-glass-strong px-5 py-3 shadow-[inset_0_1px_0_rgba(255,255,255,0.70),inset_0_-1px_0_rgba(28,25,20,0.05),0_8px_32px_rgba(28,25,20,0.08)] backdrop-blur-2xl backdrop-saturate-150 transition-colors duration-300 group-data-[scrolled]:bg-glass-stronger sm:px-6 dark:shadow-[inset_0_1px_0_rgba(255,255,255,0.10),inset_0_-1px_0_rgba(0,0,0,0.35),0_8px_32px_rgba(0,0,0,0.35)]">
         {/* Brand zone */}
         {brand}
 
@@ -108,7 +108,7 @@ export function GlassNav({ brand, links, activeHref, cta, children, className }:
           aria-expanded={open}
           aria-controls={panelId}
           onClick={() => setOpen((v) => !v)}
-          className="grid size-9 place-items-center justify-self-end rounded-full border border-glass-edge bg-secondary lg:hidden"
+          className="grid size-9 place-items-center justify-self-end rounded-full border border-muted bg-muted lg:hidden"
         >
           <span className="flex flex-col gap-1">
             <span className="h-0.5 w-4 rounded bg-current" />

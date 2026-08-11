@@ -34,7 +34,7 @@ function GlassTableRow({ className, ...props }: React.ComponentProps<'tr'>) {
 function GlassTableHead({ className, ...props }: React.ComponentProps<'th'>) {
   return (
     <th
-      className={cn('py-2 pr-4 font-mono text-[0.75rem] tracking-wide uppercase text-faint font-normal', className)}
+      className={cn('py-2 pr-4 font-mono text-[0.75rem] tracking-[0.2em] uppercase text-faint font-normal', className)}
       {...props}
     />
   )

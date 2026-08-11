@@ -17,7 +17,7 @@ export function ThemeToggle({ className }: { className?: string }) {
         }
       }}
       className={cn(
-        'grid size-9 place-items-center rounded-full text-muted-foreground transition-colors hover:text-foreground',
+        'grid size-9 place-items-center rounded-full text-muted-foreground transition-colors hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background',
         className,
       )}
     >

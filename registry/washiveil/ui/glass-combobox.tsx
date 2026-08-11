@@ -54,7 +54,7 @@ function GlassCombobox({
           role="combobox"
           aria-expanded={open}
           className={cn(
-            'flex h-10 w-full items-center justify-between rounded-xl border border-glass-edge bg-glass px-3.5 py-2.5 text-sm backdrop-blur-md transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:cursor-not-allowed disabled:opacity-50',
+            'flex h-10 w-full items-center justify-between rounded-xl border border-border bg-glass px-3.5 py-2.5 text-sm backdrop-blur-md transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:cursor-not-allowed disabled:opacity-50',
             className,
           )}
         >

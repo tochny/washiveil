@@ -23,18 +23,18 @@ function GlassCalendar({ className, classNames, showOutsideDays = true, ...props
         button_previous: cn(
           'inline-flex size-8 items-center justify-center rounded-full border border-foreground/10 bg-transparent text-sm transition-colors',
           'hover:border-ruri hover:text-ruri dark:hover:border-ruri-soft dark:hover:text-ruri-soft',
-          'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring',
+          'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background',
           'absolute left-1',
         ),
         button_next: cn(
           'inline-flex size-8 items-center justify-center rounded-full border border-foreground/10 bg-transparent text-sm transition-colors',
           'hover:border-ruri hover:text-ruri dark:hover:border-ruri-soft dark:hover:text-ruri-soft',
-          'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring',
+          'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background',
           'absolute right-1',
         ),
         month_grid: 'w-full border-collapse',
         weekdays: 'flex',
-        weekday: 'font-mono text-[0.6875rem] uppercase text-faint rounded-md w-9 font-normal',
+        weekday: 'font-mono text-[0.6875rem] tracking-[0.15em] uppercase text-faint rounded-md w-9 font-normal',
         week: 'flex w-full mt-2',
         day: cn(
           'relative size-9 p-0 text-center text-sm focus-within:relative focus-within:z-20',
@@ -43,7 +43,7 @@ function GlassCalendar({ className, classNames, showOutsideDays = true, ...props
         ),
         day_button: cn(
           'inline-flex size-9 items-center justify-center rounded-full text-sm',
-          'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring',
+          'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background',
         ),
         // Selection states
         selected: 'bg-ruri text-white dark:bg-ruri-soft dark:text-deep hover:bg-ruri hover:text-white dark:hover:bg-ruri-soft dark:hover:text-deep',

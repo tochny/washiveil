@@ -19,7 +19,7 @@ const GlassToggleGroup = React.forwardRef<
   <ToggleGroupPrimitive.Root
     ref={ref}
     className={cn(
-      'inline-flex gap-1 rounded-full border border-glass-edge bg-glass p-1 backdrop-blur-md',
+      'inline-flex gap-1 rounded-full border border-muted bg-muted p-1 backdrop-blur',
       className,
     )}
     {...props}

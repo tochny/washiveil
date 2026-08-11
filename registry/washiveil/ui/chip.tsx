@@ -23,7 +23,7 @@ export function Chip({ hue = 'ruri', asChild, className, children, ...props }: C
   return (
     <Comp
       className={cn(
-        'inline-block rounded-full border px-2.5 py-0.5 font-mono text-[0.75rem] tracking-wide uppercase',
+        'inline-block rounded-full border px-2.5 py-0.5 font-mono text-[0.75rem] tracking-[0.2em] uppercase',
         hues[hue],
         className,
       )}

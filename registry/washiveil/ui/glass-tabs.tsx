@@ -14,7 +14,7 @@ const GlassTabsList = React.forwardRef<
   <TabsPrimitive.List
     ref={ref}
     className={cn(
-      'inline-flex items-center gap-1 rounded-full border border-glass-edge bg-glass p-1 backdrop-blur-md',
+      'inline-flex items-center gap-1 rounded-full border border-muted bg-muted p-1 backdrop-blur',
       className,
     )}
     {...props}

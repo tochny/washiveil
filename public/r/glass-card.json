@@ -9,7 +9,7 @@
   "files": [
     {
       "path": "registry/washiveil/ui/glass-card.tsx",
-      "content": "import { cn } from '@/lib/utils';\n\nexport interface GlassCardProps extends React.ComponentProps<'div'> {\n  padded?: boolean;\n}\n\nexport function GlassCard({ padded = true, className, ...props }: GlassCardProps) {\n  return (\n    <div\n      className={cn(\n        'rounded-2xl border border-glass-border bg-glass shadow-[0_8px_32px_rgba(28,25,20,0.06)] backdrop-blur-xl',\n        padded && 'p-6',\n        className,\n      )}\n      {...props}\n    />\n  );\n}\n",
+      "content": "import { cn } from '@/lib/utils';\n\nexport interface GlassCardProps extends React.ComponentProps<'div'> {\n  padded?: boolean;\n}\n\nexport function GlassCard({ padded = true, className, ...props }: GlassCardProps) {\n  return (\n    <div\n      className={cn(\n        'veil-grain rounded-2xl border border-glass-border bg-glass shadow-[0_8px_32px_rgba(28,25,20,0.06)] backdrop-blur-xl',\n        padded && 'p-6',\n        className,\n      )}\n      {...props}\n    />\n  );\n}\n",
       "type": "registry:ui"
     }
   ],

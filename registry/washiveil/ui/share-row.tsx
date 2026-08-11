@@ -22,7 +22,7 @@ function LinkedInIcon({ className }: { className?: string }) {
 }
 
 const btn =
-  'grid size-9 place-items-center rounded-full border transition-colors border-foreground/10 text-muted-foreground hover:border-ruri hover:text-ruri dark:border-white/10 dark:hover:border-ruri-soft dark:hover:text-ruri-soft'
+  'grid size-9 place-items-center rounded-full border transition-colors border-foreground/10 text-muted-foreground hover:border-ruri hover:text-ruri dark:border-white/10 dark:hover:border-ruri-soft dark:hover:text-ruri-soft focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background'
 
 interface ShareRowProps {
   url: string

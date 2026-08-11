@@ -13,7 +13,7 @@ const GlassMenubar = React.forwardRef<
   <MenubarPrimitive.Root
     ref={ref}
     className={cn(
-      'flex items-center gap-1 rounded-full border border-glass-edge bg-glass p-1 backdrop-blur-md',
+      'flex items-center gap-1 rounded-full border border-muted bg-muted p-1 backdrop-blur',
       className,
     )}
     {...props}

@@ -35,8 +35,8 @@ function GlassInputOTPSlot({
   return (
     <div
       className={cn(
-        'relative flex size-10 items-center justify-center rounded-xl border border-glass-edge bg-glass font-mono text-sm backdrop-blur-md transition-all',
-        isActive && 'z-10 ring-2 ring-ring',
+        'relative flex size-10 items-center justify-center rounded-xl border border-border bg-glass font-mono text-sm backdrop-blur-md transition-all',
+        isActive && 'z-10 outline-none ring-2 ring-ring ring-offset-2 ring-offset-background',
         className,
       )}
       {...props}

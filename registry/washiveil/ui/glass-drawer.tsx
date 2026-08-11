@@ -68,7 +68,7 @@ const GlassDrawerTitle = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <DrawerPrimitive.Title
     ref={ref}
-    className={cn('font-display text-lg font-medium', className)}
+    className={cn('font-display text-lg font-medium leading-none tracking-tight', className)}
     {...props}
   />
 ))
