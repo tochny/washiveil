@@ -429,6 +429,42 @@ export function DemoPage({ locale }: { locale: Locale }) {
               </GlassCard>
             </div>
             <InstallCommand item="glass-tabs" copyLabel={t.installCmd.copy} copiedLabel={t.installCmd.copied} className="mt-4" />
+
+            <div className="mt-8 grid grid-cols-1 gap-3 sm:grid-cols-2">
+              {[
+                { name: 'ground', l: '#F7F3EC', d: '#12130F', role: '紙底 · washi ground' },
+                { name: 'ink', l: '#1C1914', d: '#E9E5DC', role: '標題 · headings' },
+                { name: 'body', l: '#4A443C', d: '#B5AFA2', role: '內文 · body text' },
+                { name: 'muted', l: '#6E6659', d: '#A8A193', role: '次要 · secondary text' },
+                { name: 'faint', l: '#9A9184', d: '#7E7869', role: 'meta · timestamps' },
+                { name: 'ruri 瑠璃', l: '#2E63B8', d: '#82B4F0', role: '導引 · links, focus, selection' },
+                { name: 'korozen 黄櫨染', l: '#D0722E', d: '#F2A36B', role: '行動 · primary CTA, editorial marks' },
+                { name: 'sumire 菫', l: '#7B68C8', d: '#A99BEA', role: '氛圍 · ambient glow, ::selection' },
+                { name: 'deep', l: '#112441', d: undefined, role: 'hover 深端 · dark button text' },
+              ].map((c) => (
+                <GlassCard key={c.name} className="flex items-center gap-4 !p-4">
+                  <span className="flex shrink-0 -space-x-2">
+                    <span
+                      className="size-10 rounded-full border border-foreground/10"
+                      style={{ background: c.l }}
+                    />
+                    {c.d && (
+                      <span
+                        className="size-10 rounded-full border border-foreground/10 ring-2 ring-background"
+                        style={{ background: c.d }}
+                      />
+                    )}
+                  </span>
+                  <div className="min-w-0">
+                    <p className="text-sm font-medium">{c.name}</p>
+                    <p className="font-mono text-[0.75rem] text-faint">
+                      {c.l} · dark {c.d ?? '—'}
+                    </p>
+                    <p className="mt-0.5 text-xs text-muted-foreground">{c.role}</p>
+                  </div>
+                </GlassCard>
+              ))}
+            </div>
           </Section>
 
           <Section id="indicators" title={t.indicators.title} lede={t.indicators.lede}>
