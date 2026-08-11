@@ -88,8 +88,8 @@ revisited on demand.
 
 ## Design story
 
-The palette and its three lights have an origin story — read it at
-[alexchih.com](https://alexchih.com) (link lands with the launch post).
+The palette and its three lights have an origin story. A writeup is in the works
+at [alexchih.com](https://alexchih.com).
 
 ## License
 
