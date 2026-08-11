@@ -4,10 +4,12 @@
   "title": "Glass Toggle Group",
   "description": "Segmented toggles on the glass pill ground, built on Radix ToggleGroup.",
   "dependencies": [
-    "radix-ui"
+    "radix-ui",
+    "class-variance-authority"
   ],
   "registryDependencies": [
-    "https://washiveil.alexchih.com/r/theme.json"
+    "https://washiveil.alexchih.com/r/theme.json",
+    "https://washiveil.alexchih.com/r/glass-toggle.json"
   ],
   "files": [
     {

@@ -5,7 +5,8 @@
   "description": "Site navigation with strong-glass flyout panels, built on Radix NavigationMenu.",
   "dependencies": [
     "radix-ui",
-    "lucide-react"
+    "lucide-react",
+    "class-variance-authority"
   ],
   "registryDependencies": [
     "https://washiveil.alexchih.com/r/theme.json"

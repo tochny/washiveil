@@ -4,7 +4,8 @@
   "title": "Glass Breadcrumb",
   "description": "Breadcrumb trail in the quiet text register.",
   "dependencies": [
-    "lucide-react"
+    "lucide-react",
+    "radix-ui"
   ],
   "registryDependencies": [
     "https://washiveil.alexchih.com/r/theme.json"

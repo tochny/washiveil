@@ -35,7 +35,7 @@
           "background": "#f7f3ec",
           "foreground": "#1c1914",
           "body": "#4a443c",
-          "faint": "#7a7265",
+          "faint": "#746c60",
           "muted": "rgba(28, 25, 20, 0.06)",
           "muted-foreground": "#6e6659",
           "card": "rgba(255, 255, 255, 0.45)",
@@ -217,6 +217,9 @@
           "path": "registry/washiveil/ui/chip.tsx",
           "type": "registry:ui"
         }
+      ],
+      "dependencies": [
+        "radix-ui"
       ]
     },
     {
@@ -518,7 +521,8 @@
       "description": "Side sheet as a veil — slides from any edge over a soft scrim. Built on Radix Dialog.",
       "dependencies": [
         "radix-ui",
-        "lucide-react"
+        "lucide-react",
+        "class-variance-authority"
       ],
       "registryDependencies": [
         "https://washiveil.alexchih.com/r/theme.json"
@@ -667,6 +671,9 @@
           "path": "registry/washiveil/ui/glass-alert.tsx",
           "type": "registry:ui"
         }
+      ],
+      "dependencies": [
+        "class-variance-authority"
       ]
     },
     {
@@ -726,7 +733,8 @@
       "title": "Glass Breadcrumb",
       "description": "Breadcrumb trail in the quiet text register.",
       "dependencies": [
-        "lucide-react"
+        "lucide-react",
+        "radix-ui"
       ],
       "registryDependencies": [
         "https://washiveil.alexchih.com/r/theme.json"
@@ -801,7 +809,8 @@
       "description": "Site navigation with strong-glass flyout panels, built on Radix NavigationMenu.",
       "dependencies": [
         "radix-ui",
-        "lucide-react"
+        "lucide-react",
+        "class-variance-authority"
       ],
       "registryDependencies": [
         "https://washiveil.alexchih.com/r/theme.json"
@@ -837,7 +846,8 @@
       "title": "Glass Toggle",
       "description": "Pressed-state pill — quiet until on, then ruri. Built on Radix Toggle.",
       "dependencies": [
-        "radix-ui"
+        "radix-ui",
+        "class-variance-authority"
       ],
       "registryDependencies": [
         "https://washiveil.alexchih.com/r/theme.json"
@@ -855,10 +865,12 @@
       "title": "Glass Toggle Group",
       "description": "Segmented toggles on the glass pill ground, built on Radix ToggleGroup.",
       "dependencies": [
-        "radix-ui"
+        "radix-ui",
+        "class-variance-authority"
       ],
       "registryDependencies": [
-        "https://washiveil.alexchih.com/r/theme.json"
+        "https://washiveil.alexchih.com/r/theme.json",
+        "https://washiveil.alexchih.com/r/glass-toggle.json"
       ],
       "files": [
         {
@@ -975,7 +987,8 @@
       "title": "Glass Input OTP",
       "description": "One-time-code input on glass cells with a ruri active caret.",
       "dependencies": [
-        "input-otp"
+        "input-otp",
+        "lucide-react"
       ],
       "registryDependencies": [
         "https://washiveil.alexchih.com/r/theme.json"
@@ -997,7 +1010,8 @@
         "lucide-react"
       ],
       "registryDependencies": [
-        "https://washiveil.alexchih.com/r/theme.json"
+        "https://washiveil.alexchih.com/r/theme.json",
+        "https://washiveil.alexchih.com/r/glass-dialog.json"
       ],
       "files": [
         {

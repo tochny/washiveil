@@ -62,7 +62,7 @@ function GlassCombobox({
           <ChevronsUpDown className="size-4 shrink-0 text-faint" />
         </button>
       </GlassPopoverTrigger>
-      <GlassPopoverContent className="w-[--radix-popover-trigger-width] p-0">
+      <GlassPopoverContent className="w-(--radix-popover-trigger-width) p-0">
         <GlassCommand>
           <GlassCommandInput placeholder={placeholder} />
           <GlassCommandList>

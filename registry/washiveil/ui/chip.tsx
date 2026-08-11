@@ -5,7 +5,7 @@ import { cn } from '@/lib/utils';
 const hues = {
   ruri: 'border-ruri/25 bg-ruri/10 text-ruri dark:border-ruri-soft/25 dark:bg-ruri-soft/10 dark:text-ruri-soft',
   korozen:
-    'border-korozen/25 bg-korozen/10 text-korozen dark:border-korozen-soft/25 dark:bg-korozen-soft/10 dark:text-korozen-soft',
+    'border-korozen/25 bg-korozen/10 text-korozen-deep dark:border-korozen-soft/25 dark:bg-korozen-soft/10 dark:text-korozen-soft',
   sumire:
     'border-sumire/25 bg-sumire/10 text-sumire dark:border-sumire-soft/25 dark:bg-sumire-soft/10 dark:text-sumire-soft',
   neutral: 'border-glass-edge bg-glass text-muted-foreground backdrop-blur',

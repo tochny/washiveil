@@ -3,6 +3,9 @@
   "name": "glass-alert",
   "title": "Glass Alert",
   "description": "Inline alert on glass — neutral, ruri info, korozen warning, destructive.",
+  "dependencies": [
+    "class-variance-authority"
+  ],
   "registryDependencies": [
     "https://washiveil.alexchih.com/r/theme.json"
   ],

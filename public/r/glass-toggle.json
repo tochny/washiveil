@@ -4,7 +4,8 @@
   "title": "Glass Toggle",
   "description": "Pressed-state pill — quiet until on, then ruri. Built on Radix Toggle.",
   "dependencies": [
-    "radix-ui"
+    "radix-ui",
+    "class-variance-authority"
   ],
   "registryDependencies": [
     "https://washiveil.alexchih.com/r/theme.json"

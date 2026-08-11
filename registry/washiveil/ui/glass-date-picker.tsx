@@ -13,15 +13,38 @@ export interface GlassDatePickerProps {
   onValueChange?: (date: Date | undefined) => void
   placeholder?: string
   className?: string
+  /** Custom date formatter. Defaults to Intl.DateTimeFormat with long month. */
+  formatDate?: (date: Date) => string
 }
+
+const defaultFormatDate = (date: Date) =>
+  new Intl.DateTimeFormat(undefined, {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+  }).format(date)
 
 function GlassDatePicker({
   value,
   onValueChange,
   placeholder = 'Pick a date',
   className,
+  formatDate = defaultFormatDate,
 }: GlassDatePickerProps) {
   const [open, setOpen] = React.useState(false)
+  const [mounted, setMounted] = React.useState(false)
+
+  React.useEffect(() => {
+    setMounted(true)
+  }, [])
+
+  let displayText: string | undefined
+  if (value) {
+    // Before mount, render a deterministic ISO-like fallback so server/client
+    // HTML is identical. After mount, swap to the locale-aware formatter.
+    displayText = mounted ? formatDate(value) : value.toISOString().slice(0, 10)
+  }
+
   return (
     <GlassPopover open={open} onOpenChange={setOpen}>
       <GlassPopoverTrigger asChild>
@@ -34,13 +57,7 @@ function GlassDatePicker({
           )}
         >
           <CalendarIcon className="mr-2 size-4 text-faint" />
-          {value
-            ? new Intl.DateTimeFormat(undefined, {
-                year: 'numeric',
-                month: 'long',
-                day: 'numeric',
-              }).format(value)
-            : placeholder}
+          {displayText ?? placeholder}
         </GlassButton>
       </GlassPopoverTrigger>
       <GlassPopoverContent className="w-auto p-0">

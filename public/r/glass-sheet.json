@@ -5,7 +5,8 @@
   "description": "Side sheet as a veil — slides from any edge over a soft scrim. Built on Radix Dialog.",
   "dependencies": [
     "radix-ui",
-    "lucide-react"
+    "lucide-react",
+    "class-variance-authority"
   ],
   "registryDependencies": [
     "https://washiveil.alexchih.com/r/theme.json"

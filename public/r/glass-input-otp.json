@@ -4,7 +4,8 @@
   "title": "Glass Input OTP",
   "description": "One-time-code input on glass cells with a ruri active caret.",
   "dependencies": [
-    "input-otp"
+    "input-otp",
+    "lucide-react"
   ],
   "registryDependencies": [
     "https://washiveil.alexchih.com/r/theme.json"

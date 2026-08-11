@@ -75,10 +75,18 @@ export function AmbientField({ className }: { className?: string }) {
     let gl: WebGLRenderingContext | null = null;
     let raf = 0;
     let resizeTimer: ReturnType<typeof setTimeout>;
+    let contextLost = false;
+    // GL resource handles — retained for cleanup and context-restore rebuild.
+    let glProgram: WebGLProgram | null = null;
+    let glVertShader: WebGLShader | null = null;
+    let glFragShader: WebGLShader | null = null;
+    let glBuffer: WebGLBuffer | null = null;
     // Handles accumulated during init — all cleaned up on unmount.
     let visibilityHandler: (() => void) | null = null;
-    let contextLostHandler: (() => void) | null = null;
+    let contextLostHandler: ((e: Event) => void) | null = null;
+    let contextRestoredHandler: (() => void) | null = null;
     let mutationObserver: MutationObserver | null = null;
+    let resizeHandler: ((this: Window, ev: Event) => void) | undefined;
 
     const init = () => {
       gl = canvas.getContext('webgl', { alpha: true, premultipliedAlpha: true, antialias: false });
@@ -91,13 +99,17 @@ export function AmbientField({ className }: { className?: string }) {
         if (!gl!.getShaderParameter(s, gl!.COMPILE_STATUS)) throw new Error(gl!.getShaderInfoLog(s) ?? 'shader');
         return s;
       };
+      glVertShader = sh(gl.VERTEX_SHADER, VERT);
+      glFragShader = sh(gl.FRAGMENT_SHADER, FRAG);
       const prog = gl.createProgram()!;
-      gl.attachShader(prog, sh(gl.VERTEX_SHADER, VERT));
-      gl.attachShader(prog, sh(gl.FRAGMENT_SHADER, FRAG));
+      glProgram = prog;
+      gl.attachShader(prog, glVertShader);
+      gl.attachShader(prog, glFragShader);
       gl.linkProgram(prog);
       if (!gl.getProgramParameter(prog, gl.LINK_STATUS)) throw new Error('link');
       gl.useProgram(prog);
-      gl.bindBuffer(gl.ARRAY_BUFFER, gl.createBuffer());
+      glBuffer = gl.createBuffer();
+      gl.bindBuffer(gl.ARRAY_BUFFER, glBuffer);
       gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1, -1, 3, -1, -1, 3]), gl.STATIC_DRAW);
       const loc = gl.getAttribLocation(prog, 'p');
       gl.enableVertexAttribArray(loc);
@@ -106,7 +118,7 @@ export function AmbientField({ className }: { className?: string }) {
       let sScroll = window.scrollY || 0;
 
       const render = (now: number = performance.now()) => {
-        if (!gl) return;
+        if (!gl || contextLost) return;
         const dpr = Math.min(devicePixelRatio || 1, 2);
         const vw = innerWidth;
         const vh = innerHeight;
@@ -196,11 +208,13 @@ export function AmbientField({ className }: { className?: string }) {
 
       render();
 
-      const resizeHandler = () => {
+      const _resizeHandler = () => {
+        if (contextLost) return;
         clearTimeout(resizeTimer);
         resizeTimer = setTimeout(() => render(), 150);
       };
-      window.addEventListener('resize', resizeHandler);
+      window.addEventListener('resize', _resizeHandler);
+      resizeHandler = _resizeHandler;
 
       if (drift) {
         // One adaptive loop: full-rate while scroll inertia settles, ~15fps for
@@ -208,6 +222,7 @@ export function AmbientField({ className }: { className?: string }) {
         let last = 0;
         let activeUntil = 0;
         const tick = (now: number) => {
+          if (contextLost) return;
           const target = window.scrollY || 0;
           if (Math.abs(target - sScroll) > 0.5) activeUntil = now + 300;
           sScroll += (target - sScroll) * 0.1;
@@ -220,29 +235,73 @@ export function AmbientField({ className }: { className?: string }) {
         raf = requestAnimationFrame(tick);
         visibilityHandler = () => {
           cancelAnimationFrame(raf);
-          if (!document.hidden) raf = requestAnimationFrame(tick);
+          if (!document.hidden && !contextLost) raf = requestAnimationFrame(tick);
         };
         document.addEventListener('visibilitychange', visibilityHandler);
+
+        // Rebuild GL and restart the loop on context restore. init() re-registers
+        // every listener below, so tear the current set down first — otherwise
+        // each loss/restore cycle stacks another resize/visibility/observer set.
+        contextRestoredHandler = () => {
+          contextLost = false;
+          deleteGLResources();
+          cancelAnimationFrame(raf);
+          if (resizeHandler) {
+            window.removeEventListener('resize', resizeHandler);
+            resizeHandler = undefined;
+          }
+          if (visibilityHandler) {
+            document.removeEventListener('visibilitychange', visibilityHandler);
+            visibilityHandler = null;
+          }
+          if (contextRestoredHandler) canvas.removeEventListener('webglcontextrestored', contextRestoredHandler);
+          if (mutationObserver) {
+            mutationObserver.disconnect();
+            mutationObserver = null;
+          }
+          try {
+            init();
+          } catch {
+            // rebuild failed — fallback stays visible
+          }
+        };
+        canvas.addEventListener('webglcontextrestored', contextRestoredHandler);
       }
 
       // Re-render when dark mode toggles (html class change).
-      mutationObserver = new MutationObserver(() => render());
+      mutationObserver = new MutationObserver(() => {
+        if (!contextLost) render();
+      });
       mutationObserver.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
-
-      // On context loss, fall back to CSS divs.
-      contextLostHandler = () => {
-        canvas.hidden = true;
-        fallback.hidden = false;
-      };
-      canvas.addEventListener('webglcontextlost', contextLostHandler);
-
-      // Return resize cleanup (the rest is cleaned up in the effect teardown).
-      return resizeHandler;
     };
 
-    let resizeHandler: ((this: Window, ev: Event) => void) | undefined;
+    /** Delete retained GL resources (program, shaders, buffer). */
+    const deleteGLResources = () => {
+      if (gl) {
+        if (glProgram) gl.deleteProgram(glProgram);
+        if (glVertShader) gl.deleteShader(glVertShader);
+        if (glFragShader) gl.deleteShader(glFragShader);
+        if (glBuffer) gl.deleteBuffer(glBuffer);
+      }
+      glProgram = null;
+      glVertShader = null;
+      glFragShader = null;
+      glBuffer = null;
+    };
+
+    // Context-lost handler: prevent default (allows restore), cancel the loop,
+    // set the lost flag, and show the CSS fallback.
+    contextLostHandler = (e: Event) => {
+      e.preventDefault();
+      contextLost = true;
+      cancelAnimationFrame(raf);
+      canvas.hidden = true;
+      fallback.hidden = false;
+    };
+    canvas.addEventListener('webglcontextlost', contextLostHandler);
+
     try {
-      resizeHandler = init();
+      init();
     } catch {
       // init failed — fallback divs stay visible.
     }
@@ -251,9 +310,11 @@ export function AmbientField({ className }: { className?: string }) {
     return () => {
       cancelAnimationFrame(raf);
       clearTimeout(resizeTimer);
+      deleteGLResources();
       if (resizeHandler) window.removeEventListener('resize', resizeHandler);
       if (visibilityHandler) document.removeEventListener('visibilitychange', visibilityHandler);
       if (contextLostHandler) canvas.removeEventListener('webglcontextlost', contextLostHandler);
+      if (contextRestoredHandler) canvas.removeEventListener('webglcontextrestored', contextRestoredHandler);
       if (mutationObserver) mutationObserver.disconnect();
     };
   }, []);

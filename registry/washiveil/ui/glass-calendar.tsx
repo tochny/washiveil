@@ -7,10 +7,13 @@ import { ChevronLeft, ChevronRight } from 'lucide-react'
 
 import { cn } from '@/lib/utils'
 
-function GlassCalendar({ className, classNames, showOutsideDays = true, ...props }: DayPickerProps) {
+// Consumers should pass `today` and `defaultMonth` explicitly for TZ-stable rendering.
+function GlassCalendar({ className, classNames, showOutsideDays = true, today, defaultMonth, ...props }: DayPickerProps & { today?: Date; defaultMonth?: Date }) {
   return (
     <DayPicker
       showOutsideDays={showOutsideDays}
+      today={today}
+      defaultMonth={defaultMonth}
       className={cn('p-3', className)}
       classNames={{
         // UI elements
