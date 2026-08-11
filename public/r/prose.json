@@ -122,19 +122,22 @@
       "font-size": "0.8125rem"
     },
     ".prose pre": {
-      "margin-top": "1.5rem",
-      "margin-bottom": "1.5rem",
+      "margin": "1.5rem 0",
       "overflow-x": "auto",
       "border-radius": "0.75rem",
-      "border": "1px solid color-mix(in srgb, var(--foreground) 8%, transparent)",
-      "background": "var(--code-cream)",
+      "border": "1px solid var(--glass-border)",
+      "background-color": "var(--glass)",
+      "background-image": "var(--veil-grain)",
+      "background-size": "128px 128px",
+      "-webkit-backdrop-filter": "blur(24px)",
+      "backdrop-filter": "blur(24px)",
       "padding": "1.25rem",
       "font-family": "var(--font-mono)",
       "font-size": "0.8125rem",
       "line-height": "1.625"
     },
     ".dark .prose pre": {
-      "background": "var(--code-panel)",
+      "background-color": "var(--glass)",
       "color": "var(--code-ink)"
     },
     ".prose hr": {
@@ -191,6 +194,6 @@
       "color": "var(--faint)"
     }
   },
-  "docs": "Pairs with any Shiki/rehype highlighter — the pre/code shell is styled; token colors are yours. The demo uses shiki with vitesse-light/dark.",
+  "docs": "Pairs with any Shiki/rehype highlighter — the pre/code shell is a veil-grain glass panel; token colors are yours. Prefer solid plates? Override background to var(--code-cream) / var(--code-panel). The demo uses shiki with vitesse-light/dark.",
   "type": "registry:item"
 }
