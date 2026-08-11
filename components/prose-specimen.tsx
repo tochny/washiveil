@@ -13,7 +13,7 @@ export async function ProseSpecimen() {
 
   return (
     // Bare on the washi, exactly like a real article — no glass between ink and paper.
-    <div className="prose max-w-2xl">
+    <div className="prose">
         <p>
           <a href="#" className="font-mono text-[0.75rem]">&larr; Writing</a>
           <span className="font-mono text-[0.75rem] text-faint">
