@@ -564,23 +564,25 @@ export function DemoPage({ locale }: { locale: Locale }) {
           </Section>
         </main>
 
-        <footer className="mt-24 flex flex-wrap items-center justify-between gap-4 border-t border-foreground/10 pt-8 text-sm text-muted-foreground">
-          <p>
-            MIT ©{' '}
+        <footer className="mt-24 grid gap-6 border-t border-foreground/10 pt-8 text-sm text-muted-foreground">
+          <p className="text-center font-mono text-[0.75rem] tracking-[0.2em] uppercase">{t.footer.tagline}</p>
+          <div className="flex flex-wrap items-center justify-between gap-4">
+            <p>
+              MIT ©{' '}
+              <a
+                className="text-ruri hover:text-deep dark:text-ruri-soft dark:hover:text-ruri-pale"
+                href="https://alexchih.com"
+              >
+                Alex Chih
+              </a>
+            </p>
             <a
+              href={locale === 'en' ? '/accessibility/' : `${LOCALE_PATHS[locale]}/accessibility/`}
               className="text-ruri hover:text-deep dark:text-ruri-soft dark:hover:text-ruri-pale"
-              href="https://alexchih.com"
             >
-              Alex Chih
+              {t.footer.a11y}
             </a>
-          </p>
-          <a
-            href={locale === 'en' ? '/accessibility/' : `${LOCALE_PATHS[locale]}/accessibility/`}
-            className="text-ruri hover:text-deep dark:text-ruri-soft dark:hover:text-ruri-pale"
-          >
-            {t.footer.a11y}
-          </a>
-          <p className="font-mono text-[0.75rem] tracking-[0.2em] uppercase">{t.footer.tagline}</p>
+          </div>
         </footer>
       </div>
     </>
