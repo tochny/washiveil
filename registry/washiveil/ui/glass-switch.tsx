@@ -19,7 +19,7 @@ const GlassSwitch = React.forwardRef<
   >
     <SwitchPrimitive.Thumb
       className={cn(
-        'pointer-events-none block size-5 rounded-full bg-background shadow ring-0 transition-transform data-[state=checked]:translate-x-[17px] data-[state=unchecked]:translate-x-px',
+        'pointer-events-none block size-5 rounded-full bg-background shadow ring-0 dark:data-[state=unchecked]:bg-foreground dark:data-[state=checked]:bg-deep transition-transform data-[state=checked]:translate-x-[17px] data-[state=unchecked]:translate-x-px',
       )}
     />
   </SwitchPrimitive.Root>
