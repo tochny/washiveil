@@ -47,7 +47,7 @@ export function GlassNav({ brand, links, activeHref, cta, children, className }:
   return (
     <header
       ref={headerRef}
-      className={cn('group sticky top-4 z-10 mt-4', className)}
+      className={cn('group sticky top-4 z-30 mt-4', className)}
       style={{ viewTransitionName: 'site-nav' }}
     >
       {/* Scroll-edge masked backdrop-blur band */}
