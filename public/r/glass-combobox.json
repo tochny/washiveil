@@ -2,6 +2,7 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "glass-combobox",
   "title": "Glass Combobox",
+  "author": "Alex Chih (https://alexchih.com)",
   "description": "Searchable select composed from the command palette inside a popover.",
   "dependencies": [
     "cmdk",

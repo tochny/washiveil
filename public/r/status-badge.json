@@ -2,6 +2,7 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "status-badge",
   "title": "Status Badge",
+  "author": "Alex Chih (https://alexchih.com)",
   "description": "Live-status pill with a pulse dot on a glass ground.",
   "registryDependencies": [
     "https://washiveil.alexchih.com/r/theme.json"

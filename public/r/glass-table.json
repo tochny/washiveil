@@ -2,6 +2,7 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "glass-table",
   "title": "Glass Table",
+  "author": "Alex Chih (https://alexchih.com)",
   "description": "Data table in the washi editorial register — mono uppercase header, soft row dividers.",
   "registryDependencies": [
     "https://washiveil.alexchih.com/r/theme.json"

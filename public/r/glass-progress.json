@@ -2,6 +2,7 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "glass-progress",
   "title": "Glass Progress",
+  "author": "Alex Chih (https://alexchih.com)",
   "description": "Progress bar with a ruri fill on a glass track, built on Radix Progress.",
   "dependencies": [
     "radix-ui"

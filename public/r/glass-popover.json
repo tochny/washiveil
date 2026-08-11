@@ -2,6 +2,7 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "glass-popover",
   "title": "Glass Popover",
+  "author": "Alex Chih (https://alexchih.com)",
   "description": "Popover panel on strong glass, built on Radix Popover.",
   "dependencies": [
     "radix-ui"

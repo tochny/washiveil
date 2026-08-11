@@ -2,6 +2,7 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "glass-drawer",
   "title": "Glass Drawer",
+  "author": "Alex Chih (https://alexchih.com)",
   "description": "Bottom drawer as a rising veil with a grab handle, built on Vaul.",
   "dependencies": [
     "vaul"

@@ -2,6 +2,7 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "glass-slider",
   "title": "Glass Slider",
+  "author": "Alex Chih (https://alexchih.com)",
   "description": "Slider with a ruri range on a glass track, built on Radix Slider.",
   "dependencies": [
     "radix-ui"

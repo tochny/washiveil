@@ -2,6 +2,7 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "glass-separator",
   "title": "Glass Separator",
+  "author": "Alex Chih (https://alexchih.com)",
   "description": "Hairline separator on the soft border register, built on Radix Separator.",
   "dependencies": [
     "radix-ui"

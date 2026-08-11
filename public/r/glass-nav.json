@@ -2,6 +2,7 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "glass-nav",
   "title": "Glass Nav",
+  "author": "Alex Chih (https://alexchih.com)",
   "description": "Floating glass pill navigation — sliding hover pill, scroll-adaptive contrast, masked blur scroll edge, working mobile sheet.",
   "dependencies": [
     "lucide-react"
@@ -16,5 +17,6 @@
       "type": "registry:ui"
     }
   ],
+  "docs": "Drop <ThemeToggle /> or <LangSwitcher /> into the children slot — it renders in the desktop actions zone and the mobile sheet footer. Active state is controlled via activeHref.",
   "type": "registry:ui"
 }

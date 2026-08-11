@@ -2,6 +2,7 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "theme",
   "title": "Washi Veil Theme",
+  "author": "Alex Chih (https://alexchih.com)",
   "description": "Warm washi ground, translucent glass veils, and the ruri/korozen/sumire tri-color — light and dark. Installs the token layer every Washi Veil component builds on.",
   "cssVars": {
     "theme": {
@@ -113,5 +114,6 @@
       "background-blend-mode": "soft-light"
     }
   },
+  "docs": "Fonts are not bundled — install @fontsource-variable/inter, manrope, jetbrains-mono, noto-sans-tc and noto-sans-jp to pin the stacks; system fonts are the fallback. Text selection ships sumire — the third light’s quietest job.",
   "type": "registry:theme"
 }

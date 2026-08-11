@@ -2,6 +2,7 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "glass-sheet",
   "title": "Glass Sheet",
+  "author": "Alex Chih (https://alexchih.com)",
   "description": "Side sheet as a veil — slides from any edge over a soft scrim. Built on Radix Dialog.",
   "dependencies": [
     "radix-ui",

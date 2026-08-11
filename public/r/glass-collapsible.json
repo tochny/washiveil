@@ -2,6 +2,7 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "glass-collapsible",
   "title": "Glass Collapsible",
+  "author": "Alex Chih (https://alexchih.com)",
   "description": "Show/hide region, built on Radix Collapsible.",
   "dependencies": [
     "radix-ui"

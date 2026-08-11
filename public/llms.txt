@@ -1,0 +1,74 @@
+# washiveil
+
+> Warm washi ground, glass veils, tri-color, Chinese & Japanese typography first-class.
+
+## Install
+
+```
+npx shadcn@latest add https://washiveil.alexchih.com/r/<item>.json
+```
+
+## Items
+
+- [theme](https://washiveil.alexchih.com/r/theme.json): Warm washi ground, translucent glass veils, and the ruri/korozen/sumire tri-color — light and dark. Installs the token layer every Washi Veil component builds on.
+- [ambient-field](https://washiveil.alexchih.com/r/ambient-field.json): Viewport-fixed tri-color light field the page scrolls over — WebGL glows with per-pixel dither, CSS fallback for first paint, film-grain overlay. Reduced-motion safe.
+- [glass-nav](https://washiveil.alexchih.com/r/glass-nav.json): Floating glass pill navigation — sliding hover pill, scroll-adaptive contrast, masked blur scroll edge, working mobile sheet.
+- [theme-toggle](https://washiveil.alexchih.com/r/theme-toggle.json): Class-strategy dark mode toggle with localStorage persistence and no-flash pre-paint script helper.
+- [glass-card](https://washiveil.alexchih.com/r/glass-card.json): The base translucent surface — blurred white veil on washi in light, lifted warm dark in dark.
+- [glass-button](https://washiveil.alexchih.com/r/glass-button.json): Pill button in three registers — korozen primary, quiet secondary outline, ruri tinted.
+- [chip](https://washiveil.alexchih.com/r/chip.json): Taxonomy pill in the tri-color hues (ruri / korozen / sumire) plus a neutral glass register.
+- [stat-strip](https://washiveil.alexchih.com/r/stat-strip.json): Three-up stat band with tri-colored numerals on a glass surface.
+- [status-badge](https://washiveil.alexchih.com/r/status-badge.json): Live-status pill with a pulse dot on a glass ground.
+- [code-badge](https://washiveil.alexchih.com/r/code-badge.json): Identifier badge for codes and versions — rounded-md mono, distinct from the taxonomy Chip.
+- [glass-toc](https://washiveil.alexchih.com/r/glass-toc.json): On-this-page navigation card with active-item highlight.
+- [glass-input](https://washiveil.alexchih.com/r/glass-input.json): Text input on a translucent glass surface with a ruri focus ring.
+- [glass-textarea](https://washiveil.alexchih.com/r/glass-textarea.json): Multiline input on a translucent glass surface with a ruri focus ring.
+- [glass-dialog](https://washiveil.alexchih.com/r/glass-dialog.json): Modal dialog as a glass veil — blurred translucent panel over a soft scrim, built on Radix Dialog.
+- [glass-tooltip](https://washiveil.alexchih.com/r/glass-tooltip.json): Tooltip on the strong glass surface, built on Radix Tooltip.
+- [share-row](https://washiveil.alexchih.com/r/share-row.json): URL-intent share row — native share sheet when supported, clipboard copy fallback, X/LinkedIn intents. No SDKs, no trackers.
+- [glass-label](https://washiveil.alexchih.com/r/glass-label.json): Form label in the mono uppercase register.
+- [glass-select](https://washiveil.alexchih.com/r/glass-select.json): Select on the glass field register — popover panel on strong glass, built on Radix Select.
+- [glass-switch](https://washiveil.alexchih.com/r/glass-switch.json): Toggle switch — ruri track when on, glass thumb, built on Radix Switch.
+- [glass-checkbox](https://washiveil.alexchih.com/r/glass-checkbox.json): Checkbox on glass with a ruri checked state, built on Radix Checkbox.
+- [glass-radio-group](https://washiveil.alexchih.com/r/glass-radio-group.json): Radio group on glass with ruri selection dots, built on Radix RadioGroup.
+- [glass-slider](https://washiveil.alexchih.com/r/glass-slider.json): Slider with a ruri range on a glass track, built on Radix Slider.
+- [glass-popover](https://washiveil.alexchih.com/r/glass-popover.json): Popover panel on strong glass, built on Radix Popover.
+- [glass-dropdown-menu](https://washiveil.alexchih.com/r/glass-dropdown-menu.json): Menu on strong glass — items, labels, separators, shortcuts, submenus. Built on Radix DropdownMenu.
+- [glass-sheet](https://washiveil.alexchih.com/r/glass-sheet.json): Side sheet as a veil — slides from any edge over a soft scrim. Built on Radix Dialog.
+- [glass-alert-dialog](https://washiveil.alexchih.com/r/glass-alert-dialog.json): Confirmation dialog on strong glass, built on Radix AlertDialog.
+- [glass-hover-card](https://washiveil.alexchih.com/r/glass-hover-card.json): Hover card on strong glass, built on Radix HoverCard.
+- [glass-sonner](https://washiveil.alexchih.com/r/glass-sonner.json): Toasts as small veils — sonner styled on the washi glass registers.
+- [glass-tabs](https://washiveil.alexchih.com/r/glass-tabs.json): Pill tab list on a glass ground with a ruri active tab, built on Radix Tabs.
+- [glass-accordion](https://washiveil.alexchih.com/r/glass-accordion.json): Accordion on glass with soft dividers, built on Radix Accordion.
+- [glass-table](https://washiveil.alexchih.com/r/glass-table.json): Data table in the washi editorial register — mono uppercase header, soft row dividers.
+- [glass-separator](https://washiveil.alexchih.com/r/glass-separator.json): Hairline separator on the soft border register, built on Radix Separator.
+- [glass-alert](https://washiveil.alexchih.com/r/glass-alert.json): Inline alert on glass — neutral, ruri info, korozen warning, destructive.
+- [glass-skeleton](https://washiveil.alexchih.com/r/glass-skeleton.json): Loading placeholder — a shimmering veil.
+- [glass-progress](https://washiveil.alexchih.com/r/glass-progress.json): Progress bar with a ruri fill on a glass track, built on Radix Progress.
+- [glass-avatar](https://washiveil.alexchih.com/r/glass-avatar.json): Avatar with a glass ring, built on Radix Avatar.
+- [glass-breadcrumb](https://washiveil.alexchih.com/r/glass-breadcrumb.json): Breadcrumb trail in the quiet text register.
+- [glass-pagination](https://washiveil.alexchih.com/r/glass-pagination.json): Pagination pills on the ghost-circle register.
+- [glass-context-menu](https://washiveil.alexchih.com/r/glass-context-menu.json): Right-click menu on strong glass — items, checkboxes, radios, submenus. Built on Radix ContextMenu.
+- [glass-menubar](https://washiveil.alexchih.com/r/glass-menubar.json): Application menubar on the glass pill with strong-glass dropdowns, built on Radix Menubar.
+- [glass-navigation-menu](https://washiveil.alexchih.com/r/glass-navigation-menu.json): Site navigation with strong-glass flyout panels, built on Radix NavigationMenu.
+- [glass-collapsible](https://washiveil.alexchih.com/r/glass-collapsible.json): Show/hide region, built on Radix Collapsible.
+- [glass-toggle](https://washiveil.alexchih.com/r/glass-toggle.json): Pressed-state pill — quiet until on, then ruri. Built on Radix Toggle.
+- [glass-toggle-group](https://washiveil.alexchih.com/r/glass-toggle-group.json): Segmented toggles on the glass pill ground, built on Radix ToggleGroup.
+- [glass-scroll-area](https://washiveil.alexchih.com/r/glass-scroll-area.json): Custom scrollbar as a faint veil, built on Radix ScrollArea.
+- [glass-aspect-ratio](https://washiveil.alexchih.com/r/glass-aspect-ratio.json): Ratio-locked container, built on Radix AspectRatio.
+- [glass-kbd](https://washiveil.alexchih.com/r/glass-kbd.json): Keyboard key cap in the mono register on a faint glass chip.
+- [glass-spinner](https://washiveil.alexchih.com/r/glass-spinner.json): Loading spinner in the quiet register, reduced-motion safe.
+- [glass-empty](https://washiveil.alexchih.com/r/glass-empty.json): Empty state — icon, title, description, action slot on a soft glass ground.
+- [glass-drawer](https://washiveil.alexchih.com/r/glass-drawer.json): Bottom drawer as a rising veil with a grab handle, built on Vaul.
+- [glass-input-otp](https://washiveil.alexchih.com/r/glass-input-otp.json): One-time-code input on glass cells with a ruri active caret.
+- [glass-command](https://washiveil.alexchih.com/r/glass-command.json): Command palette on strong glass — search, groups, shortcuts. Built on cmdk.
+- [glass-combobox](https://washiveil.alexchih.com/r/glass-combobox.json): Searchable select composed from the command palette inside a popover.
+- [glass-calendar](https://washiveil.alexchih.com/r/glass-calendar.json): Calendar on the washi ground with ruri selection, built on react-day-picker.
+- [glass-date-picker](https://washiveil.alexchih.com/r/glass-date-picker.json): Date picker — glass field trigger, calendar in a strong-glass popover.
+- [glass-form](https://washiveil.alexchih.com/r/glass-form.json): react-hook-form wiring with the washiveil label and message registers.
+- [lang-switcher](https://washiveil.alexchih.com/r/lang-switcher.json): Locale switcher on the glass pill — the active language is a filled ruri moment. For sites that take Chinese & Japanese seriously.
+
+## Docs
+
+- [Homepage](https://washiveil.alexchih.com)
+- [GitHub](https://github.com/tochny/washiveil)

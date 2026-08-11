@@ -2,6 +2,7 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "lang-switcher",
   "title": "Lang Switcher",
+  "author": "Alex Chih (https://alexchih.com)",
   "description": "Locale switcher on the glass pill — the active language is a filled ruri moment. For sites that take Chinese & Japanese seriously.",
   "registryDependencies": [
     "https://washiveil.alexchih.com/r/theme.json"

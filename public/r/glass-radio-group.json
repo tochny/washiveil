@@ -2,6 +2,7 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "glass-radio-group",
   "title": "Glass Radio Group",
+  "author": "Alex Chih (https://alexchih.com)",
   "description": "Radio group on glass with ruri selection dots, built on Radix RadioGroup.",
   "dependencies": [
     "radix-ui"

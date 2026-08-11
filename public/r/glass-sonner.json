@@ -2,6 +2,7 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "glass-sonner",
   "title": "Glass Sonner",
+  "author": "Alex Chih (https://alexchih.com)",
   "description": "Toasts as small veils — sonner styled on the washi glass registers.",
   "dependencies": [
     "sonner"
@@ -16,5 +17,6 @@
       "type": "registry:ui"
     }
   ],
+  "docs": "Mount <GlassToaster /> once at the root, then call toast() from anywhere.",
   "type": "registry:ui"
 }
