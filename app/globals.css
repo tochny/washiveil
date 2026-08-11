@@ -29,7 +29,7 @@
   --background: #f7f3ec;
   --foreground: #1c1914;
   --body: #4a443c;
-  --faint: #9a9184;
+  --faint: #7a7265;
   --muted: rgba(28, 25, 20, 0.06);
   --muted-foreground: #6e6659;
   --card: rgba(255, 255, 255, 0.45);
@@ -53,6 +53,10 @@
   --glass-edge: rgba(255, 255, 255, 0.5);
   --glass-strong: rgba(255, 255, 255, 0.75);
   --glass-stronger: rgba(255, 255, 255, 0.85);
+  /* Paper tooth for veil surfaces (.veil-grain): the same fiber as the ground,
+     baked into the background stack so it clips to the radius and stays under
+     content. Strength lives in the rect opacity — light shows more tooth. */
+  --veil-grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='128' height='128'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='128' height='128' filter='url(%23n)' opacity='.5'/%3E%3C/svg%3E");
 
   --ruri: #2e63b8;
   --ruri-soft: #82b4f0;
@@ -69,7 +73,7 @@
   --background: #12130f;
   --foreground: #e9e5dc;
   --body: #b5afa2;
-  --faint: #7e7869;
+  --faint: #8f897b;
   --muted: rgba(255, 255, 255, 0.1);
   --muted-foreground: #a8a193;
   --card: rgba(255, 255, 255, 0.07);
@@ -96,6 +100,10 @@
   --glass-edge: rgba(255, 255, 255, 0.06);
   --glass-strong: rgba(31, 32, 26, 0.85);
   --glass-stronger: rgba(31, 32, 26, 0.92);
+  /* No tooth in dark — same reasoning as the ground: soft-light on a dark surface
+     has nothing to darken, so grain reads as lighten-only static. Dark veils stay
+     night-glass; paper is light mode's story. */
+  --veil-grain: none;
 }
 
 @theme inline {
@@ -152,6 +160,14 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
+}
+
+/* Veils are paper, not glass: the same fiber as the ground, in the surface's own
+   background stack (under content, clipped by its radius). Pair with any bg-glass*. */
+.veil-grain {
+  background-image: var(--veil-grain);
+  background-size: 128px 128px;
+  background-blend-mode: soft-light;
 }
 
 /* Sumire selection — the passive purple moment. Third light, quietest job. */
