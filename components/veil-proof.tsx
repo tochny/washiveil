@@ -19,10 +19,9 @@ export function VeilProof({ title, body }: { title: string; body: string }) {
       {/* manuscript underlay */}
       <div className="wv-genko h-[44rem] overflow-hidden rounded-2xl p-8" lang="ja">
         <div style={{ writingMode: 'vertical-rl' }} className="h-full text-base leading-[2rem] text-foreground/80">
-          <p>{PASSAGE}</p>
-          <p>{PASSAGE}</p>
-          <p>{PASSAGE}</p>
-          <p>{PASSAGE}</p>
+          {Array.from({ length: 10 }, (_, i) => (
+            <p key={i}>{PASSAGE}</p>
+          ))}
         </div>
       </div>
       <style>{`
