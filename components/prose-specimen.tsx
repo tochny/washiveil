@@ -26,11 +26,10 @@ export async function ProseSpecimen({ h1, h2, h3 }: { h1: string; h2: string; h3
         <h2>{h2}</h2>
         <h3>{h3}</h3>
 
-        <p>
-          段落:<strong>粗體強調</strong>、<em>Latin italic</em>、
-          <a href="#">行內連結 inline link</a>、行內 code:
-          <code>terraform plan</code>。
-          混合スクリプトで、全形句點與全角句読点の共存を確認する。
+        <p lang="zh-Hant">
+          段落：<strong>粗體強調</strong>、<em>Latin italic</em>、
+          <a href="#">行內連結</a>、行內 <code>terraform plan</code>——
+          中西混排時，全形標點與半形字元同行共存。
         </p>
 
                 <p lang="en">
