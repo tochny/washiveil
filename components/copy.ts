@@ -231,7 +231,7 @@ const en: Copy = {
     lede: 'Sharp ink beneath translucent glass — scroll, and the veil proves itself.',
     cardTitle: 'Ink under veil',
     cardBody:
-      'Ruled paper and the Tale of the Bamboo Cutter — a glowing stalk among the bamboo. The ink is real. So is the veil.',
+      'Ruled paper and the Tale of the Bamboo Cutter — a glowing stalk among the bamboo.',
   },
   typography: {
     title: 'Chinese & Japanese, first-class',
@@ -356,7 +356,7 @@ const zhTw: Copy = {
     title: '紗的證明',
     lede: '紗下是銳利的墨——捲動，看紗如何工作。',
     cardTitle: '墨上之紗',
-    cardBody: '紗下是罫線與《竹取物語》——竹中那一筋光。墨是真的，紗也是。',
+    cardBody: '紗下是罫線與《竹取物語》——竹中那一筋光。',
   },
   typography: {
     title: '中日文排版，一等公民',
@@ -482,7 +482,7 @@ const ja: Copy = {
     lede: '紗の下には鋭い墨——スクロールすると、紗が自ら証明します。',
     cardTitle: '墨の上の紗',
     cardBody:
-      '紗の下には罫線と『竹取物語』——竹の中の一筋の光。墨も紗も、本物です。',
+      '紗の下には罫線と『竹取物語』——竹の中の一筋の光。',
   },
   typography: {
     title: '中国語と日本語、第一級の組版',
