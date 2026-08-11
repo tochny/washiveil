@@ -5,6 +5,7 @@ import '@fontsource-variable/jetbrains-mono';
 import '@fontsource-variable/noto-sans-tc';
 import '@fontsource-variable/noto-sans-jp';
 import './globals.css';
+import { CreditScript } from '@/components/credit-script';
 import { LocaleScript } from '@/components/locale-script';
 import { ThemeScript } from '@/registry/washiveil/ui/theme-toggle';
 
@@ -29,6 +30,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
       <head>
         <LocaleScript />
         <ThemeScript />
+        <CreditScript />
       </head>
       <body>{children}</body>
     </html>

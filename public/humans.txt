@@ -1,0 +1,11 @@
+/* TEAM */
+Author: Alex Chih
+Site: https://alexchih.com
+GitHub: https://github.com/tochny
+Location: Taipei
+
+/* SITE */
+Name: washiveil
+Doctrine: paper is the ground, every layer is a veil, three lights beneath.
+Colors: ruri 瑠璃 / korozen 黄櫨染 / sumire 菫
+Stack: Next.js, Tailwind CSS v4, Radix, shadcn registry

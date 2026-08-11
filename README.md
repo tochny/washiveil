@@ -75,9 +75,9 @@ tuned for contrast on the washi ground; the lineage is the point, not a spectral
 
 ## Roadmap
 
-Deferred deliberately, not forgotten: `glass-command`, `glass-calendar`,
-`glass-carousel`, charts, and blocks (hero, footer, contact) — heavy
-dependencies or low glass leverage, revisited on demand.
+Deferred deliberately, not forgotten: `glass-carousel`, `glass-resizable`,
+charts, sidebar, and blocks (hero, pricing, article) — heavy dependencies
+or low glass leverage, revisited on demand.
 
 ## Design story
 
