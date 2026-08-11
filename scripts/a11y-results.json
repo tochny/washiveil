@@ -1,0 +1,132 @@
+{
+  "/ [light]": {
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "nodes": 4,
+        "sample": ".text-faint.text-\\[0\\.75rem\\]",
+        "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds"
+      }
+    ],
+    "passes": 36,
+    "incomplete": 1
+  },
+  "/ [dark]": {
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "nodes": 5,
+        "sample": ".disabled\\:pointer-events-none.data-\\[state\\=on\\]\\:bg-ruri[data-state=\"off\"]:nth-child(1)",
+        "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds"
+      }
+    ],
+    "passes": 36,
+    "incomplete": 1
+  },
+  "/ [contrast-more]": {
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "nodes": 4,
+        "sample": ".text-faint.text-\\[0\\.75rem\\]",
+        "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds"
+      }
+    ],
+    "passes": 36,
+    "incomplete": 1
+  },
+  "/zh-tw/ [light]": {
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "nodes": 4,
+        "sample": ".text-faint.text-\\[0\\.75rem\\]",
+        "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds"
+      }
+    ],
+    "passes": 36,
+    "incomplete": 1
+  },
+  "/zh-tw/ [dark]": {
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "nodes": 4,
+        "sample": ".disabled\\:pointer-events-none.data-\\[state\\=on\\]\\:bg-ruri[data-state=\"off\"]:nth-child(1)",
+        "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds"
+      }
+    ],
+    "passes": 36,
+    "incomplete": 1
+  },
+  "/zh-tw/ [contrast-more]": {
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "nodes": 4,
+        "sample": ".text-faint.text-\\[0\\.75rem\\]",
+        "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds"
+      }
+    ],
+    "passes": 36,
+    "incomplete": 1
+  },
+  "/ja/ [light]": {
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "nodes": 4,
+        "sample": ".text-faint.text-\\[0\\.75rem\\]",
+        "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds"
+      }
+    ],
+    "passes": 36,
+    "incomplete": 1
+  },
+  "/ja/ [dark]": {
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "nodes": 5,
+        "sample": ".disabled\\:pointer-events-none.data-\\[state\\=on\\]\\:bg-ruri[data-state=\"off\"]:nth-child(1)",
+        "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds"
+      }
+    ],
+    "passes": 36,
+    "incomplete": 1
+  },
+  "/ja/ [contrast-more]": {
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "nodes": 4,
+        "sample": ".text-faint.text-\\[0\\.75rem\\]",
+        "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds"
+      }
+    ],
+    "passes": 36,
+    "incomplete": 1
+  },
+  "/ [light + dialog open]": {
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "nodes": 4,
+        "sample": ".text-faint.text-\\[0\\.75rem\\]",
+        "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds"
+      }
+    ],
+    "passes": 22,
+    "incomplete": 2
+  }
+}

@@ -141,23 +141,30 @@
           ":root": {
             "--border": "#8a8072",
             "--input": "#8a8072",
-            "--glass-edge": "rgba(138, 128, 114, 0.9)"
+            "--glass-edge": "rgba(135, 125, 111, 0.9)"
           },
           ".dark": {
-            "--border": "#666660",
-            "--input": "#666660",
-            "--glass-edge": "rgba(102, 102, 96, 0.9)"
+            "--border": "#6e6e68",
+            "--input": "#6e6e68",
+            "--glass-edge": "rgba(120, 120, 114, 0.9)"
           }
         },
         ".contrast-more": {
           "--border": "#8a8072",
           "--input": "#8a8072",
-          "--glass-edge": "rgba(138, 128, 114, 0.9)"
+          "--glass-edge": "rgba(135, 125, 111, 0.9)"
         },
         ".contrast-more.dark, .contrast-more .dark": {
-          "--border": "#666660",
-          "--input": "#666660",
-          "--glass-edge": "rgba(102, 102, 96, 0.9)"
+          "--border": "#6e6e68",
+          "--input": "#6e6e68",
+          "--glass-edge": "rgba(120, 120, 114, 0.9)"
+        },
+        "@media (prefers-reduced-motion: reduce)": {
+          "*, ::before, ::after": {
+            "animation-duration": "0.01ms !important",
+            "animation-iteration-count": "1 !important",
+            "transition-duration": "0.01ms !important"
+          }
         }
       }
     },
@@ -1387,11 +1394,11 @@
           "font-size": "0.75rem",
           "letter-spacing": "0.05em",
           "text-transform": "uppercase",
-          "color": "var(--faint)"
+          "color": "var(--muted-foreground)"
         },
         ".dark .prose thead tr": {
           "border-bottom-color": "color-mix(in srgb, white 15%, transparent)",
-          "color": "var(--faint)"
+          "color": "var(--muted-foreground)"
         },
         ".prose th, .prose td": {
           "padding": "0.5rem 1rem 0.5rem 0"

@@ -135,23 +135,30 @@
       ":root": {
         "--border": "#8a8072",
         "--input": "#8a8072",
-        "--glass-edge": "rgba(138, 128, 114, 0.9)"
+        "--glass-edge": "rgba(135, 125, 111, 0.9)"
       },
       ".dark": {
-        "--border": "#666660",
-        "--input": "#666660",
-        "--glass-edge": "rgba(102, 102, 96, 0.9)"
+        "--border": "#6e6e68",
+        "--input": "#6e6e68",
+        "--glass-edge": "rgba(120, 120, 114, 0.9)"
       }
     },
     ".contrast-more": {
       "--border": "#8a8072",
       "--input": "#8a8072",
-      "--glass-edge": "rgba(138, 128, 114, 0.9)"
+      "--glass-edge": "rgba(135, 125, 111, 0.9)"
     },
     ".contrast-more.dark, .contrast-more .dark": {
-      "--border": "#666660",
-      "--input": "#666660",
-      "--glass-edge": "rgba(102, 102, 96, 0.9)"
+      "--border": "#6e6e68",
+      "--input": "#6e6e68",
+      "--glass-edge": "rgba(120, 120, 114, 0.9)"
+    },
+    "@media (prefers-reduced-motion: reduce)": {
+      "*, ::before, ::after": {
+        "animation-duration": "0.01ms !important",
+        "animation-iteration-count": "1 !important",
+        "transition-duration": "0.01ms !important"
+      }
     }
   },
   "docs": "Fonts are not bundled — install @fontsource-variable/inter, manrope, jetbrains-mono, noto-sans-tc and noto-sans-jp to pin the stacks; system fonts are the fallback. Text selection ships sumire — the third light’s quietest job. Defaults meet WCAG AA text contrast; control boundaries harden automatically under prefers-contrast: more (or force with a contrast-more class on <html>).",

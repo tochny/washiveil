@@ -133,7 +133,7 @@ function Section({ id, title, lede, children }: { id: string; title: string; led
 }
 
 function Tag({ children }: { children: React.ReactNode }) {
-  return <p className="font-mono text-[0.75rem] tracking-[0.2em] text-faint uppercase">{children}</p>;
+  return <p className="font-mono text-[0.75rem] tracking-[0.2em] text-muted-foreground uppercase">{children}</p>;
 }
 
 export function DemoPage({ locale }: { locale: Locale }) {
@@ -277,8 +277,8 @@ export function DemoPage({ locale }: { locale: Locale }) {
                     <GlassLabel htmlFor="demo-r2">Korozen</GlassLabel>
                   </div>
                 </GlassRadioGroup>
-                <GlassSlider defaultValue={[62]} max={100} step={1} />
-                <GlassProgress value={62} />
+                <GlassSlider defaultValue={[62]} max={100} step={1} aria-label={t.controls.sliderLabel} />
+                <GlassProgress value={62} aria-label={t.controls.progressLabel} />
               </GlassCard>
             </div>
             <InstallCommand item="glass-select" copyLabel={t.installCmd.copy} copiedLabel={t.installCmd.copied} className="mt-4" />
@@ -488,7 +488,7 @@ export function DemoPage({ locale }: { locale: Locale }) {
             <div className="grid gap-4 sm:grid-cols-2">
               <GlassCard className="grid content-start gap-4">
                 <PickerDemo comboboxPlaceholder={t.pickers.comboboxPh} comboboxEmpty={t.pickers.comboboxEmpty} datePlaceholder={t.pickers.datePh} />
-                <GlassInputOTP maxLength={6}>
+                <GlassInputOTP maxLength={6} aria-label={t.pickers.otpLabel}>
                   <GlassInputOTPGroup>
                     <GlassInputOTPSlot index={0} />
                     <GlassInputOTPSlot index={1} />
@@ -536,7 +536,7 @@ export function DemoPage({ locale }: { locale: Locale }) {
 
           <Section id="typography" title={t.typography.title} lede={t.typography.lede}>
             <div className="grid gap-4 sm:grid-cols-2">
-              <GlassCard>
+              <GlassCard lang="zh-Hant">
                 <Tag>zh-TW 中文</Tag>
                 <h3 className="mt-2 font-display text-xl font-medium">紙為底，紗為層，三色為光</h3>
                 <p className="mt-2 text-sm leading-[1.85] text-body">

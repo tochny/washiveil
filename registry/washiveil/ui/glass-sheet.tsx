@@ -64,7 +64,7 @@ const GlassSheetContent = React.forwardRef<
       className={cn(glassSheetContentVariants({ side }), className)}
       {...props}
     >
-      <DialogPrimitive.Close className="absolute right-4 top-4 rounded-full text-muted-foreground transition-colors hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:pointer-events-none">
+      <DialogPrimitive.Close className="absolute right-4 top-4 grid size-6 place-items-center rounded-full text-muted-foreground transition-colors hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:pointer-events-none">
         <X className="size-4" />
         <span className="sr-only">Close</span>
       </DialogPrimitive.Close>

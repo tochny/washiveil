@@ -40,7 +40,7 @@ GlassNavigationMenuList.displayName = NavigationMenuPrimitive.List.displayName
 const GlassNavigationMenuItem = NavigationMenuPrimitive.Item
 
 const navigationMenuTriggerStyle = cva(
-  'group inline-flex items-center justify-center rounded-full px-3.5 py-1.5 text-sm font-medium text-muted-foreground transition-colors hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:pointer-events-none disabled:opacity-50 data-[state=open]:bg-accent data-[state=open]:text-accent-foreground data-[active]:bg-accent data-[active]:text-accent-foreground',
+  'group inline-flex items-center justify-center rounded-full px-3.5 py-1.5 text-sm font-medium text-muted-foreground dark:text-body transition-colors hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:pointer-events-none disabled:opacity-50 data-[state=open]:bg-accent data-[state=open]:text-accent-foreground data-[active]:bg-accent data-[active]:text-accent-foreground',
 )
 
 const GlassNavigationMenuTrigger = React.forwardRef<

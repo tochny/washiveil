@@ -9,7 +9,7 @@ export const glassButtonVariants = cva(
     variants: {
       variant: {
         primary:
-          'bg-korozen font-semibold text-white shadow-[0_8px_24px_rgba(208,114,46,0.30)] hover:bg-[#9d4416] dark:bg-korozen-soft dark:font-medium dark:text-deep dark:hover:bg-[#F7B888]',
+          'bg-primary font-semibold text-primary-foreground shadow-[0_8px_24px_rgba(208,114,46,0.30)] hover:bg-[#9d4416] dark:font-medium dark:hover:bg-[#F7B888]',
         secondary:
           'border border-border text-body hover:border-ruri hover:text-ruri dark:hover:border-ruri-soft dark:hover:text-ruri-soft',
         tinted:

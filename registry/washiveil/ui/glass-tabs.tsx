@@ -29,7 +29,7 @@ const GlassTabsTrigger = React.forwardRef<
   <TabsPrimitive.Trigger
     ref={ref}
     className={cn(
-      'rounded-full px-3.5 py-1.5 text-sm text-muted-foreground transition-colors hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background data-[state=active]:bg-ruri data-[state=active]:font-medium data-[state=active]:text-white dark:data-[state=active]:bg-ruri-soft dark:data-[state=active]:text-deep',
+      'rounded-full px-3.5 py-1.5 text-sm text-muted-foreground dark:text-body transition-colors hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background data-[state=active]:bg-ruri data-[state=active]:font-medium data-[state=active]:text-white dark:data-[state=active]:bg-ruri-soft dark:data-[state=active]:text-deep',
       className,
     )}
     {...props}

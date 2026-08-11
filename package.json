@@ -36,13 +36,16 @@
     "zod": "^3.25.76"
   },
   "devDependencies": {
+    "@axe-core/playwright": "^4.12.1",
     "@eslint/eslintrc": "^3.3.1",
+    "@playwright/test": "^1.62.1",
     "@tailwindcss/postcss": "^4.1.11",
     "@types/node": "^20.19.9",
     "@types/react": "19.1.2",
     "@types/react-dom": "19.1.2",
     "eslint": "^9.32.0",
     "eslint-config-next": "15.3.1",
+    "playwright": "^1.62.1",
     "shadcn": "^4.16.2",
     "shiki": "^4.4.3",
     "tailwindcss": "^4.1.11",

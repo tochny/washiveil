@@ -21,6 +21,8 @@ export interface GlassComboboxProps {
   placeholder?: string
   emptyText?: string
   className?: string
+  /** Accessible name for the combobox trigger. Falls back to `placeholder`. */
+  ariaLabel?: string
 }
 
 function GlassCombobox({
@@ -30,6 +32,7 @@ function GlassCombobox({
   placeholder = 'Select...',
   emptyText = 'No results found.',
   className,
+  ariaLabel,
 }: GlassComboboxProps) {
   const [open, setOpen] = React.useState(false)
   const [internalValue, setInternalValue] = React.useState('')
@@ -53,6 +56,7 @@ function GlassCombobox({
         <button
           role="combobox"
           aria-expanded={open}
+          aria-label={ariaLabel ?? placeholder}
           className={cn(
             'flex h-10 w-full items-center justify-between rounded-xl border border-border bg-glass px-3.5 py-2.5 text-sm backdrop-blur-md transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:cursor-not-allowed disabled:opacity-50',
             className,

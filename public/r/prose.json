@@ -161,11 +161,11 @@
       "font-size": "0.75rem",
       "letter-spacing": "0.05em",
       "text-transform": "uppercase",
-      "color": "var(--faint)"
+      "color": "var(--muted-foreground)"
     },
     ".dark .prose thead tr": {
       "border-bottom-color": "color-mix(in srgb, white 15%, transparent)",
-      "color": "var(--faint)"
+      "color": "var(--muted-foreground)"
     },
     ".prose th, .prose td": {
       "padding": "0.5rem 1rem 0.5rem 0"

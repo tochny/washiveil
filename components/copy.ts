@@ -44,6 +44,8 @@ export interface Copy {
     send: string;
     ambient: string;
     grain: string;
+    sliderLabel: string;
+    progressLabel: string;
   };
   overlays: {
     title: string;
@@ -108,6 +110,7 @@ export interface Copy {
     loading: string;
     emptyTitle: string;
     emptyBody: string;
+    otpLabel: string;
   };
   veil: { title: string; lede: string };
   typography: { title: string; lede: string };
@@ -156,6 +159,8 @@ const en: Copy = {
     send: 'Send',
     ambient: 'Ambient motion',
     grain: 'Ship with grain',
+    sliderLabel: 'Value',
+    progressLabel: 'Progress',
   },
   overlays: {
     title: 'Overlays',
@@ -226,6 +231,7 @@ const en: Copy = {
     loading: 'Loading with',
     emptyTitle: 'Nothing here yet',
     emptyBody: 'The empty state is a dashed washi ground — quiet, not apologetic.',
+    otpLabel: 'One-time code',
   },
   veil: {
     title: 'The veil at work',
@@ -286,6 +292,8 @@ const zhTw: Copy = {
     send: '送出',
     ambient: '環境光動態',
     grain: '保留紙紋',
+    sliderLabel: '數值',
+    progressLabel: '進度',
   },
   overlays: {
     title: '浮層',
@@ -356,6 +364,7 @@ const zhTw: Copy = {
     loading: '載入中，旁邊是',
     emptyTitle: '這裡還沒有東西',
     emptyBody: '空狀態是一片虛線的和紙底——安靜，不致歉。',
+    otpLabel: '一次性驗證碼',
   },
   veil: {
     title: '紗的證明',
@@ -416,6 +425,8 @@ const ja: Copy = {
     send: '送信',
     ambient: 'アンビエントモーション',
     grain: '紙の質感を残す',
+    sliderLabel: '値',
+    progressLabel: '進捗',
   },
   overlays: {
     title: 'オーバーレイ',
@@ -486,6 +497,7 @@ const ja: Copy = {
     loading: '読み込み中、そばには',
     emptyTitle: 'まだ何もありません',
     emptyBody: '空の状態は破線の和紙の地——静かに、詫びずに。',
+    otpLabel: 'ワンタイムコード',
   },
   veil: {
     title: '紗の証明',
