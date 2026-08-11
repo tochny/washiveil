@@ -13,7 +13,7 @@
   "files": [
     {
       "path": "registry/washiveil/ui/glass-label.tsx",
-      "content": "'use client'\n\nimport * as React from 'react'\nimport { Label as LabelPrimitive } from 'radix-ui'\n\nimport { cn } from '@/lib/utils'\n\nconst GlassLabel = React.forwardRef<\n  React.ComponentRef<typeof LabelPrimitive.Root>,\n  React.ComponentPropsWithoutRef<typeof LabelPrimitive.Root>\n>(({ className, ...props }, ref) => (\n  <LabelPrimitive.Root\n    ref={ref}\n    className={cn(\n      'font-mono text-[0.75rem] tracking-[0.2em] uppercase text-faint peer-disabled:cursor-not-allowed peer-disabled:opacity-50',\n      className,\n    )}\n    {...props}\n  />\n))\nGlassLabel.displayName = LabelPrimitive.Root.displayName\n\nexport { GlassLabel }\n",
+      "content": "'use client'\n\nimport * as React from 'react'\nimport { Label as LabelPrimitive } from 'radix-ui'\n\nimport { cn } from '@/lib/utils'\n\nconst GlassLabel = React.forwardRef<\n  React.ComponentRef<typeof LabelPrimitive.Root>,\n  React.ComponentPropsWithoutRef<typeof LabelPrimitive.Root>\n>(({ className, ...props }, ref) => (\n  <LabelPrimitive.Root\n    ref={ref}\n    className={cn(\n      'font-mono text-[0.8125rem] tracking-[0.15em] uppercase text-muted-foreground peer-disabled:cursor-not-allowed peer-disabled:opacity-50',\n      className,\n    )}\n    {...props}\n  />\n))\nGlassLabel.displayName = LabelPrimitive.Root.displayName\n\nexport { GlassLabel }\n",
       "type": "registry:ui"
     }
   ],

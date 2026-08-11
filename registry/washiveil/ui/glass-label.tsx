@@ -12,7 +12,7 @@ const GlassLabel = React.forwardRef<
   <LabelPrimitive.Root
     ref={ref}
     className={cn(
-      'font-mono text-[0.75rem] tracking-[0.2em] uppercase text-faint peer-disabled:cursor-not-allowed peer-disabled:opacity-50',
+      'font-mono text-[0.8125rem] tracking-[0.15em] uppercase text-muted-foreground peer-disabled:cursor-not-allowed peer-disabled:opacity-50',
       className,
     )}
     {...props}
