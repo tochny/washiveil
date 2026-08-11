@@ -322,7 +322,7 @@ export function AmbientField({ className }: { className?: string }) {
   }, []);
 
   return (
-    <div className={cn('pointer-events-none fixed inset-0 isolate overflow-hidden', className)} aria-hidden="true">
+    <div className={cn('pointer-events-none fixed inset-0 -z-10 isolate overflow-hidden', className)} aria-hidden="true">
       <canvas ref={canvasRef} className="absolute inset-0 h-full w-full" hidden />
       <div ref={fallbackRef}>
         <div className="absolute top-[-10rem] left-[-7.5rem] h-[18rem] w-[22rem] rounded-full bg-ruri/26 blur-[6.25rem] sm:h-[26.25rem] sm:w-[32.5rem] dark:bg-ruri/40" />
