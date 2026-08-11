@@ -48,7 +48,7 @@ void main(){
   // Full-strength dither wherever ANY coverage exists (the faint tails are
   // exactly where 8-bit steps live) — alpha-scaled dither was a bug that
   // switched the cure off where the disease is. Bare ground stays clean.
-  float dn=(hash(gl_FragCoord.xy)-0.5)*(1.5/255.0)*smoothstep(0.0,0.005,max(c0,max(c1,c2)));
+  float dn=(hash(gl_FragCoord.xy)-0.5)*(2.5/255.0)*smoothstep(0.0,0.005,max(c0,max(c1,c2)));
   rgb=max(rgb+vec3(dn),vec3(0.0));
   a=clamp(a+dn,0.0,1.0);
   gl_FragColor=vec4(rgb,a);
@@ -345,7 +345,7 @@ export function AmbientField({ className }: { className?: string }) {
         html.dark .wv-grain {
           mask-image:
             radial-gradient(40rem 32rem at 9rem 3rem, black 35%, transparent 72%),
-            radial-gradient(38rem 32rem at calc(100% + 4rem) 45%, black 35%, transparent 72%),
+            radial-gradient(46rem 40rem at calc(100% + 4rem) 45%, black 40%, transparent 78%),
             radial-gradient(40rem 30rem at 9rem 100%, black 35%, transparent 72%);
         }
       `}</style>

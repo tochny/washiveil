@@ -111,7 +111,7 @@ export interface Copy {
   };
   veil: { title: string; lede: string };
   typography: { title: string; lede: string };
-  prose: { title: string; lede: string };
+  prose: { title: string; lede: string; h1: string; h2: string; h3: string };
   install: { title: string; lede: string };
   installCmd: { copy: string; copied: string };
   footer: { tagline: string };
@@ -238,6 +238,9 @@ const en: Copy = {
   prose: {
     title: 'Prose — the ink layer',
     lede: 'Article typography with a stance: ruri marks what responds, korozen marks what the editor meant.',
+    h1: 'Ink on Washi',
+    h2: 'H2 — Section heading',
+    h3: 'H3 — Subsection heading',
   },
   install: { title: 'Install', lede: 'Every component pulls the theme token layer automatically.' },
   installCmd: { copy: 'Copy install command', copied: 'Copied' },
@@ -365,6 +368,9 @@ const zhTw: Copy = {
   prose: {
     title: '散文——墨的一層',
     lede: '有主張的文章排版：瑠璃標記可互動，黄櫨染標記編輯的意圖。',
+    h1: '紙上之墨',
+    h2: 'H2 章節標題',
+    h3: 'H3 小節標題',
   },
   install: { title: '安裝', lede: '每個元件都會自動帶入 theme token 層。' },
   installCmd: { copy: '複製安裝指令', copied: '已複製' },
@@ -492,6 +498,9 @@ const ja: Copy = {
   prose: {
     title: '散文——墨のレイヤー',
     lede: '主張のある本文組版：瑠璃は応えるもの、黄櫨染は編集の意図を示します。',
+    h1: '和紙の上の墨',
+    h2: 'H2 章タイトル',
+    h3: 'H3 節タイトル',
   },
   install: { title: 'インストール', lede: 'どのコンポーネントも theme トークン層を自動で取り込みます。' },
   installCmd: { copy: 'インストールコマンドをコピー', copied: 'コピーしました' },

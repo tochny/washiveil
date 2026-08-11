@@ -555,7 +555,7 @@ export function DemoPage({ locale }: { locale: Locale }) {
           </Section>
 
           <Section id="prose" title={t.prose.title} lede={t.prose.lede}>
-            <ProseSpecimen />
+            <ProseSpecimen h1={t.prose.h1} h2={t.prose.h2} h3={t.prose.h3} />
             <InstallCommand item="prose" copyLabel={t.installCmd.copy} copiedLabel={t.installCmd.copied} className="mt-4" />
           </Section>
 

@@ -353,34 +353,35 @@ h3 {
 .prose pre {
   margin: 1.5rem 0;
   overflow-x: auto;
-  border-radius: 1rem;
-  border: 1px solid var(--glass-border);
-  background-color: var(--glass-strong);
-  box-shadow: 0 8px 32px rgba(28, 25, 20, 0.06);
-  -webkit-backdrop-filter: blur(24px);
-  backdrop-filter: blur(24px);
+  border-radius: 0.75rem;
+  border: 1px solid var(--glass-edge);
+  background-color: var(--glass);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
   padding: 1.25rem;
   font-family: var(--font-mono);
   font-size: 0.8125rem;
   line-height: 1.625;
+  font-weight: 450;
 }
 .dark .prose pre {
-  background: var(--code-panel);
+  background: var(--glass);
   color: var(--code-ink);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
 }
 /* Shiki highlighted code blocks (defaultColor:false emits both palettes
    as --shiki-light / --shiki-dark CSS vars; we pick the right one per mode
    and force the washi ground over shiki's theme background). */
 .prose pre.shiki {
-  background-color: var(--glass-strong) !important;
+  background-color: var(--glass) !important;
 }
 .prose pre.shiki span {
-  color: var(--shiki-light);
+  color: color-mix(in srgb, var(--shiki-light) 80%, var(--foreground));
   font-style: var(--shiki-light-font-style);
   font-weight: var(--shiki-light-font-weight);
 }
 .dark .prose pre.shiki {
-  background-color: var(--glass-strong) !important;
+  background-color: var(--glass) !important;
 }
 .dark .prose pre.shiki span {
   color: var(--shiki-dark) !important;
