@@ -85,7 +85,7 @@ function ShareRow({ url, title, label = 'Share', copiedLabel = 'Link copied', cl
 
   return (
     <div className={cn('flex flex-wrap items-center gap-3', className)}>
-      <span className="font-mono text-[0.75rem] tracking-[0.2em] text-faint uppercase">{label}</span>
+      <span className="font-mono text-[0.75rem] tracking-[0.2em] text-muted-foreground uppercase">{label}</span>
       <div className="flex items-center gap-2">
         {nets.map((n) => (
           <a key={n.label} href={n.href} target="_blank" rel="noopener noreferrer" aria-label={n.label} className={btn}>

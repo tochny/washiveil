@@ -24,14 +24,17 @@
       "color-korozen-deep": "var(--korozen-deep)",
       "color-sumire": "var(--sumire)",
       "color-sumire-soft": "var(--sumire-soft)",
-      "color-deep": "var(--deep)"
+      "color-deep": "var(--deep)",
+      "color-code-cream": "var(--code-cream)",
+      "color-code-panel": "var(--code-panel)",
+      "color-code-ink": "var(--code-ink)"
     },
     "light": {
       "radius": "1rem",
       "background": "#f7f3ec",
       "foreground": "#1c1914",
       "body": "#4a443c",
-      "faint": "#746c60",
+      "faint": "#9a9184",
       "muted": "rgba(28, 25, 20, 0.06)",
       "muted-foreground": "#6e6659",
       "card": "rgba(255, 255, 255, 0.45)",
@@ -63,13 +66,16 @@
       "sumire": "#7b68c8",
       "sumire-soft": "#a99bea",
       "deep": "#112441",
+      "code-cream": "#f0ebe1",
+      "code-panel": "#16181a",
+      "code-ink": "#d8dee4",
       "veil-grain": "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='128' height='128'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='128' height='128' filter='url(%23n)' opacity='.5'/%3E%3C/svg%3E\")"
     },
     "dark": {
       "background": "#12130f",
       "foreground": "#e9e5dc",
       "body": "#b5afa2",
-      "faint": "#8f897b",
+      "faint": "#7e7869",
       "muted": "rgba(255, 255, 255, 0.1)",
       "muted-foreground": "#a8a193",
       "card": "rgba(255, 255, 255, 0.07)",
@@ -112,6 +118,16 @@
       "background-image": "var(--veil-grain)",
       "background-size": "128px 128px",
       "background-blend-mode": "soft-light"
+    },
+    "@media (min-width: 1920px)": {
+      "html": {
+        "font-size": "17px"
+      }
+    },
+    "@media (min-width: 2560px)": {
+      "html": {
+        "font-size": "19px"
+      }
     }
   },
   "docs": "Fonts are not bundled — install @fontsource-variable/inter, manrope, jetbrains-mono, noto-sans-tc and noto-sans-jp to pin the stacks; system fonts are the fallback. Text selection ships sumire — the third light’s quietest job.",

@@ -58,7 +58,7 @@ function GlassCombobox({
             className,
           )}
         >
-          <span className={cn(!selectedLabel && 'text-faint')}>{selectedLabel ?? placeholder}</span>
+          <span className={cn(!selectedLabel && 'text-muted-foreground')}>{selectedLabel ?? placeholder}</span>
           <ChevronsUpDown className="size-4 shrink-0 text-faint" />
         </button>
       </GlassPopoverTrigger>

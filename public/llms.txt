@@ -67,6 +67,7 @@ npx shadcn@latest add https://washiveil.alexchih.com/r/<item>.json
 - [glass-date-picker](https://washiveil.alexchih.com/r/glass-date-picker.json): Date picker — glass field trigger, calendar in a strong-glass popover.
 - [glass-form](https://washiveil.alexchih.com/r/glass-form.json): react-hook-form wiring with the washiveil label and message registers.
 - [lang-switcher](https://washiveil.alexchih.com/r/lang-switcher.json): Locale switcher on the glass pill — the active language is a filled ruri moment. For sites that take Chinese & Japanese seriously.
+- [prose](https://washiveil.alexchih.com/r/prose.json): Article typography with a stance — 1.85 CJK line-height, ruri for interactive marks, korozen for editorial ones. The ink layer of the system.
 
 ## Docs
 

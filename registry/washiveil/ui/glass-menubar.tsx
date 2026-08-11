@@ -177,7 +177,7 @@ function GlassMenubarLabel({
   return (
     <MenubarPrimitive.Label
       className={cn(
-        'font-mono text-[0.6875rem] tracking-[0.15em] uppercase text-faint px-2 py-1.5',
+        'font-mono text-[0.6875rem] tracking-[0.15em] uppercase text-muted-foreground px-2 py-1.5',
         inset && 'pl-8',
         className,
       )}
@@ -193,7 +193,7 @@ function GlassMenubarSeparator({ className, ...props }: React.ComponentPropsWith
 GlassMenubarSeparator.displayName = MenubarPrimitive.Separator.displayName
 
 function GlassMenubarShortcut({ className, ...props }: React.HTMLAttributes<HTMLSpanElement>) {
-  return <span className={cn('ml-auto text-xs tracking-widest text-faint', className)} {...props} />
+  return <span className={cn('ml-auto text-xs tracking-widest text-muted-foreground', className)} {...props} />
 }
 GlassMenubarShortcut.displayName = 'GlassMenubarShortcut'
 

@@ -52,11 +52,11 @@ function GlassDatePicker({
           variant="secondary"
           className={cn(
             'w-full justify-start rounded-xl font-normal',
-            !value && 'text-faint',
+            !value && 'text-muted-foreground',
             className,
           )}
         >
-          <CalendarIcon className="mr-2 size-4 text-faint" />
+          <CalendarIcon className="mr-2 size-4 text-muted-foreground" />
           {displayText ?? placeholder}
         </GlassButton>
       </GlassPopoverTrigger>

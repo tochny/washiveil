@@ -31,7 +31,7 @@ export function StatStrip({ items, className, ...props }: StatStripProps) {
       {items.map((item, i) => (
         <div key={i} className="px-4 sm:px-5">
           <p className={cn('font-display text-3xl font-medium', numeralHues[i % 3])}>{item.value}</p>
-          <p className="mt-1 font-mono text-[0.75rem] tracking-[0.2em] text-faint uppercase">{item.label}</p>
+          <p className="mt-1 font-mono text-[0.75rem] tracking-[0.2em] text-muted-foreground uppercase">{item.label}</p>
         </div>
       ))}
     </div>

@@ -37,7 +37,7 @@ function GlassCalendar({ className, classNames, showOutsideDays = true, today, d
         ),
         month_grid: 'w-full border-collapse',
         weekdays: 'flex',
-        weekday: 'font-mono text-[0.6875rem] tracking-[0.15em] uppercase text-faint rounded-md w-9 font-normal',
+        weekday: 'font-mono text-[0.6875rem] tracking-[0.15em] uppercase text-muted-foreground rounded-md w-9 font-normal',
         week: 'flex w-full mt-2',
         day: cn(
           'relative size-9 p-0 text-center text-sm focus-within:relative focus-within:z-20',
@@ -55,7 +55,7 @@ function GlassCalendar({ className, classNames, showOutsideDays = true, today, d
         range_middle: 'bg-accent text-accent-foreground',
         // Day flags
         today: 'border border-ruri/40 dark:border-ruri-soft/40',
-        outside: 'text-faint/60 aria-selected:bg-accent/50 aria-selected:text-faint',
+        outside: 'text-muted-foreground/60 aria-selected:bg-accent/50 aria-selected:text-muted-foreground',
         disabled: 'text-muted-foreground opacity-40',
         hidden: 'invisible',
         focused: '',

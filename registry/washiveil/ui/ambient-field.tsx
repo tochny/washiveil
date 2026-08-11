@@ -155,7 +155,9 @@ export function AmbientField({ className }: { className?: string }) {
         // idle wander — the 404 orbs' narrative at "stare ten seconds to be
         // sure" amplitude. Knobs: drift factors, WANDER, per-orb periods
         // (co-prime seconds so the paths don't visibly repeat).
-        const sy = drift * sScroll;
+        // Drift is a whisper, not a journey — long pages must not relocate the lights.
+        const syMax = (8 / 0.07) * rem; // largest drift factor pins the cap
+        const sy = drift * Math.max(-syMax, Math.min(syMax, sScroll));
         const tm = (drift * now) / 1000;
         const WANDER = drift * 0.6 * rem;
         const wob = (px: number, py: number, ph: number): [number, number] => [

@@ -1,5 +1,6 @@
 import { InstallCommand } from '@/components/install-command';
 import { PickerDemo } from '@/components/picker-demo';
+import { ProseSpecimen } from '@/components/prose-specimen';
 import { SiteNav } from '@/components/site-nav';
 import { ToastDemo } from '@/components/toast-demo';
 import { VeilProof } from '@/components/veil-proof';
@@ -146,6 +147,7 @@ export function DemoPage({ locale }: { locale: Locale }) {
     { label: t.structure.title, href: '#structure' },
     { label: t.indicators.title, href: '#indicators' },
     { label: t.typography.title, href: '#typography' },
+    { label: t.prose.title, href: '#prose' },
   ];
 
   return (
@@ -183,7 +185,7 @@ export function DemoPage({ locale }: { locale: Locale }) {
 
         <main className="mt-20 space-y-20">
           <Section id="veil" title={t.veil.title} lede={t.veil.lede}>
-            <VeilProof title={t.veil.cardTitle} body={t.veil.cardBody} />
+            <VeilProof />
           </Section>
 
           <Section id="surfaces" title={t.surfaces.title} lede={t.surfaces.lede}>
@@ -550,6 +552,11 @@ export function DemoPage({ locale }: { locale: Locale }) {
               </GlassCard>
             </div>
             <InstallCommand item="theme" copyLabel={t.installCmd.copy} copiedLabel={t.installCmd.copied} className="mt-4" />
+          </Section>
+
+          <Section id="prose" title={t.prose.title} lede={t.prose.lede}>
+            <ProseSpecimen />
+            <InstallCommand item="prose" copyLabel={t.installCmd.copy} copiedLabel={t.installCmd.copied} className="mt-4" />
           </Section>
 
           <Section id="install" title={t.install.title} lede={t.install.lede}>

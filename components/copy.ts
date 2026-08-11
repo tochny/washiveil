@@ -109,8 +109,9 @@ export interface Copy {
     emptyTitle: string;
     emptyBody: string;
   };
-  veil: { title: string; lede: string; cardTitle: string; cardBody: string };
+  veil: { title: string; lede: string };
   typography: { title: string; lede: string };
+  prose: { title: string; lede: string };
   install: { title: string; lede: string };
   installCmd: { copy: string; copied: string };
   footer: { tagline: string };
@@ -228,14 +229,15 @@ const en: Copy = {
   },
   veil: {
     title: 'The veil at work',
-    lede: 'Sharp ink beneath translucent glass — scroll, and the veil proves itself.',
-    cardTitle: 'Ink under veil',
-    cardBody:
-      'Ruled paper and the Tale of the Bamboo Cutter — a glowing stalk among the bamboo.',
+    lede: 'Ruled paper and the Tale of the Bamboo Cutter beneath the veil — a glowing stalk among the bamboo.',
   },
   typography: {
     title: 'Chinese & Japanese, first-class',
     lede: 'Noto CJK unifies zh/ja glyph forms; display text balances; Japanese headings break at phrase boundaries.',
+  },
+  prose: {
+    title: 'Prose — the ink layer',
+    lede: 'Article typography with a stance: ruri marks what responds, korozen marks what the editor meant.',
   },
   install: { title: 'Install', lede: 'Every component pulls the theme token layer automatically.' },
   installCmd: { copy: 'Copy install command', copied: 'Copied' },
@@ -354,13 +356,15 @@ const zhTw: Copy = {
   },
   veil: {
     title: '紗的證明',
-    lede: '紗下是銳利的墨——捲動，看紗如何工作。',
-    cardTitle: '墨上之紗',
-    cardBody: '紗下是罫線與《竹取物語》——竹中那一筋光。',
+    lede: '紗下是罫線與《竹取物語》——竹中那一筋光。',
   },
   typography: {
     title: '中日文排版，一等公民',
     lede: 'Noto CJK 統一中日字形；標題自動平衡斷行；日文標題按語節換行。',
+  },
+  prose: {
+    title: '散文——墨的一層',
+    lede: '有主張的文章排版：瑠璃標記可互動，黄櫨染標記編輯的意圖。',
   },
   install: { title: '安裝', lede: '每個元件都會自動帶入 theme token 層。' },
   installCmd: { copy: '複製安裝指令', copied: '已複製' },
@@ -479,14 +483,15 @@ const ja: Copy = {
   },
   veil: {
     title: '紗の証明',
-    lede: '紗の下には鋭い墨——スクロールすると、紗が自ら証明します。',
-    cardTitle: '墨の上の紗',
-    cardBody:
-      '紗の下には罫線と『竹取物語』——竹の中の一筋の光。',
+    lede: '紗の下には罫線と『竹取物語』——竹の中の一筋の光。',
   },
   typography: {
     title: '中国語と日本語、第一級の組版',
     lede: 'Noto CJK が中日の字形を統一。見出しはバランス改行、日本語は文節単位で折り返します。',
+  },
+  prose: {
+    title: '散文——墨のレイヤー',
+    lede: '主張のある本文組版：瑠璃は応えるもの、黄櫨染は編集の意図を示します。',
   },
   install: { title: 'インストール', lede: 'どのコンポーネントも theme トークン層を自動で取り込みます。' },
   installCmd: { copy: 'インストールコマンドをコピー', copied: 'コピーしました' },

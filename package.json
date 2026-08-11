@@ -44,6 +44,7 @@
     "eslint": "^9.32.0",
     "eslint-config-next": "15.3.1",
     "shadcn": "^4.16.2",
+    "shiki": "^4.4.3",
     "tailwindcss": "^4.1.11",
     "typescript": "^5.9.2"
   },

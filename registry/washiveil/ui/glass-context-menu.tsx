@@ -146,7 +146,7 @@ function GlassContextMenuLabel({
   return (
     <ContextMenuPrimitive.Label
       className={cn(
-        'font-mono text-[0.6875rem] tracking-[0.15em] uppercase text-faint px-2 py-1.5',
+        'font-mono text-[0.6875rem] tracking-[0.15em] uppercase text-muted-foreground px-2 py-1.5',
         inset && 'pl-8',
         className,
       )}
@@ -162,7 +162,7 @@ function GlassContextMenuSeparator({ className, ...props }: React.ComponentProps
 GlassContextMenuSeparator.displayName = ContextMenuPrimitive.Separator.displayName
 
 function GlassContextMenuShortcut({ className, ...props }: React.HTMLAttributes<HTMLSpanElement>) {
-  return <span className={cn('ml-auto text-xs tracking-widest text-faint', className)} {...props} />
+  return <span className={cn('ml-auto text-xs tracking-widest text-muted-foreground', className)} {...props} />
 }
 GlassContextMenuShortcut.displayName = 'GlassContextMenuShortcut'
 

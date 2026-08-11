@@ -19,7 +19,7 @@ const GlassSelectTrigger = React.forwardRef<
   <SelectPrimitive.Trigger
     ref={ref}
     className={cn(
-      'flex h-10 w-full items-center justify-between gap-2 rounded-xl border border-border bg-glass px-3.5 py-2.5 text-sm text-foreground backdrop-blur-md placeholder:text-faint focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:cursor-not-allowed disabled:opacity-50 [&>span]:line-clamp-1',
+      'flex h-10 w-full items-center justify-between gap-2 rounded-xl border border-border bg-glass px-3.5 py-2.5 text-sm text-foreground backdrop-blur-md placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:cursor-not-allowed disabled:opacity-50 [&>span]:line-clamp-1',
       className,
     )}
     {...props}
@@ -94,7 +94,7 @@ const GlassSelectLabel = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <SelectPrimitive.Label
     ref={ref}
-    className={cn('px-2 py-1.5 font-mono text-[0.6875rem] tracking-[0.15em] uppercase text-faint', className)}
+    className={cn('px-2 py-1.5 font-mono text-[0.6875rem] tracking-[0.15em] uppercase text-muted-foreground', className)}
     {...props}
   />
 ))
