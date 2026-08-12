@@ -1,5 +1,7 @@
 'use client';
 
+// A stored "theme" is an explicit pin; its absence means follow the system.
+
 import { Moon, Sun } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
@@ -11,7 +13,13 @@ export function ThemeToggle({ className }: { className?: string }) {
       onClick={() => {
         const isDark = document.documentElement.classList.toggle('dark');
         try {
-          localStorage.setItem('theme', isDark ? 'dark' : 'light');
+          // Back in step with the system — drop the pin instead of storing a
+          // value that only agrees today.
+          if (isDark === matchMedia('(prefers-color-scheme: dark)').matches) {
+            localStorage.removeItem('theme');
+          } else {
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+          }
         } catch {
           /* non-persistent */
         }
@@ -27,11 +35,12 @@ export function ThemeToggle({ className }: { className?: string }) {
   );
 }
 
+// Inline so it resolves before first paint, ahead of any bundle.
 export function ThemeScript() {
   return (
     <script
       dangerouslySetInnerHTML={{
-        __html: `try{var t=localStorage.getItem("theme"),d=t==="dark"||t!=="light"&&matchMedia("(prefers-color-scheme:dark)").matches;if(d)document.documentElement.classList.add("dark")}catch(e){}`,
+        __html: `try{var m=matchMedia("(prefers-color-scheme:dark)"),s=function(){try{return localStorage.getItem("theme")}catch(e){return null}},t=s();if(t==="dark"||t!=="light"&&m.matches)document.documentElement.classList.add("dark");m.addEventListener("change",function(e){if(!s())document.documentElement.classList.toggle("dark",e.matches)})}catch(e){}`,
       }}
     />
   );
