@@ -1,5 +1,9 @@
 'use client';
 
+// Three states, two controls: a stored "theme" key is an explicit pin, and its
+// ABSENCE means "follow the system". That absence is what makes the OS switch
+// live — see ThemeScript below.
+
 import { Moon, Sun } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
@@ -11,7 +15,15 @@ export function ThemeToggle({ className }: { className?: string }) {
       onClick={() => {
         const isDark = document.documentElement.classList.toggle('dark');
         try {
-          localStorage.setItem('theme', isDark ? 'dark' : 'light');
+          // Landing back on what the system already says means the user is
+          // following it again, so drop the pin rather than storing a value
+          // that happens to agree today. Writing it unconditionally is what
+          // made the first toggle a one-way door out of system-follow.
+          if (isDark === matchMedia('(prefers-color-scheme: dark)').matches) {
+            localStorage.removeItem('theme');
+          } else {
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+          }
         } catch {
           /* non-persistent */
         }
@@ -27,11 +39,22 @@ export function ThemeToggle({ className }: { className?: string }) {
   );
 }
 
+/**
+ * Pre-paint theme resolution, plus a live subscription to the OS setting.
+ *
+ * Reading `matches` once at boot is what strands the page: flip the OS to dark
+ * with the tab open and nothing happens until a reload. The `change` listener
+ * fixes that, and it defers to a stored pin so an explicit choice still wins.
+ *
+ * Stays inline and un-minified-by-hand because it must run before first paint,
+ * ahead of any bundle. `prefers-contrast` needs no equivalent — it is pure CSS
+ * and the browser re-evaluates it on its own.
+ */
 export function ThemeScript() {
   return (
     <script
       dangerouslySetInnerHTML={{
-        __html: `try{var t=localStorage.getItem("theme"),d=t==="dark"||t!=="light"&&matchMedia("(prefers-color-scheme:dark)").matches;if(d)document.documentElement.classList.add("dark")}catch(e){}`,
+        __html: `try{var m=matchMedia("(prefers-color-scheme:dark)"),s=function(){try{return localStorage.getItem("theme")}catch(e){return null}},t=s();if(t==="dark"||t!=="light"&&m.matches)document.documentElement.classList.add("dark");m.addEventListener("change",function(e){if(!s())document.documentElement.classList.toggle("dark",e.matches)})}catch(e){}`,
       }}
     />
   );

@@ -3,6 +3,31 @@
 Settled rulings with enough context to reopen them later without re-deriving
 the measurements. Newest first.
 
+## Absent storage key = follow the system; no third control (2026-08-12)
+
+**Ruling:** dark mode has three states — pinned light, pinned dark, and
+following the system — expressed through two controls. The `theme` key in
+`localStorage` is the pin; its **absence** means follow. Toggling to whatever
+the system currently says clears the key instead of writing an agreeing value,
+so the way back to system-follow is the toggle itself.
+
+**Why not a third control.** The obvious alternative is GitHub's explicit
+light / dark / system picker. That earns its place on a site with an account
+and cross-device sync; on a component registry it spends a control slot to
+name a state users reach anyway by toggling back.
+
+**What was broken.** `ThemeScript` read `matches` once at boot and never
+subscribed, so changing the OS appearance with the tab open did nothing until
+a reload. Worse, the toggle wrote the key unconditionally, making the first
+click a one-way door: after it, the system setting was ignored forever. Both
+halves had to change — a listener alone still strands anyone who has ever
+touched the toggle.
+
+**Not affected:** the high-contrast layer. `prefers-contrast: more` is a plain
+CSS media query with no JS mirror, so the browser re-evaluates it live already.
+That is the argument for keeping mode logic as thin as it can be — the color
+scheme only needs JS because a user override has to survive navigation.
+
 ## Tri-color control-fill grammar — keep ruri (2026-08-11)
 
 **Ruling:** the baseline keeps ruri 瑠璃 as the control-fill accent (tabs
