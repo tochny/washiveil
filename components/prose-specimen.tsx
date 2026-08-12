@@ -21,7 +21,7 @@ export async function ProseSpecimen({ h1, h2, h3 }: { h1: string; h2: string; h3
           </span>
         </p>
 
-        <h1>{h1}</h1>
+        <div className="spec-h1">{h1}</div>
 
         <h2>{h2}</h2>
         <h3>{h3}</h3>
