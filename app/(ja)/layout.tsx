@@ -10,6 +10,12 @@ export const metadata: Metadata = {
   description: COPY.ja.hero.lede,
   alternates: {
     canonical: `${BASE}/ja/`,
+    languages: {
+      en: `${BASE}/`,
+      'zh-Hant': `${BASE}/zh-tw/`,
+      ja: `${BASE}/ja/`,
+      'x-default': `${BASE}/`,
+    },
   },
   openGraph: {
     title: 'washiveil — 温かい紙、透ける紗',

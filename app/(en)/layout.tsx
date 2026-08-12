@@ -10,6 +10,12 @@ export const metadata: Metadata = {
     'A shadcn registry: washi ground, glass veils, the ruri/korozen/sumire tri-color, and first-class Chinese & Japanese typography.',
   alternates: {
     canonical: `${BASE}/`,
+    languages: {
+      en: `${BASE}/`,
+      'zh-Hant': `${BASE}/zh-tw/`,
+      ja: `${BASE}/ja/`,
+      'x-default': `${BASE}/`,
+    },
   },
   openGraph: {
     title: 'washiveil — warm paper, translucent veils',

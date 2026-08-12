@@ -10,6 +10,12 @@ export const metadata: Metadata = {
   description: COPY['zh-tw'].hero.lede,
   alternates: {
     canonical: `${BASE}/zh-tw/`,
+    languages: {
+      en: `${BASE}/`,
+      'zh-Hant': `${BASE}/zh-tw/`,
+      ja: `${BASE}/ja/`,
+      'x-default': `${BASE}/`,
+    },
   },
   openGraph: {
     title: 'washiveil — 暖紙為底，透紗為層',

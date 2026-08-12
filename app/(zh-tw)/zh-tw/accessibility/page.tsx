@@ -12,6 +12,7 @@ export const metadata: Metadata = {
       en: 'https://washiveil.alexchih.com/accessibility/',
       'zh-Hant': 'https://washiveil.alexchih.com/zh-tw/accessibility/',
       ja: 'https://washiveil.alexchih.com/ja/accessibility/',
+      'x-default': 'https://washiveil.alexchih.com/accessibility/',
     },
   },
   openGraph: {
