@@ -11,6 +11,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'zh-Hant': `${BASE}/zh-tw/accessibility/`,
     ja: `${BASE}/ja/accessibility/`,
   };
+  const privacyLanguages = {
+    en: `${BASE}/privacy/`,
+    'zh-Hant': `${BASE}/zh-tw/privacy/`,
+    ja: `${BASE}/ja/privacy/`,
+  };
   return [
     { url: `${BASE}/`, alternates: { languages } },
     { url: `${BASE}/zh-tw/`, alternates: { languages } },
@@ -18,5 +23,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/accessibility/`, alternates: { languages: a11yLanguages } },
     { url: `${BASE}/zh-tw/accessibility/`, alternates: { languages: a11yLanguages } },
     { url: `${BASE}/ja/accessibility/`, alternates: { languages: a11yLanguages } },
+    { url: `${BASE}/privacy/`, alternates: { languages: privacyLanguages } },
+    { url: `${BASE}/zh-tw/privacy/`, alternates: { languages: privacyLanguages } },
+    { url: `${BASE}/ja/privacy/`, alternates: { languages: privacyLanguages } },
   ];
 }

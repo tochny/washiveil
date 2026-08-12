@@ -140,6 +140,15 @@ const CLUSTERS = [
       'x-default': `${ORIGIN}/accessibility/`,
     },
   },
+  {
+    pages: ['privacy', 'zh-tw/privacy', 'ja/privacy'],
+    want: {
+      en: `${ORIGIN}/privacy/`,
+      'zh-Hant': `${ORIGIN}/zh-tw/privacy/`,
+      ja: `${ORIGIN}/ja/privacy/`,
+      'x-default': `${ORIGIN}/privacy/`,
+    },
+  },
 ];
 
 for (const { pages: group, want } of CLUSTERS) {
@@ -170,6 +179,43 @@ for (const { pages: group, want } of CLUSTERS) {
     const self = `${ORIGIN}/${dir}${dir ? '/' : ''}`;
     check(found.some((f) => f.href === self), `${label} lists itself among its alternates`);
   }
+}
+
+console.log('--- 8. privacy statement exists in all three locales ---');
+const PRIVACY = [
+  { dir: 'privacy', want: `${ORIGIN}/privacy/` },
+  { dir: 'zh-tw/privacy', want: `${ORIGIN}/zh-tw/privacy/` },
+  { dir: 'ja/privacy', want: `${ORIGIN}/ja/privacy/` },
+];
+for (const { dir, want } of PRIVACY) {
+  const doc = html(...dir.split('/'));
+  if (!doc) continue;
+  check(link(doc, 'canonical') === want, `/${dir}/ canonical is ${want}`);
+  check(!!meta(doc, 'og:image'), `/${dir}/ has og:image`);
+  check(!!meta(doc, 'twitter:image'), `/${dir}/ has twitter:image`);
+  const n = (doc.match(/<h1[\s>]/gi) ?? []).length;
+  check(n === 1, `/${dir}/ has exactly one <h1> (got ${n})`);
+}
+
+console.log('--- 9. footer links to the locale privacy page ---');
+for (const { dir: base, want } of [
+  { dir: '', want: '/privacy/' },
+  { dir: 'zh-tw', want: '/zh-tw/privacy/' },
+  { dir: 'ja', want: '/ja/privacy/' },
+]) {
+  const doc = html(...base.split('/').filter(Boolean));
+  if (!doc) continue;
+  check(new RegExp(`href="${want}"`).test(doc), `/${base}${base ? '/' : ''} footer links to ${want}`);
+}
+
+console.log('--- 10. GA4 tag ships with the right property ---');
+const GA_ID = 'G-BJKR77KRZ2';
+for (const dir of ['', 'zh-tw', 'ja', 'accessibility', 'privacy']) {
+  const doc = html(...dir.split('/').filter(Boolean));
+  if (!doc) continue;
+  check(doc.includes(GA_ID), `/${dir}${dir ? '/' : ''} carries ${GA_ID}`);
+  const foreign = /G-[A-Z0-9]{8,}/.test(doc) && !doc.includes(GA_ID);
+  check(!foreign, `/${dir}${dir ? '/' : ''} carries no foreign GA property`);
 }
 
 console.log(failures === 0 ? '\nALL CHECKS PASSED' : `\n${failures} CHECK(S) FAILED`);

@@ -117,7 +117,7 @@ export interface Copy {
   prose: { title: string; lede: string; h1: string; h2: string; h3: string };
   install: { title: string; lede: string };
   installCmd: { copy: string; copied: string };
-  footer: { tagline: string; a11y: string };
+  footer: { tagline: string; a11y: string; privacy: string };
 }
 
 const en: Copy = {
@@ -250,7 +250,7 @@ const en: Copy = {
   },
   install: { title: 'Install', lede: 'Every component pulls the theme token layer automatically.' },
   installCmd: { copy: 'Copy install command', copied: 'Copied' },
-  footer: { tagline: 'washiveil — paper · veil · three lights', a11y: 'Accessibility' },
+  footer: { tagline: 'washiveil — paper · veil · three lights', a11y: 'Accessibility', privacy: 'Privacy' },
 };
 
 const zhTw: Copy = {
@@ -383,7 +383,7 @@ const zhTw: Copy = {
   },
   install: { title: '安裝', lede: '每個元件都會自動帶入 theme token 層。' },
   installCmd: { copy: '複製安裝指令', copied: '已複製' },
-  footer: { tagline: 'washiveil — 紙 · 紗 · 三色光', a11y: '無障礙聲明' },
+  footer: { tagline: 'washiveil — 紙 · 紗 · 三色光', a11y: '無障礙聲明', privacy: '隱私聲明' },
 };
 
 const ja: Copy = {
@@ -516,7 +516,7 @@ const ja: Copy = {
   },
   install: { title: 'インストール', lede: 'どのコンポーネントにも theme トークン層が自動で組み込まれます。' },
   installCmd: { copy: 'インストールコマンドをコピー', copied: 'コピーしました' },
-  footer: { tagline: 'washiveil — 紙 · 紗 · 三つの灯り', a11y: 'アクセシビリティ' },
+  footer: { tagline: 'washiveil — 紙 · 紗 · 三つの灯り', a11y: 'アクセシビリティ', privacy: 'プライバシー' },
 };
 
 export const COPY: Record<Locale, Copy> = { en, 'zh-tw': zhTw, ja };
