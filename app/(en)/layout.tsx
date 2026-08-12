@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 import { RootShell } from '@/components/root-shell';
-
-const BASE = 'https://washiveil.alexchih.com';
+import { BASE, baseOg } from '@/lib/og';
 
 export const metadata: Metadata = {
   metadataBase: new URL(BASE),
@@ -17,16 +16,12 @@ export const metadata: Metadata = {
       'x-default': `${BASE}/`,
     },
   },
-  openGraph: {
+  openGraph: baseOg('en_US', {
     title: 'washiveil — warm paper, translucent veils',
     description:
       'A shadcn registry: washi ground, glass veils, the ruri/korozen/sumire tri-color, and first-class Chinese & Japanese typography.',
     url: `${BASE}/`,
-    siteName: 'washiveil',
-    locale: 'en_US',
-    type: 'website',
-    images: [{ url: '/og/en.png', width: 1200, height: 630, alt: 'washiveil — warm paper, translucent veils' }],
-  },
+  }),
   twitter: {
     card: 'summary_large_image',
   },

@@ -243,7 +243,8 @@ h2,
 h3 {
   text-wrap: balance;
 }
-[lang='ja'] :is(h1, h2, h3) {
+[lang='ja'] :is(h1, h2, h3),
+[lang='ja'] .prose .spec-h1 {
   word-break: auto-phrase;
 }
 

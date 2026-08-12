@@ -1,26 +1,27 @@
 import type { Metadata } from 'next';
 
 import { A11yStatement } from '@/components/a11y-statement';
+import { BASE, baseOg } from '@/lib/og';
 
 export const metadata: Metadata = {
   title: 'washiveil — Accessibility statement',
   description:
     'washiveil aims for WCAG 2.2 Level AA across this demo site and the shipped component defaults. Accessibility fixes are treated as bugs.',
   alternates: {
-    canonical: 'https://washiveil.alexchih.com/accessibility/',
+    canonical: `${BASE}/accessibility/`,
     languages: {
-      en: 'https://washiveil.alexchih.com/accessibility/',
-      'zh-Hant': 'https://washiveil.alexchih.com/zh-tw/accessibility/',
-      ja: 'https://washiveil.alexchih.com/ja/accessibility/',
-      'x-default': 'https://washiveil.alexchih.com/accessibility/',
+      en: `${BASE}/accessibility/`,
+      'zh-Hant': `${BASE}/zh-tw/accessibility/`,
+      ja: `${BASE}/ja/accessibility/`,
+      'x-default': `${BASE}/accessibility/`,
     },
   },
-  openGraph: {
+  openGraph: baseOg('en_US', {
     title: 'washiveil — Accessibility statement',
     description:
       'washiveil aims for WCAG 2.2 Level AA across this demo site and the shipped component defaults. Accessibility fixes are treated as bugs.',
-    url: 'https://washiveil.alexchih.com/accessibility/',
-  },
+    url: `${BASE}/accessibility/`,
+  }),
 };
 
 export default function AccessibilityPage() {
