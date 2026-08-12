@@ -63,9 +63,13 @@ if (!existsSync(robotsPath)) {
   check(!/Disallow:\s*\/design/i.test(r), 'robots.txt does NOT Disallow /design/ (noindex needs crawl access)');
 }
 
-console.log('--- 3. OpenGraph + Twitter on every locale home ---');
-for (const l of LOCALES) {
-  const doc = html(l.dir);
+console.log('--- 3. OpenGraph + Twitter on every public page ---');
+// Next replaces a parent's openGraph wholesale rather than merging it, so a
+// child page that sets its own must restate every field. Check the sub-pages
+// too — checking only the locale homepages is what let that slip through once.
+const OG_PAGES = LOCALES.flatMap((l) => [l, { ...l, dir: `${l.dir}${l.dir ? '/' : ''}accessibility` }]);
+for (const l of OG_PAGES) {
+  const doc = html(...l.dir.split('/').filter(Boolean));
   if (!doc) continue;
   const tag = `/${l.dir}${l.dir ? '/' : ''}`;
   for (const k of ['og:title', 'og:description', 'og:type', 'og:url', 'og:site_name', 'og:image']) {
@@ -80,6 +84,9 @@ for (const l of LOCALES) {
     const rel = img.replace(ORIGIN, '').split('?')[0];
     check(existsSync(join(OUT, rel)), `${tag} og:image file exists in out/ (${rel})`);
   }
+  // summary_large_image without an image renders an empty card slot — worse
+  // than declaring a plain summary card.
+  check(!!meta(doc, 'twitter:image'), `${tag} has twitter:image to back summary_large_image`);
 }
 
 console.log('--- 4. canonical on all six public routes ---');
