@@ -114,16 +114,54 @@ for (const [dir] of ROUTES) {
   check(n === 1, `/${dir} has exactly one <h1> (got ${n})`);
 }
 
-console.log('--- 7. hreflang still intact ---');
-for (const l of LOCALES) {
-  const doc = html(l.dir);
-  if (!doc) continue;
-  const tag = `/${l.dir}${l.dir ? '/' : ''}`;
-  for (const hl of ['en', 'zh-Hant', 'ja', 'x-default']) {
+console.log('--- 7. hreflang clusters are correct and non-conflicting ---');
+// HTML attribute names are case-insensitive, so React's camelCase `hrefLang`
+// is equivalent to `hreflang` — match either. What actually matters is that a
+// page's alternates point at ITS OWN locale variants, and that a page never
+// emits two different targets for the same hreflang code.
+const CLUSTERS = [
+  {
+    pages: ['', 'zh-tw', 'ja'],
+    want: { en: `${ORIGIN}/`, 'zh-Hant': `${ORIGIN}/zh-tw/`, ja: `${ORIGIN}/ja/`, 'x-default': `${ORIGIN}/` },
+  },
+  {
+    pages: ['accessibility', 'zh-tw/accessibility', 'ja/accessibility'],
+    want: {
+      en: `${ORIGIN}/accessibility/`,
+      'zh-Hant': `${ORIGIN}/zh-tw/accessibility/`,
+      ja: `${ORIGIN}/ja/accessibility/`,
+      'x-default': `${ORIGIN}/accessibility/`,
+    },
+  },
+];
+
+for (const { pages: group, want } of CLUSTERS) {
+  for (const dir of group) {
+    const doc = html(...dir.split('/').filter(Boolean));
+    if (!doc) continue;
+    const label = `/${dir}${dir ? '/' : ''}`;
+    const found = [...head(doc).matchAll(/<link[^>]*rel="alternate"[^>]*>/gi)]
+      .map((m) => m[0])
+      .filter((tag) => /hreflang=/i.test(tag))
+      .map((tag) => ({
+        lang: tag.match(/hreflang="([^"]*)"/i)?.[1],
+        href: tag.match(/href="([^"]*)"/i)?.[1],
+      }));
+
     check(
-      new RegExp(`hreflang="${hl}"`).test(head(doc)),
-      `${tag} declares hreflang="${hl}"`
+      found.length === Object.keys(want).length,
+      `${label} emits exactly ${Object.keys(want).length} hreflang links (got ${found.length})`
     );
+
+    for (const [lang, href] of Object.entries(want)) {
+      const hits = found.filter((f) => f.lang === lang);
+      check(hits.length === 1, `${label} declares hreflang="${lang}" exactly once (got ${hits.length})`);
+      if (hits.length) check(hits[0].href === href, `${label} hreflang="${lang}" -> ${href} (got ${hits[0].href})`);
+    }
+
+    // Self-reference: the page must appear among its own alternates.
+    const self = `${ORIGIN}/${dir}${dir ? '/' : ''}`;
+    check(found.some((f) => f.href === self), `${label} lists itself among its alternates`);
   }
 }
 
