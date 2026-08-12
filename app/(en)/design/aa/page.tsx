@@ -3,7 +3,7 @@
 // Internal decision page — what FULL WCAG AA compliance looks like, including
 // the 3:1 non-text control-boundary rule nobody in the industry meets.
 // Current column = shipped values; AA column = measured passing values.
-// Never linked from nav; stripped from deploys with the rest of /design.
+// Never linked from nav; shipped but noindexed via the /design layout.
 
 import { AmbientField } from '@/registry/washiveil/ui/ambient-field';
 import { Chip } from '@/registry/washiveil/ui/chip';

@@ -9,7 +9,7 @@
   "homepage": "https://washiveil.alexchih.com",
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "next build",
+    "build": "node scripts/build-og.mjs && next build",
     "start": "next start",
     "lint": "next lint",
     "registry:build": "shadcn build && node scripts/build-llms.mjs"
@@ -20,6 +20,8 @@
     "@fontsource-variable/manrope": "^5.3.0",
     "@fontsource-variable/noto-sans-jp": "^5.3.0",
     "@fontsource-variable/noto-sans-tc": "^5.3.0",
+    "@fontsource/noto-sans-jp": "^5.3.0",
+    "@fontsource/noto-sans-tc": "^5.3.0",
     "@hookform/resolvers": "^5.7.1",
     "@radix-ui/react-label": "^2.1.7",
     "@radix-ui/react-slot": "^1.2.3",
@@ -44,6 +46,7 @@
     "@axe-core/playwright": "^4.12.1",
     "@eslint/eslintrc": "^3.3.1",
     "@playwright/test": "^1.62.1",
+    "@resvg/resvg-js": "^2.6.2",
     "@tailwindcss/postcss": "^4.1.11",
     "@types/node": "^20.19.9",
     "@types/react": "19.1.2",
@@ -51,6 +54,7 @@
     "eslint": "^9.32.0",
     "eslint-config-next": "15.3.1",
     "playwright": "^1.62.1",
+    "satori": "^0.29.0",
     "shadcn": "^4.16.2",
     "shiki": "^4.4.3",
     "tailwindcss": "^4.1.11",
