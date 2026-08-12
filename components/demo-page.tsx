@@ -611,12 +611,20 @@ export function DemoPage({ locale }: { locale: Locale }) {
             </a>
           </p>
           <p className="font-mono text-[0.75rem] tracking-[0.2em] uppercase">{t.footer.tagline}</p>
-          <a
-            href={locale === 'en' ? '/accessibility/' : `${LOCALE_PATHS[locale]}/accessibility/`}
-            className="text-ruri hover:text-deep dark:text-ruri-soft dark:hover:text-ruri-pale"
-          >
-            {t.footer.a11y}
-          </a>
+          <div className="flex gap-4">
+            <a
+              href={locale === 'en' ? '/accessibility/' : `${LOCALE_PATHS[locale]}/accessibility/`}
+              className="text-ruri hover:text-deep dark:text-ruri-soft dark:hover:text-ruri-pale"
+            >
+              {t.footer.a11y}
+            </a>
+            <a
+              href={locale === 'en' ? '/privacy/' : `${LOCALE_PATHS[locale]}/privacy/`}
+              className="text-ruri hover:text-deep dark:text-ruri-soft dark:hover:text-ruri-pale"
+            >
+              {t.footer.privacy}
+            </a>
+          </div>
         </footer>
       </div>
     </>
