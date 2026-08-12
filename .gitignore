@@ -17,6 +17,9 @@
 /.next/
 /out/
 
+# Generated OG images (rebuilt by scripts/build-og.mjs before each build)
+/public/og/
+
 # production
 /build
 
