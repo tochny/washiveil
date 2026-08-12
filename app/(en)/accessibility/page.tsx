@@ -14,6 +14,12 @@ export const metadata: Metadata = {
       ja: 'https://washiveil.alexchih.com/ja/accessibility/',
     },
   },
+  openGraph: {
+    title: 'washiveil — Accessibility statement',
+    description:
+      'washiveil aims for WCAG 2.2 Level AA across this demo site and the shipped component defaults. Accessibility fixes are treated as bugs.',
+    url: 'https://washiveil.alexchih.com/accessibility/',
+  },
 };
 
 export default function AccessibilityPage() {
