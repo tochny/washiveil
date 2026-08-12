@@ -190,7 +190,7 @@ const PRIVACY = [
 for (const { dir, want } of PRIVACY) {
   const doc = html(...dir.split('/'));
   if (!doc) continue;
-  check(linkHref(doc, 'canonical') === want, `/${dir}/ canonical is ${want}`);
+  check(link(doc, 'canonical') === want, `/${dir}/ canonical is ${want}`);
   check(!!meta(doc, 'og:image'), `/${dir}/ has og:image`);
   check(!!meta(doc, 'twitter:image'), `/${dir}/ has twitter:image`);
   const n = (doc.match(/<h1[\s>]/gi) ?? []).length;
