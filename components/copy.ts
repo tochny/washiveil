@@ -2,7 +2,7 @@ export type Locale = 'en' | 'zh-tw' | 'ja';
 
 export const LOCALE_PATHS: Record<Locale, string> = { en: '/', 'zh-tw': '/zh-tw', ja: '/ja' };
 export const LOCALE_LABELS: Record<Locale, string> = { en: 'EN', 'zh-tw': '繁', ja: '日' };
-/** BCP 47 tags for the lang attribute — zh-tw routes render Traditional Chinese. */
+/** BCP 47 tags for the lang attribute. zh-tw routes render Traditional Chinese. */
 export const LOCALE_TAGS: Record<Locale, string> = { en: 'en', 'zh-tw': 'zh-Hant', ja: 'ja' };
 
 export interface Copy {
@@ -235,18 +235,18 @@ const en: Copy = {
   },
   veil: {
     title: 'The veil at work',
-    lede: 'Ruled paper and the Tale of the Bamboo Cutter beneath the veil — a glowing stalk among the bamboo.',
+    lede: 'Ruled paper and the Tale of the Bamboo Cutter beneath the veil: a glowing stalk among the bamboo.',
   },
   typography: {
     title: 'Chinese & Japanese, first-class',
     lede: 'Noto CJK unifies zh/ja glyph forms; display text balances; Japanese headings break at phrase boundaries.',
   },
   prose: {
-    title: 'Prose — the ink layer',
+    title: 'Prose: the ink layer',
     lede: 'Article typography with a stance: ruri marks the interactive, korozen marks editorial intent.',
     h1: 'Ink on Washi',
-    h2: 'H2 — Section heading',
-    h3: 'H3 — Subsection heading',
+    h2: 'H2 Section heading',
+    h3: 'H3 Subsection heading',
   },
   install: { title: 'Install', lede: 'Every component pulls the theme token layer automatically.' },
   installCmd: { copy: 'Copy install command', copied: 'Copied' },

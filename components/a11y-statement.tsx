@@ -40,8 +40,8 @@ const DICT: Record<Locale, A11yDict> = {
     exceptionsTitle: 'Known exceptions',
     exceptions: [
       'Decorative micro-labels: the faint 0.75rem meta text (section eyebrows, specimen captions) sits below the 4.5:1 text ratio by design. It is decorative; the same information is always available in conforming text nearby.',
-      'Control boundaries: the 1px borders of the default veil aesthetic sit below the 3:1 non-text ratio (WCAG 1.4.11), as does nearly all glassmorphism. The high-contrast layer raises every control boundary to 3:1 or better — that layer is the supported path for users who need it.',
-      'Primary fill: primary-filled actions (the solid button, dialog actions, the nav call-to-action) ship display korozen (#d0722e), whose white label measures 3.43:1 — below the 4.5:1 text ratio. This is a deliberate brand-color decision; the high-contrast layer swaps the fill for korozen-deep (#b64f1b, 5.09:1). Dark mode passes in both layers.',
+      'Control boundaries: the 1px borders of the default veil aesthetic sit below the 3:1 non-text ratio (WCAG 1.4.11), as does nearly all glassmorphism. The high-contrast layer raises every control boundary to 3:1 or better. That layer is the supported path for users who need it.',
+      'Primary fill: primary-filled actions (the solid button, dialog actions, the nav call-to-action) ship display korozen (#d0722e), whose white label measures 3.43:1, below the 4.5:1 text ratio. This is a deliberate brand-color decision; the high-contrast layer swaps the fill for korozen-deep (#b64f1b, 5.09:1). Dark mode passes in both layers.',
     ],
     feedbackTitle: 'Feedback',
     feedbackParts: [
