@@ -31,7 +31,7 @@ const DICT: Record<Locale, PrivacyDict> = {
     title: 'Privacy',
     back: 'Home',
     intro:
-      'This site uses Google Analytics 4 to understand how people browse it. The tag sets two first-party cookies — _ga and _ga_BJKR77KRZ2 — carrying a randomly generated client ID. No part of this identifier names you.',
+      'This site uses Google Analytics 4 to understand how people browse it. The tag sets two first-party cookies (_ga and _ga_BJKR77KRZ2) carrying a randomly generated client ID. No part of this identifier names you.',
     collectTitle: 'What is collected',
     collectBody:
       'Page URL and title, referrer, approximate location derived from your IP address (GA4 does not store the IP itself), device type, browser, language preference, and screen resolution.',
@@ -43,13 +43,13 @@ const DICT: Record<Locale, PrivacyDict> = {
       'Google LLC processes and stores the data. Its servers are outside Taiwan and Japan. Event data is retained for 14 months, then deleted.',
     storageTitle: 'Local storage',
     storageItems: [
-      'theme — set when you toggle dark mode away from the system default. Removed when your choice matches the system again. On load, the stored value overrides the system preference; if nothing is stored, the site follows the system.',
-      'locale — set when you explicitly pick a language from the switcher. If nothing is stored and you land on /, the site detects your browser language and redirects to the matching locale without persisting that detection.',
+      'theme: set when you toggle dark mode away from the system default. Removed when your choice matches the system again. On load, the stored value overrides the system preference; if nothing is stored, the site follows the system.',
+      'locale: set when you explicitly pick a language from the switcher. If nothing is stored and you land on /, the site detects your browser language and redirects to the matching locale without persisting that detection.',
     ],
     storageOutro: 'These values never leave the browser.',
     notCollectedTitle: 'What is not collected',
     notCollectedBody:
-      'There are no accounts, no logins, and no forms that submit data. The form controls on the demo page are non-submitting specimens — they carry no action and no handler.',
+      'There are no accounts, no logins, and no forms that submit data. The form controls on the demo page are non-submitting specimens; they carry no action and no handler.',
     registryTitle: 'The component registry',
     registryBody:
       '/r/*.json files are fetched by npx shadcn add running on your machine. That request is a script fetching a JSON file; it does not execute the page’s JavaScript, so GA4 does not see it.',
@@ -57,7 +57,7 @@ const DICT: Record<Locale, PrivacyDict> = {
     declineParts: [
       'Any content blocker or privacy-focused browser prevents the Google Analytics tag from loading. Google also publishes an ',
       'opt-out browser add-on',
-      '. These are client-side measures — this site does not offer its own opt-out control.',
+      '. These are client-side measures. This site does not offer its own opt-out control.',
     ],
     questionsTitle: 'Questions',
     questionsParts: [

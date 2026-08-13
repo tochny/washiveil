@@ -220,7 +220,7 @@ export function DemoPage({ locale }: { locale: Locale }) {
                 <ShareRow
                   className="mt-3"
                   url="https://washiveil.alexchih.com"
-                  title="washiveil — warm paper, translucent veils"
+                  title="washiveil: warm paper, translucent veils"
                 />
               </GlassCard>
               <GlassTOC items={tocItems} />
@@ -458,7 +458,7 @@ export function DemoPage({ locale }: { locale: Locale }) {
                   <div className="min-w-0">
                     <p className="text-sm font-medium">{c.name}</p>
                     <p className="font-mono text-[0.75rem] text-faint">
-                      {c.l} · dark {c.d ?? '—'}
+                      {c.l} · dark {c.d ?? '–'}
                     </p>
                     <p className="mt-0.5 text-xs text-muted-foreground">{c.role}</p>
                   </div>

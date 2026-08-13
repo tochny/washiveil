@@ -12,7 +12,7 @@ export async function ProseSpecimen({ h1, h2, h3 }: { h1: string; h2: string; h3
   });
 
   return (
-    // Bare on the washi, exactly like a real article — no glass between ink and paper.
+    // Bare on the washi, exactly like a real article. No glass between ink and paper.
     <div className="prose">
         <p>
           <a href="#" className="font-mono text-[0.75rem]">&larr; Writing</a>
